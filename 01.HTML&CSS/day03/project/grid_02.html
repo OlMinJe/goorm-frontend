@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid 실습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 컨테이너 그룹 모음 */
+      .grid-wrap {
+        width: calc(600px + 40px);
+        padding: 40px 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .grid-wrap section {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        position: relative;
+      }
+
+      /* 각 컨테이너 내부 공통 스타일 */
+      .item {
+        background: skyblue;
+        color: rgb(238, 111, 187);
+        font-weight: 700;
+        font-size: 1.4rem;
+        background-size: cover;
+        background-position: center;
+        /* 글자 수직, 수평 기준 정렬 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .item:nth-child(1) {
+        background-image: url('image/image01.jpg');
+      }
+      .item:nth-child(2) {
+        background-image: url('image/image02.png');
+      }
+      .item:nth-child(3) {
+        background-image: url('image/image03.jpg');
+      }
+      .item:nth-child(4) {
+        background-image: url('image/image04.jpg');
+      }
+
+      /* 🔥 정리
+      - 행과 열을 둘다 변경할 때는 grid-area: row-start / column-start / row-end / column-end
+      - 둘 중 하나만 변경할 때는 grid-column / gird-row
+       */
+
+      /* 1번 박스 */
+      #container01 .item:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      #container01 .item:nth-child(4) {
+        grid-row: 2 / 3;
+      }
+      #container01 .item:last-child {
+        grid-column: 1 / 4;
+      }
+      /* 2번 박스 */
+      #container02 .item:first-child {
+        grid-row: 1 / 4;
+      }
+      #container02 .item:nth-child(2) {
+        grid-row: 1 / 3;
+      }
+      #container02 .item:nth-child(3) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+      #container02 .item:last-child {
+        grid-row: 2 / 4;
+      }
+      /* 4번 박스 */
+      #container04 .item:first-child {
+        grid-area: 2 / 1 / 4 / 3;
+      }
+      #container04 .item:last-child {
+        grid-row: 2 / 4;
+      }
+      /* 5번 박스 */
+      #container05 .item:first-child {
+        grid-column: 1 / 4;
+      }
+      #container05 .item:nth-child(2),
+      #container05 .item:nth-child(3),
+      #container05 .item:last-child {
+        grid-row: 2 / 4;
+      }
+      /* 6번 박스 */
+      #container06 .item:first-child {
+        grid-area: 1 / 1 / 3 / 3;
+      }
+      #container06 .item:nth-child(2) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+      #container06 .item:last-child {
+        grid-row: 2 / 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-wrap">
+      <section id="container01">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+      </section>
+      <section id="container02">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+      </section>
+      <section id="container03">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+      </section>
+      <section id="container04">
+        <div class="item">A</div>
+        <div class="item">B</div>
+      </section>
+      <section id="container05">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+      </section>
+      <section id="container06">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오른쪽 슬라이드 메뉴</title>
+    <style>
+      /* 1차 실습 - 메뉴 hover 시, 위에서 아래로 내려어더럭 동작하는 만들기 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .menu-trigger {
+        width: 100px;
+        height: 50px;
+        border: 0 none;
+        font-size: 24px;
+        background-color: #333;
+        color: #fff;
+      }
+      .menu-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100vh;
+        background-color: #f5f5f5;
+        padding: 30px;
+        /* transform: translateX(100%); */
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+      }
+      .menu-trigger:hover + .menu-panel {
+        /* transform: translateX(0%); */
+        transform: translateY(0%);
+      }
+
+      .wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .spinner {
+        width: 100px;
+        height: 100px;
+        border: 8px dashed #eee;
+        border-top: 8px solid #f00;
+        border-bottom: 8px dotted rgb(196, 49, 237);
+        border-radius: 50%;
+        animation: spinner 3s linear infinite;
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="menu-trigger">메뉴</button>
+    <div class="menu-panel">
+      <h2>메뉴</h2>
+      <ul>
+        <li>홈</li>
+        <li>서비스</li>
+        <li>소개</li>
+        <li>연락처</li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <div class="spinner"></div>
+    </div>
+  </body>
+</html>

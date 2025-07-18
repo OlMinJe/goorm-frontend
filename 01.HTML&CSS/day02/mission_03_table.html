@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Table Layout 예제</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #f0f4f8;
+        margin: 40px;
+      }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+        width: 80%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: center;
+        font-size: 16px;
+      }
+      th {
+        background-color: #80c0d0;
+        color: white;
+        font-size: 18px;
+      }
+      .red-cell {
+        background-color: #e57373;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+    <table border="1" cellspacing="0" cellpadding="10" align="center">
+      <!-- 열 너비 지정 -->
+      <colgroup>
+        <col style="width: 10%" />
+        <col style="width: 15%" />
+        <col style="width: 15%" />
+        <col style="width: 15%" />
+        <col style="width: 20%" />
+        <col style="width: 25%" />
+      </colgroup>
+
+      <!-- 헤더 -->
+      <tr>
+        <th colspan="6">Table Layout (colspan = 6)</th>
+      </tr>
+
+      <!-- 1행: 1~6 -->
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+
+      <!-- 2행: 7,8 -->
+      <tr>
+        <td colspan="3" class="red-cell">7</td>
+        <td colspan="3" class="red-cell">8</td>
+      </tr>
+
+      <!-- 3~4행: rowspan 사용 -->
+      <tr>
+        <td rowspan="2" class="red-cell">9</td>
+        <td>10</td>
+        <td rowspan="2" class="red-cell">11</td>
+        <td>12</td>
+        <td rowspan="2" class="red-cell">13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+      </tr>
+
+      <!-- 5행: 18~23 -->
+      <tr>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+      </tr>
+      <!-- 6~8행: colspan + rowspan 결합 -->
+      <tr>
+        <td>24</td>
+        <td colspan="4" rowspan="3" class="red-cell">25 (colspan=4, rowspan=3)</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>27</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>29</td>
+      </tr>
+    </table>
+  </body>
+</html>

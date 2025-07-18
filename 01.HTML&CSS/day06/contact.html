@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Test</title>
+    <style></style>
+  </head>
+  <body>
+    <section class="container">
+      <header>
+        <h1>Contact Us!</h1>
+        <p>문의 사항을 남겨주시면, 빠른 시일 내에 연락드리겠습니다.</p>
+      </header>
+      <div class="row">
+        <div class="column">
+          <div class="bg-img"></div>
+        </div>
+        <div class="column">
+          <form action="https://formspree.io/f/meozqrqg" method="post">
+            <fieldset>
+              <legend>문의하기 폼</legend>
+              <div>
+                <label for="userName">이름</label>
+                <input type="text" id="userName" placeholder="이름을 입력해 주세요." autocomplete="username" />
+              </div>
+              <div>
+                <label for="email">이메일</label>
+                <input type="text" id="email" name="email" placeholder="이메일을 입력해 주세요." autocomplete="email" />
+              </div>
+              <div>
+                <label for="type">문의 유형</label>
+                <select id="type">
+                  <option value="type1">상담문의</option>
+                  <option value="type2">견적문의</option>
+                  <option value="type3">방문문의</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">메시지</label>
+                <textarea name="message" id="message" placeholder="문의 내용을 입력해 주세요."></textarea>
+              </div>
+              <button type="submit" name="submit">확인</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

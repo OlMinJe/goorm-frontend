@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>반응형 웹페이지 실습</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1/0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: pink;
+        color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .container {
+        margin-top: 10px;
+        padding: 0 20px;
+        width: 100%;
+        min-width: 320px;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .box {
+        width: calc(33.333% - 10px);
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        text-align: center;
+        perspective: 800px;
+        perspective-origin: center;
+      }
+
+      .box img {
+        width: 100%;
+        animation: spin 10s linear infinite;
+        animation-fill-mode: backwards;
+      }
+
+      .box:nth-child(1) img {
+        animation-delay: 0s;
+      }
+      .box:nth-child(2) img {
+        animation-delay: 2s;
+      }
+      .box:nth-child(3) img {
+        animation-delay: 4s;
+      }
+      .box:nth-child(4) img {
+        animation-delay: 6s;
+      }
+      .box:nth-child(5) img {
+        animation-delay: 7s;
+      }
+      .box:nth-child(6) img {
+        animation-delay: 10s;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        /* 상자 두 개 */
+        .box {
+          width: calc(50% - 10px);
+        }
+      }
+
+      @media only screen and (max-width: 640px) {
+        /* 상자 한 개 */
+        .box {
+          width: 100%;
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>📱 반응형 웹페이지 예제</header>
+
+    <div class="container">
+      <div class="box">
+        <img src="image/image01.jpg" alt="image01" class="spin delay-1" />
+      </div>
+      <div class="box">
+        <img src="image/image02.png" alt="image02" class="spin delay-2" />
+      </div>
+      <div class="box">
+        <img src="image/image03.jpg" alt="image03" class="spin delay-3" />
+      </div>
+      <div class="box">
+        <img src="image/image04.jpg" alt="image04" class="spin delay-4" />
+      </div>
+      <div class="box">
+        <img src="image/image05.png" alt="image05" class="spin delay-5" />
+      </div>
+      <div class="box">
+        <img src="image/image01.jpg" alt="image01" class="spin delay-6" />
+      </div>
+    </div>
+  </body>
+</html>

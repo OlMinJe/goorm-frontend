@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS 선택자 테스트</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      .title {
+        font-size: 20px;
+        color: navy;
+      }
+      #header {
+        background: lightblue;
+        padding: 10px;
+      }
+      [type='text'] {
+        border: 1px solid #000;
+      }
+
+      div p {
+        color: darkgreen;
+      }
+      div > p {
+        font-weight: bold;
+      }
+      h1 + p {
+        color: red;
+      }
+      h1 ~ p {
+        color: orange;
+      }
+
+      button:hover {
+        background-color: yellow;
+      }
+      a:visited {
+        color: purple;
+      }
+      input:focus {
+        border-color: blue;
+      }
+      li:first-child {
+        color: red;
+      }
+      li:last-child {
+        color: green;
+      }
+      p:nth-of-type(2) {
+        background: #eee;
+      }
+
+      input:checked + label {
+        font-weight: bold;
+      }
+      button:disabled {
+        background: #ccc;
+      }
+      p:empty::before {
+        content: '(empty)';
+        color: gray;
+      }
+
+      p::before {
+        content: '👉 ';
+      }
+      p::after {
+        content: ' 👈';
+      }
+      p::first-line {
+        text-decoration: underline;
+      }
+      p::first-letter {
+        font-size: 150%;
+        color: blue;
+      }
+      ::selection {
+        background: yellow;
+      }
+
+      :is(h1, h2, h3) {
+        margin-top: 1rem;
+      }
+      :not(.hidden) {
+        border: 1px solid coral;
+      }
+      :where(nav, aside) {
+        padding: 10px;
+      }
+      div:has(img) {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">Header (ID 선택자)</h1>
+    <p class="title">Class 선택자 텍스트</p>
+    <input type="text" placeholder="속성 선택자" />
+
+    <section>
+      <h2>결합자 테스트</h2>
+      <div>
+        <p>div > p (자식)</p>
+        <section>
+          <p>div p (자손)</p>
+        </section>
+      </div>
+      <h1>Heading</h1>
+      <p>형제 선택자 1</p>
+      <p>형제 선택자 2</p>
+    </section>
+
+    <section>
+      <h2>가상 클래스 테스트</h2>
+      <button>Hover Me</button>
+      <a href="#visited">Visited Link</a>
+      <input type="text" placeholder="Focus me" />
+      <ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+      </ul>
+      <p>문단 1</p>
+      <p>문단 2</p>
+    </section>
+
+    <section>
+      <h2>상태/조건 관련</h2>
+      <input type="checkbox" id="check" /><label for="check">체크됨</label>
+      <button disabled>비활성 버튼</button>
+      <p></p>
+    </section>
+
+    <section>
+      <h2>가상 요소 선택자</h2>
+      <p>첫 줄, 첫 글자, before, after</p>
+    </section>
+
+    <section>
+      <h2>함수형 선택자</h2>
+      <div><img src="https://via.placeholder.com/100" alt="placeholder" /></div>
+      <p class="hidden">숨겨짐</p>
+      <nav>내비게이션</nav>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body,
+      html {
+        min-height: 100%;
+        height: 100%;
+      }
+
+      /* header */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ff0000;
+        z-index: 100;
+      }
+
+      .nav-container {
+        padding: 1.5rem 1rem;
+
+        ul {
+          list-style: none;
+          display: flex;
+          align-items: center;
+        }
+
+        li {
+          margin-right: 1rem;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+        }
+
+        input[id='hamburgerIcon'] {
+          display: none;
+        }
+
+        input[id='hamburgerIcon'] + label {
+          display: none;
+          width: 30px;
+          height: 20px;
+          margin: 0 0 0 auto;
+          position: relative;
+
+          span {
+            display: block;
+            height: 5px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &:nth-child(1) {
+              top: -5px;
+            }
+            &:nth-child(2) {
+              top: 5px;
+            }
+            &:nth-child(3) {
+              top: 15px;
+            }
+          }
+        }
+
+        input[id='hamburgerIcon']:checked + label,
+        #hamburgerIcon:hover + label {
+          span:nth-child(1) {
+            top: calc(50% - 5px);
+            transform: rotate(45deg);
+          }
+          span:nth-child(2) {
+            opacity: 0;
+          }
+          span:nth-child(3) {
+            top: calc(50% - 5px);
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      /* main */
+      main {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+      }
+
+      section {
+        scroll-snap-align: start;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0.8;
+      }
+
+      /* section01 */
+      #section01 {
+        background: url('image/bg01.jpg') no-repeat center center fixed;
+        background-size: cover;
+        text-align: center;
+
+        .question {
+          padding: 20px;
+          margin-bottom: 20px;
+          background-color: #fff;
+          border-radius: 15px;
+          animation: fadeInUp 1s ease forwards;
+          opacity: 0;
+          display: flex;
+          flex-direction: column;
+
+          span {
+            display: none;
+          }
+          &:hover span {
+            display: inline;
+            margin-top: 10px;
+            color: #ff0000;
+          }
+        }
+
+        .subQuestion {
+          display: none;
+        }
+      }
+
+      #btn01:checked ~ .subQuestion {
+        display: block;
+      }
+
+      /* section02 */
+      #section02 {
+        background: url('https://photo.newsen.com/news_photo/2025/07/12/202507121925105531_1.jpg') no-repeat center top
+          fixed;
+        background-size: cover;
+
+        div {
+          position: sticky;
+          top: 20%;
+          left: 0;
+          background-color: #f0f0f0;
+          padding: 10px;
+          font-size: 0.7rem;
+        }
+      }
+
+      /* section03 */
+      #section03 {
+        background: url('image/bg03.png') no-repeat center center fixed;
+        background-size: cover;
+
+        div {
+          width: 200px;
+          height: 200px;
+          background: url('https://pbs.twimg.com/media/C8tku1rVYAA28iK.jpg') no-repeat center center fixed;
+          background-size: 200px 200px;
+
+          &:hover {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3NJxP923RIvUs8LD9-fCzmhEdzJzcAo9jQw&s')
+              no-repeat center center fixed;
+          }
+        }
+      }
+
+      /* 반응형 */
+      @media only screen and (max-width: 640px) {
+        .nav-container {
+          li {
+            display: none;
+            flex-direction: column;
+            background-color: #ff0000;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+          }
+          input[id='hamburgerIcon'] + label {
+            display: block;
+          }
+        }
+      }
+
+      /* animation */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav>
+          <div class="nav-container">
+            <ul>
+              <li><a href="#section01">section01</a></li>
+              <li><a href="#section02">section02</a></li>
+              <li><a href="#section03">section03</a></li>
+            </ul>
+            <input type="checkbox" id="hamburgerIcon" />
+            <label for="hamburgerIcon"><span></span><span></span><span></span></label>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="section01">
+          <div class="question">동물들 중에서 세금 내는 동물은?<span>양도소득세</span></div>
+          <input type="checkbox" id="btn01" style="opacity: 0; position: absolute; left: -9999px" />
+          <label for="btn01" class="labelBtn01">🎸</label>
+          <div class="subQuestion">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQtswk_5iMDoOLMt1SA6vK6I4dRyb6leRbVg&s"
+              alt="마음을 알아주는 상사"
+            />
+          </div>
+        </section>
+        <section id="section02">
+          <div>
+            강남8학군노른자땅으로고교야구에서첫노히트노런이런거나온학교가휘문고야야잘들어봐니네학교땅값여기우리학교운동장만팔아도니네학교땅다사고교야구최강자이긴하
+            지만결과적으로나의모교우리휘문고는매년서울대를수도없이많이보내고우리학교휘문고는재수생들이많아왜재수생들이많냐들어봐들어봐서울대를가고싶은데연고대만붙어서재수하는애들이
+            많다긍까지역이름이들어간학교는아주명문이지고교야구최강자?대통령배5월5일5시간15분혈투5월5일대통령배그길민세그요달팽이요이거몰라?그붕대감고할수있어!이거기억안나?아니몰라?못봤어?기억안나?야2010년초등학교그그5월5일연장전에서이렇게써드딱불규칙딱튀어가지고길민세여기맞고피이렇게나면서붕대감고할수있어!할수있어!이거몰라?명장면?자들어봐이거보라고들어봐들었어?야구부가들어온학교가고등학교가최초야휘문이그리고들었어?바로얘기하시잖아봐빨리봐들어봐WHIMOON휘문휘문휘토리아!씩씩하다우리는휘문의건아온누리를빛낼대한학도야그대뜻을아는가휘문삼일재~천하무적이로다우리휘문아~헤이!휘문이원래학교가저쪽에있었어종로쪽에원래옛날에일제강점기시절에그리고난이후에이제강남을발전시키고거기에학군을만들기위해서휘문이이전을한거지휘문의역사도모르면서;자!오시잖아지금휘문고지금!WHIMOON휘문휘문
+            토리아!이야구장이총면적을다팔아도휘문고땅이안되지않나?그쵸?이거랑마산야구장합쳐야비등비등할정도되지않나?그래도안되겠죠?코엑스아시죠?삼성역예?삼성역아시죠삼성역
+            삼성역사거리오르막길올라가다보면사거리가나오잖아요거기가휘문고교사거리포르쉐매장을끼고우회전을합니다여러분거기가대치동이에요여러분그중심에휘문고등학교가있다.언더스탠?유남쌩?끝건들지마이제
+          </div>
+        </section>
+        <section id="section03">
+          <div></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

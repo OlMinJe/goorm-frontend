@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css transitions & animations example1</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        opacity: 0.4;
+        /* 상세히 속성을 작성하고 싶을 때 */
+        transition: width 4s ease-out 1s, background-color 4s linear 2s, opacity 4s ease-in 4s;
+        /* 전체 속성을 공통적으로 적용하고 싶을 때 */
+        transition: all 2s linear 1s;
+      }
+      div:hover {
+        width: 300px;
+        background-color: blueviolet;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 트랜지션</h1>
+    <p>마우스 오버 시 실행</p>
+    <div></div>
+  </body>
+</html>

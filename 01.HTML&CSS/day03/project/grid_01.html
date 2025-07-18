@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid 실습</title>
+  </head>
+  <body>
+    <header>
+      <h1>Grid 속성 격파하기</h1>
+      <div></div>
+      <div>
+        <p>이 미친놈 뭐지? 왜 다 해줘?</p>
+        <p>그래서 뭐요? 이거 왜 사용해요?</p>
+        <p>1차원의 flex를 확장해서 2차원으로 레이아웃 지정이 가능하다</p>
+      </div>
+    </header>
+    <main>
+      <style>
+        .container {
+          display: grid;
+          /* 그리드 형태 정의 */
+          grid-template-rows: 200px 200px 500px;
+          grid-template-columns: 100px 2fr 1fr; /* 컨테이너의 폭을 조절하면 비율로 설정된 부분만 줄어드네? */
+        }
+      </style>
+      <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

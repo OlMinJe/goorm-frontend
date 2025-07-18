@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>토글 테스트</title>
+  <style>
+    .subQuestion {
+      display: none;
+    }
+    #btn01:checked ~ .subQuestion {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <section id="section01">
+    <div>동물들 중에서 세금 내는 동물은?<span>양도소득세</span></div>
+    <input type="checkbox" id="btn01" style="opacity:0; position:absolute; left:-9999px;">
+    <label for="btn01" class="labelBtn01">기타</label>
+    <div class="subQuestion">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQtswk_5iMDoOLMt1SA6vK6I4dRyb6leRbVg&s" alt="마음을 알아주는 상사" />
+    </div>
+  </section>
+</body>
+</html>

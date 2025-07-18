@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>구름 미션</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>3️⃣ 음식 테이블</h1>
+      </header>
+      <div>
+        <table>
+          <colgroup>
+            <col style="width: 100px" />
+            <col style="width: calc(100% - 100px - 80px - 20%)" />
+            <col style="width: auto" />
+            <col style="width: 80px" />
+            <col style="width: 20%" />
+          </colgroup>
+          <thead style="background-color: #f0f0f0">
+            <tr>
+              <th rowspan="2">음식</th>
+              <th colspan="2">정보</th>
+              <th rowspan="2">평점</th>
+              <th rowspan="2">추천 링크</th>
+            </tr>
+            <tr>
+              <th style="color: red">**객관적인 평가 기준</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>연어덮밥</td>
+              <td colspan="2">신선한 연어에 맛난 하이볼!</td>
+              <td>★☆☆</td>
+              <td>
+                <a href="https://naver.me/xP8mhUxP">이자카야 우규</a>
+              </td>
+            </tr>
+            <tr>
+              <td>육회덮밥</td>
+              <td colspan="2">냄새 없는 맛난 육회!</td>
+              <td>★★☆</td>
+              <td>
+                <a href="https://naver.me/xP8mhUxP">이자카야 우규</a>
+              </td>
+            </tr>
+            <tr>
+              <td>샤브샤브</td>
+              <td colspan="2">무한리필 만세/td></td>
+              <td>★★★</td>
+              <td>
+                <a href="https://naver.me/xXwqLF2G">사브올데이</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+  <style>
+    main {
+      width: 70%;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #f9fafb;
+    }
+    th,
+    td {
+      border: 1px solid #339dca;
+      padding: 12px;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #339dca;
+      display: inline-block;
+    }
+    a::after {
+      content: '❤️';
+    }
+  </style>
+</html>

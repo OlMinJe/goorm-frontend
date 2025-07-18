@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loading spinner</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0d161b;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader {
+      width: 150px;
+      height: 150px;
+      background-color: rgb(223, 243, 147);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+    }
+    .bar {
+      position: relative;
+      width: 10px;
+      height: 15px;
+      background-color: rgb(161, 153, 153);
+      animation: stretch 2s infinite ease-in-out;
+    }
+    .bar:nth-child(1),
+    .bar:nth-child(1) .dot {
+      animation-delay: 0s;
+    }
+    .bar:nth-child(2),
+    .bar:nth-child(2) .dot {
+      animation-delay: 0.1s;
+    }
+    .bar:nth-child(3),
+    .bar:nth-child(3) .dot {
+      animation-delay: 0.2s;
+    }
+    .bar:nth-child(4),
+    .bar:nth-child(4) .dot {
+      animation-delay: 0.3s;
+    }
+    .bar:nth-child(5),
+    .bar:nth-child(5) .dot {
+      animation-delay: 0.4s;
+    }
+    .dot {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg);
+      width: 8px;
+      height: 8px;
+      background-color: #da3f3f;
+      opacity: 0;
+      animation: heartPop 2s infinite ease-in-out;
+    }
+    .dot::before,
+    .dot::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 8px;
+      background-color: #da3f3f;
+      border-radius: 50%;
+    }
+    .dot::before {
+      top: -4px;
+      left: 0;
+    }
+    .dot::after {
+      top: 0;
+      left: 4px;
+    }
+
+    @keyframes stretch {
+      0%,
+      30%,
+      100% {
+        transform: scaleY(1);
+      }
+      10% {
+        transform: scaleY(2);
+      }
+    }
+
+    @keyframes heartPop {
+      0%,
+      30%,
+      100% {
+        opacity: 0;
+        transform: translateX(-50%) rotate(-45deg) scale(0.6);
+      }
+      10% {
+        opacity: 1;
+        transform: translateX(-50%) rotate(-45deg) scale(1.2);
+      }
+    }
+  </style>
+  <body>
+    <div class="loader">
+      <div class="bar"><div class="dot"></div></div>
+      <div class="bar"><div class="dot"></div></div>
+      <div class="bar"><div class="dot"></div></div>
+      <div class="bar"><div class="dot"></div></div>
+      <div class="bar"><div class="dot"></div></div>
+    </div>
+  </body>
+</html>

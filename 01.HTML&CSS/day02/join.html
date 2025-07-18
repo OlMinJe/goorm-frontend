@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>join example</title>
+  </head>
+  <body>
+    <style>
+      table {
+        width: 50%;
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+    </style>
+    <main>
+      <article>
+        <header>
+          <h1>회원가입</h1>
+        </header>
+        <div>
+          <form action="" method="get">
+            <fieldset>
+              <legend>가입정보</legend>
+              <div>
+                <label for="userId">아이디</label>
+                <input type="text" />
+              </div>
+              <div>
+                <label for="userPassword">비밀번호</label>
+                <input type="password" />
+              </div>
+              <div>
+                <label for="userEmail">이메일</label>
+                <input type="email" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>가입정보</legend>
+              <div>
+                <label for="userName">이름</label>
+                <input type="text" />
+              </div>
+              <div>
+                <label for="userBirth">생년월일</label>
+                <input type="number" />
+              </div>
+              <div>
+                <label for="">통신사</label>
+                <select>
+                  <option value="0">선택</option>
+                  <option value="1">SKT</option>
+                  <option value="2">KT</option>
+                  <option value="3">LG</option>
+                </select>
+              </div>
+              <div>
+                <span rowspan="2" style="background-color: skyblue">구분</span>
+                <span style="background-color: antiquewhite">
+                  <label for="">남자</label>
+                  <input type="radio" name="gender" value="0" />
+                  <label for="">여자</label>
+                  <input type="radio" name="gender" value="1" />
+                </span>
+              </div>
+              <div>
+                <label for="">내국인</label>
+                <input type="radio" name="isNationals" value="0" />
+                <label for="">외국인</label>
+                <input type="radio" name="isNationals" value="1" />
+              </div>
+              <div>
+                <label for="">휴대전화번호</label>
+                <input type="tel" />
+              </div>
+              <button type="submit">회원가입</button>
+            </fieldset>
+          </form>
+        </div>
+        <footer>푸터 영역 입니당~</footer>
+      </article>
+    </main>
+  </body>
+</html>

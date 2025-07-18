@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css transitions & animations example2</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        /* animation: myFirst 5s linear 2s 3 alternate; */
+        animation-name: myFirst;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes myFirst {
+        0% {
+          background-color: red;
+          left: 0px;
+          top: 0px;
+          opacity: 0;
+        }
+        25% {
+          background-color: yellow;
+          left: 200px;
+          top: 0px;
+          opacity: 0.25;
+        }
+        50% {
+          background-color: blue;
+          left: 200px;
+          top: 200px;
+          opacity: 0.5;
+        }
+        75% {
+          background-color: green;
+          left: 0px;
+          top: 200px;
+          opacity: 0.75;
+        }
+        100% {
+          background-color: red;
+          left: 0px;
+          top: 0px;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 트랜지션</h1>
+    <div></div>
+  </body>
+</html>

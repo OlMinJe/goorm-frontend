@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>반응형 웹페이지 실습</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1/0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: pink;
+        color: #fff;
+        padding: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .container {
+        margin-top: 10px;
+        padding: 0 20px;
+        width: 100%;
+        min-width: 320px;
+        max-width: 1024px;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 0 20px;
+      }
+
+      .box {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        border: 1px solid;
+      }
+
+      @media only screen and (min-width: 640px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .box {
+          width: calc(50% - 6px);
+          min-width: 40%;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .box {
+          width: calc(33% - 5px);
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>📱 반응형 웹페이지 예제</header>
+
+    <div class="container">
+      <div class="box">
+        <div>
+          <img src="image/image01.jpg" alt="image01" />
+        </div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="image/image02.png" alt="image02" />
+        </div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="image/image03.jpg" alt="image03" />
+        </div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="image/image04.jpg" alt="image04" />
+        </div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="image/image05.png" alt="image05" />
+        </div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div>
+          <img src="image/image01.jpg" alt="image01" />
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

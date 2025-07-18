@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>뉴스 PICK</title>
+    <style>
+      main {
+        width: 330px;
+        padding: 10px 20px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 13px;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .menu {
+        margin-bottom: 10px;
+      }
+      .menu li {
+        display: inline-block;
+        padding: 15px;
+        border-radius: 36px;
+        font-weight: 500;
+        background-color: #f4f6fa;
+        margin-bottom: 10px;
+      }
+      .menu li:first-child {
+        background: #4881f7;
+        color: #fff;
+      }
+      .list_wrap img {
+        width: 30%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .list_wrap li {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+      }
+      .list_content {
+        padding-right: 20px;
+      }
+      .list_content p {
+        /* -webkit-box는 텍스트를 박스로 다루기 위한 특수한 박스 모델 */
+        display: -webkit-box;
+        /* 몇 줄까지 보여줄지 지정 */
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        /* 어느 축의 줄 기준으로 말줄임 처리할지 결정 */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        /* 
+        ...으로 표시하기. 단독으로 사용하면 작동 안함.
+        넘친 텍스트를 어떻게 표시할지!만 결정해주는 장식용~
+        즉, "넘쳤을 때 안 예쁘다고? 내가 이렇게 보여줄게!"는 가능하지만
+        "어떻게 넘칠 건데?", "어디까지 보여줄 건데?"는 스스로 결정 X -> 쪼잔하네
+        */
+        text-overflow: ellipsis;
+      }
+      .list_content span {
+        color: #8a8888;
+      }
+      footer {
+        text-align: center;
+      }
+      button {
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        border-radius: 20px;
+      }
+      button span {
+        color: #4881f7;
+      }
+    </style>
+  </head>
+  <body style="background-color: antiquewhite">
+    <main>
+      <header>
+        <h3 style="padding-bottom: 10px">뉴스1 PICK</h3>
+      </header>
+      <div>
+        <ul class="menu">
+          <li>'극한 폭염'</li>
+          <li>세상인사</li>
+          <li>윤석열 재판</li>
+          <li>지구촌 화제의 뉴스</li>
+          <li>역사&오늘</li>
+          <li>트럼프 관세전쟁</li>
+          <li>이재명 시대</li>
+          <li>의대 증원</li>
+          <li>중동 전쟁</li>
+          <li>100세 건강</li>
+        </ul>
+        <ul class="list_wrap">
+          <li>
+            <div class="list_content">
+              <p>벌써 3만 마리 이상 폐사...경남 축산 농가들 이른 폭엠에 그만..</p>
+              <span>5시간 전</span>
+            </div>
+            <img src="food.png" alt="음식이랍니다" />
+          </li>
+          <li>
+            <div class="list_content">
+              <p>벌써 3만 마리 이상 폐사...경남 축산 농가들 이른 폭엠에 그만..</p>
+              <span>5시간 전</span>
+            </div>
+            <img src="food.png" alt="음식이랍니다" />
+          </li>
+          <li>
+            <div class="list_content">
+              <p>벌써 3만 마리 이상 폐사...경남 축산 농가들 이른 폭엠에 그만..</p>
+              <span>5시간 전</span>
+            </div>
+            <img src="food.png" alt="음식이랍니다" />
+          </li>
+          <li>
+            <div class="list_content">
+              <p>벌써 3만 마리 이상 폐사...경남 축산 농가들 이른 폭엠에 그만..</p>
+              <span>5시간 전</span>
+            </div>
+            <img src="food.png" alt="음식이랍니다" />
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <button type="button"><span>'극한 폭염'</span> 더보기 &gt;</button>
+      </footer>
+    </main>
+  </body>
+</html>
