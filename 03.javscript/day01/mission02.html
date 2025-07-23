@@ -83,7 +83,6 @@
   </head>
   <body>
     <div id="wrap">
-      <!-- 모달 내 더보기 박스 추가 - 윈도우가 아니라 모달 팝업 기준 -->
       <button id="open-modal-btn">모달 열기</button>
       <!-- tab menu -->
       <header>
@@ -91,7 +90,7 @@
           <ul></ul>
         </nav>
       </header>
-
+      <!-- container -->
       <main>
         <div id="container"></div>
       </main>
@@ -139,6 +138,39 @@
       }
     };
 
+    // 중앙 정렬 함수
+    const scrollToCenter = (parent, item) => {
+      /** ✅ getBoundingClientRect와 offsetLeft/offsetWidth의 차이
+       * - getBoundingClientRect(): 브라우저 화면 기준 위치
+       * - offsetLeft: 부모 요소 기준의 왼쪽 위치
+       * - offsetWidth: 요소의 너비
+       *
+       * 1.정적일 때는 offsetLeft/offsetWidth(부모 기준 좌표라서) 사용이 더 간편
+       * 2. 동적일 때는 getBoundingClientRect()
+       */
+      const itemRect = item.getBoundingClientRect(); // 탭의 위치와 크기를 브라우저 기준 좌표계로 가져오기
+      const parentRect = parent.getBoundingClientRect(); // 마찬가지
+
+      const itemRectCenter = itemRect.left + itemRect.width / 2; // 클릭한 탭의 중앙 위치
+      const parentRectCenter = parentRect.left + parentRect.width / 2; // 탭 박스의 중앙 위치
+
+      const offset = itemRectCenter - parentRectCenter; // 얼마나 왼쪽/오른쪽에 치우쳐있나
+      /** ✅ scrollTo vs scrollBy vs scrollIntoView
+       * 1. scrollTo
+       * - 스크롤 전체 시작점(0,0) 기준
+       * - 절대 위치로 이동
+       *
+       * 2. scrollBy
+       * - 현재 스크롤 위치 기준
+       * - 상대 위치만틈 이동
+       *
+       * 3. scrollIntoView
+       * - 특정 요소 자체를 기준
+       * - 자동으로 가장 가까운 스크롤 영역이 움직임
+       */
+      parent.scrollTo({ left: parent.scrollLeft + offset, behavior: 'smooth' }); // 현재 스크롤 위치 + (탭이 가운데에서 벗어난 거리)
+    };
+
     // 탭 클릭 이벤트
     tabList.addEventListener('click', (e) => {
       const clicked = e.target;
@@ -148,16 +180,7 @@
       clicked.classList.add('selected');
       boxItem.textContent = clicked.textContent;
 
-      const tabRect = clicked.getBoundingClientRect(); // 탭의 위치와 크기를 브라우저 기준 좌표계로 가져오기
-      const tabListRect = tabList.getBoundingClientRect(); // 마찬가지
-
-      const clickedTabCenter = tabRect.left + tabRect.width / 2; // 클릭한 탭의 중앙 위치
-      const tabListCenter = tabListRect.left + tabListRect.width / 2; // 탭 박스의 중앙 위치
-
-      const offset = clickedTabCenter - tabListCenter; // 얼마나 왼쪽/오른쪽에 치우쳐있나
-      const centerPosition = tabList.scrollLeft + offset; // centerPosition = 현재 스크롤 위치 + (탭이 가운데에서 벗어난 거리)
-
-      tabList.scrollTo({ left: centerPosition, behavior: 'smooth' });
+      scrollToCenter(tabList, clicked);
     });
 
     // 모달 열기, 닫기
