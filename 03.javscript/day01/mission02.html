@@ -150,10 +150,10 @@
 
       const tabRect = clicked.getBoundingClientRect(); // 탭의 위치와 크기를 브라우저 기준 좌표계로 가져오기
       const tabListRect = tabList.getBoundingClientRect(); // 마찬가지
-      const scrollLeft = tabList.scrollLeft; // 수평 스크롤 위치를 가져옴
 
       const clickedTabCenter = tabRect.left + tabRect.width / 2; // 클릭한 탭의 중앙 위치
       const tabListCenter = tabListRect.left + tabListRect.width / 2; // 탭 박스의 중앙 위치
+
       const offset = clickedTabCenter - tabListCenter; // 얼마나 왼쪽/오른쪽에 치우쳐있나
       const centerPosition = tabList.scrollLeft + offset; // centerPosition = 현재 스크롤 위치 + (탭이 가운데에서 벗어난 거리)
 
