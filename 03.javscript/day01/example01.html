@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭하기</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        color: #fff;
+      }
+
+      .bg_color {
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>버튼 클릭하기</h1>
+      <button type="button" id="myBtn">버튼</button>
+      <div id="boxRed" class="box">텍스트입니다</div>
+    </div>
+  </body>
+
+  <script>
+    const button = document.getElementById('myBtn');
+    button.addEventListener('click', () => {
+      alert('버튼이 클릭되었습니다!');
+
+      const boxRed = document.getElementById('boxRed');
+
+      boxRed.style.backgroundColor = '#ff0';
+      boxRed.style.color = '#000';
+      boxRed.classList.add('bg_color'); // css 우선순위에 밀려서 적용 안됨
+    });
+  </script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤 이벤트 실습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #page-header {
+        height: 50px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #more-btn {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="page-header" style="height: 50px; background: lightgray">헤더</header>
+    <div id="content">
+      <div style="height: 2000px"></div>
+    </div>
+    <button id="more-btn" style="display: none" type="button">더보기</button>
+  </body>
+  <script>
+    const header = document.querySelector('#page-header');
+    const moreBtn = document.getElementById('more-btn');
+    const content = document.getElementById('content');
+
+    // 랜덤 색상 생성 함수
+    const getRandomColor = () => {
+      const r = Math.floor(Math.random() * 255) + 1;
+      const g = Math.floor(Math.random() * 255) + 1;
+      const b = Math.floor(Math.random() * 255) + 1;
+      return `rgb(${r}, ${g}, ${b})`;
+    };
+
+    // ===================== scroll event =====================
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      header.style.backgroundColor = scrollY > 100 ? 'tomato' : 'lightgray';
+      header.style.opacity = scrollY > 100 ? '0.5' : '1';
+
+      // 스크롤 마지막에 도달했을 때, 더보기 버튼 나오게 하기
+      const atBottom = windowHeight + scrollY >= document.documentElement.scrollHeight;
+      moreBtn.style.display = atBottom ? 'block' : 'none';
+
+      /**Q. 스크롤 위치가 왜 1046 까지만 올라가는가?
+       * A. window.scrollY의 최대값은?
+       * - window.scrollY <= (문서 전체 높이 - 브라우저 화면 높이)
+       * - (문서 전체 높이: 2050px) - (브라우저 전체 높이: 1004px) = 총 1046px
+       */
+      console.log('브라우저 화면 크기:', windowWidth + 'x' + windowHeight);
+      console.log('스크롤 위치(Y좌표):', scrollY);
+      console.log('문서 전체 높이:', document.documentElement.scrollHeight);
+    });
+
+    // ===================== more-btn click event =====================
+    moreBtn.addEventListener('click', () => {
+      const newDiv = document.createElement('div');
+      newDiv.style.height = '1000px';
+      newDiv.style.backgroundColor = getRandomColor();
+      content.append(newDiv);
+    });
+  </script>
+</html>

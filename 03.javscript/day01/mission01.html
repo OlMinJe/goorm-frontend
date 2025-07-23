@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모달 팝업 미션</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 10px;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      #open-modal-btn {
+        margin-bottom: 10px;
+      }
+
+      #tab ul {
+        display: flex;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #f0f0f0;
+        white-space: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+
+      #tab li {
+        padding: 10px 15px;
+        border-radius: 20px;
+        margin-right: 10px;
+        background-color: #f0f0f0;
+      }
+
+      #tab li.selected {
+        background-color: rgb(228, 120, 83);
+        color: #fff;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        min-width: 500px;
+        min-height: 500px;
+      }
+
+      .modal-content-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      #more-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 모달 내 더보기 박스 추가 - 윈도우가 아니라 모달 팝업 기준 -->
+      <button id="open-modal-btn">모달 열기</button>
+      <!-- tab menu -->
+      <header>
+        <nav id="tab">
+          <ul></ul>
+        </nav>
+      </header>
+
+      <main>
+        <div id="container"></div>
+      </main>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <!-- modal content top  -->
+        <div class="modal-content-top">
+          <p>이것은 모달 팝업입니다.</p>
+          <button id="close-modal-btn">닫기</button>
+        </div>
+
+        <!-- modal content box -->
+        <div class="modal-content-box" style="height: 430px; overflow-y: scroll">
+          <div id="content">
+            <div style="background-color: #f0f0f0; height: 2000px"></div>
+          </div>
+          <button id="more-btn" style="display: none" type="button">더보기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const modal = document.getElementById('modal');
+    const modalOpenBtn = document.getElementById('open-modal-btn');
+    const modalCloseBtn = document.getElementById('close-modal-btn');
+    const modalContentBox = document.querySelector('.modal-content-box');
+    const moreBtn = document.getElementById('more-btn');
+    const tabList = document.querySelector('#tab ul');
+    const boxItem = document.getElementById('container');
+
+    // 탭 생성
+    const createTabs = (count = 100) => {
+      const tabs = [...Array(count)].map((_, i) => `<li>탭 ${i + 1}</li>`).join('');
+      tabList.innerHTML = tabs;
+    };
+
+    // 탭 선택 초기화
+    const initializeTabs = () => {
+      const firstTab = tabList.querySelector('li');
+      if (firstTab) {
+        firstTab.classList.add('selected');
+        container.textContent = firstTab.textContent;
+      }
+    };
+
+    // 탭 클릭 이벤트
+    tabList.addEventListener('click', (e) => {
+      const clicked = e.target;
+      if (clicked.tagName !== 'LI') return;
+
+      tabList.querySelectorAll('li').forEach((tab) => tab.classList.remove('selected'));
+      clicked.classList.add('selected');
+      boxItem.textContent = clicked.textContent;
+    });
+
+    // 모달 열기, 닫기
+    modalOpenBtn.addEventListener('click', () => (modal.style.display = 'flex'));
+    modalCloseBtn.addEventListener('click', () => (modal.style.display = 'none'));
+
+    // 모달 스크롤 이벤트
+    modalContentBox.addEventListener('scroll', () => {
+      const atBottom = modalContentBox.scrollTop + modalContentBox.clientHeight >= modalContentBox.scrollHeight;
+      moreBtn.style.display = atBottom ? 'block' : 'none';
+    });
+
+    // 더보기 클릭 시 추가
+    moreBtn.addEventListener('click', () => {
+      const newDiv = document.createElement('div');
+      newDiv.style.height = '1000px';
+      newDiv.style.backgroundColor = getRandomColor();
+      document.getElementById('content').append(newDiv);
+    });
+
+    // 랜덤 색상 함수
+    const getRandomColor = () => {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    };
+
+    createTabs();
+    initializeTabs();
+  </script>
+</html>

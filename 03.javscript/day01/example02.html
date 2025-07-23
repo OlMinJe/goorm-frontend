@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e69138c754.js" crossorigin="anonymous"></script>
+    <title>클릭 이벤트 실습</title>
+    <style>
+      .nav-menu {
+        display: block;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="menu-btn" type="button">
+      <i id="menu-open" class="fa-solid fa-caret-down"></i>
+      <i id="menu-close" class="fa-solid fa-caret-up hidden"></i>
+    </button>
+    <nav id="menu" class="nav-menu">
+      <ul>
+        <li>홈</li>
+        <li>서비스</li>
+        <li>문의하기</li>
+      </ul>
+    </nav>
+  </body>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    // menu.style.display = 'block'; // 인라인 스타일과 css 설정의 우선 순위 차이로 초기값 직접 설정
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+
+    menuBtn.addEventListener('click', () => {
+      // const isVisible = menu.style.display === 'block';
+      // menu.style.display = isVisible ? 'none' : 'block';
+      // console.log('메뉴 상태:', isVisible ? '닫힘' : '열림');
+
+      const isHidden = menu.classList.toggle('hidden');
+      menuOpen.classList.toggle('hidden', isHidden);
+      menuClose.classList.toggle('hidden', !isHidden);
+
+      console.log('메뉴 상태:', isHidden ? '닫힘' : '열림');
+    });
+  </script>
+</html>
