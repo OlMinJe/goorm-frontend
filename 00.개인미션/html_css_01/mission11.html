@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(HTML) html 폼 요소 이해하기</title>
+  </head>
+  <body>
+    <h2>회원 정보 입력</h2>
+
+    <form action="/submit" method="post">
+      <!-- 텍스트 입력 -->
+      <label for="name">이름:</label><br />
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required /><br /><br />
+
+      <!-- 이메일 입력 -->
+      <label for="email">이메일:</label><br />
+      <input type="email" id="email" name="email" placeholder="example@example.com" /><br /><br />
+
+      <!-- 비밀번호 입력 -->
+      <label for="password">비밀번호:</label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+
+      <!-- 체크박스 -->
+      <label>관심사 (복수 선택 가능):</label><br />
+      <input type="checkbox" id="food" name="interest" value="food" />
+      <label for="food">음식</label>
+      <input type="checkbox" id="travel" name="interest" value="travel" />
+      <label for="travel">여행</label>
+      <input type="checkbox" id="tech" name="interest" value="tech" />
+      <label for="tech">기술</label><br /><br />
+
+      <!-- 라디오 버튼 -->
+      <label>성별:</label><br />
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">남성</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">여성</label><br /><br />
+
+      <!-- 셀렉트 박스 -->
+      <label for="job">직업:</label><br />
+      <select id="job" name="job">
+        <option value="student">학생</option>
+        <option value="engineer">엔지니어</option>
+        <option value="teacher">교사</option></select
+      ><br /><br />
+
+      <!-- 텍스트 영역 -->
+      <label for="memo">메모:</label><br />
+      <textarea id="memo" name="memo" rows="4" cols="40" placeholder="기타 사항을 입력하세요"></textarea><br /><br />
+
+      <!-- 제출 버튼 -->
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

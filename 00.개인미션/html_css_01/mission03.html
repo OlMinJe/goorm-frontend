@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(css) 가상 선택자 이해하기</title>
+    <style>
+      input:checked + label {
+        color: green;
+        font-weight: bold;
+      }
+
+      input:enabled {
+        background-color: #e0f7fa;
+      }
+
+      input:disabled {
+        background-color: #eeeeee;
+        color: #999;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 가상 선택자 예제</h1>
+
+    <div class="section">
+      <h2>:checked</h2>
+      <input type="checkbox" id="check1" />
+      <label for="check1">이 체크박스를 선택하면 라벨이 초록색으로 바뀝니다.</label>
+    </div>
+
+    <div class="section">
+      <h2>:enabled</h2>
+      <input type="text" placeholder="활성화된 입력창입니다" />
+    </div>
+
+    <div class="section">
+      <h2>:disabled</h2>
+      <input type="text" placeholder="비활성화된 입력창입니다" disabled />
+    </div>
+  </body>
+</html>

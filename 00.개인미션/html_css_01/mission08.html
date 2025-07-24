@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(HTML) 공간 분할 태그-시맨틱 태그 이해하기</title>
+  </head>
+  <body>
+    <h1>시맨틱 태그 이해</h1>
+    <h2>✅ 1. 시맨틱 태그란?</h2>
+    <div>
+      HTML5에서 도입된 시맨틱(semantic, 의미 기반) 태그는 웹 페이지의 구조를 명확히 설명하는 태그로,
+      개발자/검색엔진/보조 기술(스크린리더 등) 모두에게 페이지 구조를 쉽게 이해시키는 데 도움됨.
+    </div>
+    <h2>✅ 2. 주요 시맨틱 태그 소개</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>태그</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;header&gt;</td>
+          <td>사이트나 섹션의 헤더 영역 (로고, 내비게이션 포함)</td>
+        </tr>
+        <tr>
+          <td>&lt;nav&gt;</td>
+          <td>내비게이션 링크를 담는 영역</td>
+        </tr>
+        <tr>
+          <td>&lt;main&gt;</td>
+          <td>문서의 핵심 콘텐츠 영역 (하나의 문서에 하나만 사용)</td>
+        </tr>
+        <tr>
+          <td>&lt;section&gt;</td>
+          <td>관련 있는 콘텐츠를 묶는 구획 영역</td>
+        </tr>
+        <tr>
+          <td>&lt;article&gt;</td>
+          <td>독립적으로 의미를 가지는 콘텐츠 (예: 뉴스, 상품 정보 등)</td>
+        </tr>
+        <tr>
+          <td>&lt;aside&gt;</td>
+          <td>보조 콘텐츠 (광고, 관련 링크 등)</td>
+        </tr>
+        <tr>
+          <td>&lt;footer&gt;</td>
+          <td>하단 영역, 저작권, 연락처, 이용약관 등</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+
+    <header>
+      <h1>마켓컬리</h1>
+      <nav>
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">베스트</a></li>
+          <li><a href="#">신상품</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>오늘의 추천 상품</h2>
+        <article>
+          <h3>친환경 무농약 사과</h3>
+          <p>가격: 9,900원</p>
+        </article>
+        <article>
+          <h3>한우 불고기 세트</h3>
+          <p>가격: 19,800원</p>
+        </article>
+      </section>
+
+      <aside>
+        <h2>광고</h2>
+        <p>배송비 무료 쿠폰 받기</p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 MarketKurly Corp</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(HTML) 다양한 입력폼 만들기</title>
+  </head>
+  <body>
+   <h2>회원가입</h2>
+  <form action="/signup" method="post">
+    <label for="username">이름:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="email">이메일:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">비밀번호:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="birth">생년월일:</label><br>
+    <input type="date" id="birth" name="birth"><br><br>
+
+    <label>성별:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">남성</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">여성</label><br><br>
+
+    <label for="interest">관심사:</label><br>
+    <select id="interest" name="interest">
+      <option value="food">음식</option>
+      <option value="tech">기술</option>
+      <option value="travel">여행</option>
+    </select><br><br>
+
+    <label for="bio">자기소개:</label><br>
+    <textarea id="bio" name="bio" rows="4" cols="30" placeholder="간단히 소개해주세요"></textarea><br><br>
+
+    <label>
+      <input type="checkbox" name="agree" required>
+      이용약관에 동의합니다
+    </label><br><br>
+
+    <button type="submit">회원가입</button>
+  </form>
+    </form>
+  </body>
+</html>

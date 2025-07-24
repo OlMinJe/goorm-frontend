@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 자손 선택자 이해하기</title>
+    <style>
+      /* 자손 선택자 */
+      .direct-descendant > p {
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* 후손 선택자 */
+      .any-descendant p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>자손 선택자(>)</h2>
+    <div class="direct-descendant">
+      <p>direct-descendant의 직접 자식</p>
+      <div>
+        <p>direct-descendant안에 있지만 직접 자식이 아니라서 스타일이 적용되지 않음</p>
+      </div>
+    </div>
+
+    <h2>후손 선택자 (공백)</h2>
+    <div class="any-descendant">
+      <p>any-descendant의 자식이자 후손</p>
+      <div>
+        <p>any-descendant 자식의 자식(후손)</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS 배치 이해하기</title>
+    <style>
+      .none {
+        display: none;
+      }
+
+      .block {
+        display: block;
+        background-color: lightblue;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .inline {
+        display: inline;
+        background-color: lightgreen;
+        padding: 5px;
+      }
+
+      .container {
+        border: 1px solid #333;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 배치 이해하기</h1>
+
+    <p>CSS의 display 속성은 HTML 요소가 페이지에 어떻게 나타날지를 결정하는 데 사용됨.</p>
+
+    <h2>✅ 개념 설명</h2>
+    <h3>display: none</h3>
+    <ul>
+      <li>요소를 보이지 않게 숨기며 공간도 차지하지 않음.</li>
+      <li>DOM에는 남아 있지만 사용자에게는 보이지 않음.</li>
+    </ul>
+
+    <h3>display: block</h3>
+    <ul>
+      <li>요소를 블록 요소처럼 배치.</li>
+      <li>전체 가로 폭을 차지하며, 줄 바꿈이 자동으로 일어남.</li>
+    </ul>
+    <h3>display: inline</h3>
+    <ul>
+      <li>요소를 인라인 요소처럼 배치.</li>
+      <li>컨텐츠만큼의 너비를 차지하며 줄 바꿈이 일어나지 않음.</li>
+    </ul>
+
+    <div class="container">
+      <div class="block">Block 요소 1</div>
+      <div class="block">Block 요소 2</div>
+      <span class="inline">Inline 요소 1</span>
+      <span class="inline">Inline 요소 2</span>
+      <div class="none">이 요소는 display: none 입니다 (보이지 않음)</div>
+    </div>
+  </body>
+</html>
