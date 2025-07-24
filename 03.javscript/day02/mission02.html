@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미션 1번</title>
+    <style>
+      #result {
+        color: red;
+        margin-top: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>이용자 정보 입력</h2>
+    <label for="userName">이름</label>
+    <input type="text" id="userName" placeholder="이름을 입력하세요" />
+    <br />
+
+    <label for="userAge">나이</label>
+    <input type="number" id="userAge" placeholder="숫자로 입력" />
+    <br />
+
+    <label for="userTel">전화번호</label>
+    <input type="tel" id="userTel" placeholder="010-1234-5678" />
+    <br />
+
+    <button type="button" id="submit-btn">입장 가능 여부 확인</button>
+    <br />
+
+    <div id="result"></div>
+  </body>
+  <script>
+    // 상수 정의
+    const RESULT_MESSAGE = {
+      EMPTY_ALL: '⚠️ 유효한 값을 입력하세요.',
+      INVALID_NAME: '⚠️ 이름을 올바른 형식으로 입력하세요.',
+      INVALID_AGE: '⚠️ 나이를 올바른 형식으로 입력하세요.',
+      EMPTY_PHONE: '⚠️ 휴대폰 번호를 입력해주세요.',
+      INVALID_PHONE: '⚠️ 휴대폰 번호는 11자리여야 합니다.',
+      UNDERAGE: '❌ 미성년자는 입장할 수 없습니다.',
+      getSuccessMessage: (name, phone, age) =>
+        `✅ ${name}님(${phone})은 입장 가능합니다. 내년에는 ${age + 1}살이 됩니다!`,
+    };
+    const TEL_PATTERN = /^(\d{3})(\d{4})(\d{4})$/;
+    const TEL_FORMATTED_REGEX = /^\d{3}-\d{4}-\d{4}$/;
+
+    // DOM 요소 선택
+    const nameInput = document.getElementById('userName');
+    const ageInput = document.getElementById('userAge');
+    const telInput = document.getElementById('userTel');
+    const submitBtn = document.getElementById('submit-btn');
+    const result = document.getElementById('result');
+
+    // 나이 입력 제어
+    ageInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, ''); // \D : 숫자가 아닌 값 없애기
+    });
+
+    // 전화번호 입력 제어
+    const formatPhoneNumber = (digits) => digits.replace(TEL_PATTERN, '$1-$2-$3');
+    telInput.addEventListener('input', (e) => {
+      const numbersOnly = e.target.value.replace(/\D/g, '').slice(0, 11);
+      telInput.value = numbersOnly.length >= 11 ? formatPhoneNumber(numbersOnly) : numbersOnly;
+    });
+
+    // 유효성 검사 함수
+    const validateInputs = () => {
+      const name = nameInput.value.trim();
+      const age = parseInt(ageInput.value.trim());
+      const phone = telInput.value.trim();
+
+      if (!name && isNaN(age) && !phone) return RESULT_MESSAGE.EMPTY_ALL;
+      if (name.replace(/\s/g, '').length === 0) return RESULT_MESSAGE.INVALID_NAME;
+      if (isNaN(age)) return RESULT_MESSAGE.INVALID_AGE;
+      if (!phone) return RESULT_MESSAGE.EMPTY_PHONE;
+      if (!TEL_FORMATTED_REGEX.test(phone)) return RESULT_MESSAGE.INVALID_PHONE;
+      if (age < 20) return RESULT_MESSAGE.UNDERAGE;
+      return RESULT_MESSAGE.getSuccessMessage(name, phone, age);
+    };
+
+    // 메시지 출력 함수
+    const showResult = (message) => (result.textContent = message);
+
+    // 버튼 클릭 이벤트
+    submitBtn.addEventListener('click', () => {
+      const message = validateInputs();
+      showResult(message);
+    });
+  </script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>멀티 슬라이드</title>
+    <style>
+      .multi-container {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .multi-wrapper {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .multi-slide {
+        flex: 0 0 33.3333%; /* 한 화면에 3개 보이기 */
+        height: 300px;
+        padding: 5px;
+      }
+
+      .multi-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .multi-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="multi-container">
+      <div class="multi-wrapper" id="multiSlider">
+        <div class="multi-slide"><img src="https://picsum.photos/id/100/300/200" /></div>
+        <div class="multi-slide"><img src="https://picsum.photos/id/101/300/200" /></div>
+        <div class="multi-slide"><img src="https://picsum.photos/id/102/300/200" /></div>
+        <div class="multi-slide"><img src="https://picsum.photos/id/103/300/200" /></div>
+        <div class="multi-slide"><img src="https://picsum.photos/id/104/300/200" /></div>
+        <div class="multi-slide"><img src="https://picsum.photos/id/105/300/200" /></div>
+      </div>
+      <button class="multi-btn prev" onclick="moveMultiSlide(-1)">‹</button>
+      <button class="multi-btn next" onclick="moveMultiSlide(1)">›</button>
+    </div>
+
+    <script>
+      const multiSlider = document.getElementById('multiSlider');
+      const multiSlides = multiSlider.children;
+      const slidesPerView = 3; // 한 화면에 보여줄 슬라이드 수
+      const totalGroups = Math.ceil(multiSlides.length / slidesPerView); // 슬라이드를 3장씩 묶은 그룹 수
+      let currentGroup = 0; // 현재 그룹 위치
+
+      const moveMultiSlide = (step) => {
+        currentGroup = (currentGroup + step + totalGroups) % totalGroups;
+        multiSlider.style.transform = `translateX(-${100 * currentGroup}%)`;
+      };
+
+      setInterval(() => moveMultiSlide(1), 5000);
+    </script>
+  </body>
+</html>

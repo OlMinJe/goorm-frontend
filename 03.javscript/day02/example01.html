@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이더 예제</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      .slider-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 40px auto;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        height: 400px;
+        flex-shrink: 0;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 20px;
+        border-radius: 4px;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      @media (max-width: 600px) {
+        .slide {
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider-wrapper" id="slider">
+        <div class="slide">
+          <img src="image/image01.jpeg" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="image/image02.jpeg" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="image/image03.gif" alt="Slide 3" />
+        </div>
+      </div>
+      <button class="slider-button prev" onclick="changeSlide(-1)">&lt;</button>
+      <button class="slider-button next" onclick="changeSlide(1)">&gt;</button>
+    </div>
+  </body>
+  <script>
+    const slider = document.getElementById('slider');
+    const totalSlides = slider.children.length;
+    let currentIndex = 0;
+
+    /**
+     * 슬라이치 위치를 업데이트하는 함수(현재 인덱스에 따라 슬라이트 wrapper를 왼쪽으로 이동
+     * 각 슬라이드는 min-width: 100%이므로 100%씩 이동하면 다음 슬라이드가 보임.
+     * - currentIndex = 0 → translateX(0%) (첫 번째 슬라이드)
+     * - currentIndex = 1 → translateX(-100%) (두 번째 슬라이드)
+     * - currentIndex = 2 → translateX(-200%) (세 번째 슬라이드)
+     */
+    const updateSlidePosition = () => (slider.style.transform = `translateX(-${currentIndex * 100}%)`);
+
+    /**
+     * 현재 인덱스를 1 감소시키되, 첫 번째에서 뒤로 가면 마지막 슬라이드로 순환됨.
+     * 예: currentIndex = 0 → 이전 클릭 → (0 - 1 + 3) % 3 = 2
+     */
+    /**
+    const prevSlide = () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    };
+
+    const nextSlide = () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    }; */
+
+    const changeSlide = (step) => {
+      currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+      updateSlidePosition();
+    };
+
+    setInterval(() => changeSlide(1), 4000);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+  </script>
+</html>

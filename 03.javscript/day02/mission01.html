@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 실습</title>
+    <style>
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>자바스크립트 기초 실습</h1>
+    <h2>자기소개</h2>
+    <p id="self-introduce"></p>
+
+    <h2>나이 체크</h2>
+    <label for="userName">이름</label>
+    <input type="text" id="userName" placeholder="이름을 입력하세요" />
+    <br />
+    <label for="userAge">나이</label>
+    <input type="number" id="userAge" placeholder="숫자로 입력" />
+    <br />
+    <button type="button" id="submit-btn">입장 가능 여부 확인</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    //
+    const info = {
+      name: '민제',
+      age: 26,
+      job: '프론트엔드 개발자',
+    };
+    const selfIntroductionText = `안녕하세요. 제 이름은 ${info.name}이고, 나이는 ${info.age}살이며, 직업은 ${info.job}입니다.`;
+
+    const selfIntroduction = document.getElementById('self-introduce');
+    selfIntroduction.innerHTML = selfIntroductionText;
+
+    //
+    const nameInput = document.getElementById('userName');
+    const ageInput = document.getElementById('userAge');
+    const submitBtn = document.getElementById('submit-btn');
+    const result = document.getElementById('result');
+
+    const showResult = (message) => (result.textContent = message);
+
+    /**Q. 나이 입력 예외처리를 진행한 이유
+     * A. <input type="number">는 숫자 외에도 e, E, +, -, . 같은 **지수 표기법(exponential notation)**과 부호를 기본적으로 허용함. (예: 1e5, +30, -4.2)
+     *    숫자 입력값을 단순한 정수만 받도록 제한하는 것이 사용자 입장에서 올바른 동작
+     */
+    ageInput.addEventListener('keydown', (e) => {
+      if (['e', 'E', '+', '-'].includes(e.key)) e.preventDefault();
+    });
+
+    submitBtn.addEventListener('click', () => {
+      /**Q. trim 대신 replace와 정규 표현식을 사용한 이유
+       * A. trim은 앞뒤 공백만 제거함.
+       *    반면에 replace는 문자열의 패턴을 변환할 수 있기 때문에, 정규표현식과 함께 사용하여
+       *    문자열 안의 모든 공백 문자(띄어쓰기, 줄바꿈, 탭 등)를 제거함.
+       *
+       *    - trim() 겉모습 정리용,
+       *    - replace(/\s/g, '') 입력값 자체를 정규화
+       */
+      const name = nameInput.value.replace(/\s/g, '');
+      const age = parseInt(ageInput.value.replace(/\s/g, ''));
+
+      if (!name && isNaN(age)) {
+        result.textContent = '⚠️ 유효한 이름과 나이를 입력하세요.';
+        return;
+      }
+
+      if (!name) {
+        showResult('⚠️ 이름을 올바른 형식으로 입력하세요.');
+        return;
+      }
+
+      if (isNaN(age)) {
+        showResult('⚠️ 나이를 올바른 형식으로 입력하세요.');
+        return;
+      }
+
+      if (age < 20) showResult('❌ 미성년자는 입장할 수 없습니다.');
+      else showResult(`✅ ${name}님은 입장 가능합니다. 내년에는 ${age + 1}살이 됩니다!`);
+    });
+  </script>
+</html>

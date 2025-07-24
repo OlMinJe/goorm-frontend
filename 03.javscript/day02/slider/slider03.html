@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이드 슬라이더</title>
+    <style>
+      .fade-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height: 400px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .fade-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+
+      .fade-slide.active {
+        opacity: 1;
+        z-index: 2;
+      }
+
+      .fade-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fade-container" id="fade-slider">
+      <div class="fade-slide active">
+        <img src="https://picsum.photos/id/1025/800/400" width="100%" height="100%" />
+      </div>
+      <div class="fade-slide"><img src="https://picsum.photos/id/1026/800/400" width="100%" height="100%" /></div>
+      <div class="fade-slide"><img src="https://picsum.photos/id/1027/800/400" width="100%" height="100%" /></div>
+
+      <button class="fade-button prev" onclick="changeFadeSlide(-1)">‹</button>
+      <button class="fade-button next" onclick="changeFadeSlide(1)">›</button>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll('.fade-slide');
+      let fadeIndex = 0;
+
+      const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      };
+
+      const changeFadeSlide = (step) => {
+        fadeIndex = (fadeIndex + step + slides.length) % slides.length;
+        showSlide(fadeIndex);
+      };
+
+      setInterval(() => changeFadeSlide(1), 4000);
+    </script>
+  </body>
+</html>
