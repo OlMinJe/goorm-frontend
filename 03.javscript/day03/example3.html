@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커피 주문 시스템</title>
+  </head>
+  <body>
+    <h1>커피 주문 시스템(async/await)</h1>
+    <button type="button" onclick="handleOrder()">커피 주문하기!</button>
+    <div id="log"></div>
+  </body>
+  <script>
+    let orderNumber = 0;
+
+    // 커피 만드는 함수
+    function makeCoffee(orderId) {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve(`[${orderId}번째 주문] 커피 완성! 진동벨 울림!`), 3000);
+      });
+    }
+
+    async function handleOrder() {
+      orderNumber++;
+
+      const currentOrder = orderNumber;
+      const log = document.getElementById('log');
+
+      const logItem = document.createElement('div');
+      logItem.classList = 'log-item';
+      logItem.id = `order-${currentOrder}`;
+      logItem.textContent = `[${currentOrder} 번째] 커피를 만드는 중입니다...`;
+      log.appendChild(logItem);
+
+      const result = await makeCoffee(currentOrder);
+
+      logItem.textContent = result;
+    }
+  </script>
+</html>

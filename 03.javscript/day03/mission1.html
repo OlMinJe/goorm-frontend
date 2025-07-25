@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입 유효성 검사</title>
+    <style>
+      * {
+        padding: none;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        max-width: 400px;
+        margin: auto;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .message {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .success {
+        color: green;
+      }
+
+      .error {
+        color: red;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>회원가입</h2>
+
+    <label for="email">이메일</label>
+    <input type="email" id="email" placeholder="example@email.com" />
+    <div id="emailMessage" class="message"></div>
+
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" placeholder="8자 이상, 특수문자 포함" />
+    <div id="passwordMessage" class="message"></div>
+
+    <button onclick="validateForm()">가입하기</button>
+    <div id="submitMessage" class="message"></div>
+  </body>
+
+  <script>
+    const RESULT_MESSAGE = {
+      EMPTY_EMAIL: '이메일을 입력하세요.',
+      INVALID_EMAIL: '이메일을 올바른 형식으로 입력하세요.',
+      EMPTY_PASSWORD: '비밀번호를 입력하세요.',
+      INVALID_PASSWORD: '비밀번호는 특수문자 포함 8자 이상',
+      ERROR: '입력한 정보를 다시 확인해주세요.',
+      SUCCESS: '얼 성공',
+    };
+
+    const CLASS_NAME = {
+      BASE: 'message',
+      ERROR: 'error',
+      SUCCESS: 'success',
+    };
+
+    const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isValidPassword = (password) => password.length >= 8 && /[!@#$%^&*]/.test(password);
+
+    const resetMessage = (elements) => {
+      elements.forEach((el) => {
+        el.textContent = '';
+        el.className = CLASS_NAME.BASE;
+      });
+    };
+
+    const setMessage = (element, message, type = 'error') => {
+      element.textContent = message;
+      element.className = `${CLASS_NAME.BASE} ${CLASS_NAME[type.toUpperCase()]}`;
+    };
+
+    const validateForm = () => {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const emailMessage = document.getElementById('emailMessage');
+      const passwordMessage = document.getElementById('passwordMessage');
+      const submitMessage = document.getElementById('submitMessage');
+
+      let isValidAll = true;
+
+      resetMessage([emailMessage, passwordMessage, submitMessage]);
+
+      if (!email) {
+        setMessage(emailMessage, RESULT_MESSAGE.EMPTY_EMAIL);
+        isValidAll = false;
+      } else if (!isValidEmail(email)) {
+        setMessage(emailMessage, RESULT_MESSAGE.INVALID_EMAIL);
+        isValidAll = false;
+      }
+
+      if (!password) {
+        setMessage(passwordMessage, RESULT_MESSAGE.EMPTY_PASSWORD);
+        isValidAll = false;
+      } else if (!isValidPassword(password)) {
+        setMessage(passwordMessage, RESULT_MESSAGE.INVALID_PASSWORD);
+        isValidAll = false;
+      }
+
+      if (!isValidAll) setMessage(submitMessage, RESULT_MESSAGE.ERROR);
+      else setMessage(submitMessage, RESULT_MESSAGE.SUCCESS, 'success');
+    };
+  </script>
+</html>
