@@ -120,8 +120,13 @@
         isValidAll = false;
       }
 
-      if (!isValidAll) setMessage(submitMessage, RESULT_MESSAGE.ERROR);
-      else setMessage(submitMessage, RESULT_MESSAGE.SUCCESS, 'success');
+      if (!isValidAll) {
+        setMessage(submitMessage, RESULT_MESSAGE.ERROR);
+        return;
+      }
+
+      setMessage(submitMessage, RESULT_MESSAGE.SUCCESS, 'success');
+      // api 호출 부분
     };
   </script>
 </html>
