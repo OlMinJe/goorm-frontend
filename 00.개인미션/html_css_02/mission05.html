@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(HTML/CSS) 시맨틱 태그를 사용한 간단한 블로그 페이지 제작하기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+      }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #e9ecef;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      article {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Blog</h1>
+      <p>HTML/CSS 시맨틱 태그 예제</p>
+    </header>
+
+    <nav>
+      <a href="#">홈</a>
+      <a href="#">소개</a>
+      <a href="#">연락처</a>
+    </nav>
+
+    <main>
+      <article>
+        <h2>첫 번째 글</h2>
+        <p>시맨틱 태그를 사용하면 웹 페이지 구조를 더. 명확하게 표현할 수 있다.</p>
+      </article>
+      <article>
+        <h2>두 번째 글</h2>
+        <p>header, main, footer, article, nav 사용하기!</p>
+      </article>
+      <article>
+        <h2>세 번째 글</h2>
+        <p>머리 쥐어짜기</p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025</p>
+    </footer>
+  </body>
+</html>

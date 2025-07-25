@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(HTML/CSS) 접근성 속성(예: alt, role 등) 추가하기</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 1.5rem;
+      }
+
+      nav {
+        background-color: #f1f1f1;
+        padding: 1rem;
+      }
+
+      main {
+        padding: 2rem;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 0.75rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+
+  <header role="banner">
+    <h1>접근성 데모 페이지</h1>
+    <p>스크린 리더와 보조기기 사용자들을 고려한 마크업</p>
+  </header>
+
+  <nav role="navigation" aria-label="메인 내비게이션">
+    <ul>
+      <li><a href="#section1">섹션 1</a></li>
+      <li><a href="#section2">섹션 2</a></li>
+    </ul>
+  </nav>
+
+  <main role="main">
+    <section id="section1">
+      <h2>이미지에 대체 텍스트 제공</h2>
+      <img src="" alt="난 이제 지쳤어요 땡벌 이미지" />
+    </section>
+
+    <section id="section2" style="margin-top: 2rem;">
+      <h2>버튼에 역할과 레이블 제공</h2>
+      <button type="button" role="button" aria-label="더 많은 정보 보기">더보기</button>
+    </section>
+  </main>
+
+  <footer role="contentinfo" style="text-align:center; padding:1rem; background:#eee;">
+    <p>&copy; </p>
+  </footer>
+
+</body>
+
+  </body>
+</html>
