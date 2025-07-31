@@ -2,24 +2,39 @@
 
 ## 1. 웹 애플리케이션의 동작 흐름
 
+웹 애플리케이션은 사용자 요청(Request) → 서버 처리(Backend) → 응답(Response) → 브라우저 렌더링(Frontend) 의 흐름으로 작동한다.
+
 ### 1-1. 사용자 요청 (Request)
 
 - 사용자가 브라우저에서 URL 입력 또는 버튼 클릭
 - 브라우저가 서버에 HTTP 요청을 전송
+- 요청에는 다음 정보가 포함됨:
+  1.  URL(자원 주소)
+  2.  HTTP 메서드 (GET, POST 등)
+  3.  헤더(Header): 브라우저 정보, 쿠키, 인증 토큰 등
+  4.  바디(Body): POST 요청 시 전송할 데이터
 
 ### 1-2. 서버 처리 (Backend)
 
 - 서버(백엔드)는 요청을 받아 로직 처리 (데이터베이스 조회, 연산 등)
 - 처리 결과를 HTML, JSON 등 응답 형태로 준비
 
-### 1-3. 응답 (Response)
+### 1-3. 서버 응답 (Response)
 
 - 서버가 브라우저로 응답(HTML/CSS/JS/JSON 등)을 보냄
+- 응답에는 다음 정보가 포함됨:
+  1.  HTTP 상태 코드: 200(성공), 404(자원 없음), 500(서버 오류) 등
+  2.  응답 헤더: 데이터 형식, 길이, 캐싱 정보
+  3.  응답 본문: HTML/CSS/JS 또는 JSON 등의 실제 데이터
 
 ### 1-4.브라우저 렌더링 (Frontend)
 
-- 브라우저는 받은 HTML/CSS/JS를 해석하여 화면에 표시
-- JavaScript로 동적 기능 실행
+- 브라우저는 응답 받은 데이터를 해석하여 화면에 표시
+  1. HTML: 콘텐츠 구조
+  2. CSS: 스타일, 색상, 레이아웃
+  3. JavaScript: 동적 동작(애니메이션, 사용자 상호작용)
+- 렌더링 엔진이 HTML과 CSS를 분석하고 DOM 트리를 생성하여 화면에 그린다.
+- 필요 시 JavaScript가 추가로 서버에 요청(AJAX, Fetch API)을 보내어 데이터를 갱신한다.
 
 ## 2. HTTP 프로토콜
 
@@ -70,10 +85,19 @@ Host: example.com
 HTTP/1.1 200 OK
 Content-Type: text/html
 
-<html> ... </html>
+<html>
+  <head><title>Products</title></head>
+  <body>
+    <h1>상품 목록</h1>
+  </body>
+</html>
 ```
 
 ### 4) 브라우저 화면 렌더링
+
+- HTML → 구조 생성
+- CSS → 스타일 적용
+- JS → 동적 동작 추가
 
 ## 5. 요약
 
