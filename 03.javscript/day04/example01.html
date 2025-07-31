@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동기, 비동기 실습</title>
+  </head>
+  <body>
+    <button onclick="makeCoffee()">커피 만들기 시작</button>
+    <button onclick="nextOrder()">다음 손님 주문</button>
+  </body>
+  <script>
+    // ================ 동기 내에서의 비동기 처리랄까 ================
+    // function blockFor5Seconds() {
+    //   const end = Date.now() + 5000;
+    //   while (Date.now() < end) {}
+    // }
+
+    // function makeCoffee() {
+    //   console.log('1.커피 주문');
+    //   console.log('2. 커피 만드는 중');
+
+    //   blockFor5Seconds(); // UI 멈춤
+
+    //   console.log('3. 커피 다 됐어요! (진동벨 없음)');
+    //   console.log('결제 먼저 하고 싶어도 안 됨!');
+    // }
+
+    // function nextOrder() {
+    //   alert('다음 주문을 받아주세요!');
+    //   makeCoffee();
+    // }
+
+    // ================ 비동기 처리 ================
+    // function makeCoffee() {
+    //   console.log('1.커피 주문');
+    //   console.log('2. 커피 만드는 중');
+
+    //   setTimeout(() => console.log('3. 커피 다 됐어요! (진동벨 없음)'), 5000);
+
+    //   console.log('결제 먼저 하고 싶어도 안 됨!');
+    // }
+
+    // function nextOrder() {
+    //   alert('다음 주문을 받아주세요!');
+    //   makeCoffee();
+    // }
+
+    // ================ promise ================
+    // function delayTask(task, fail = false) {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       if (fail) {
+    //         reject(`${task} 실패!`);
+    //       } else {
+    //         console.log(`${task} 완료!`);
+    //         resolve();
+    //       }
+    //     }, 1000);
+    //   });
+    // }
+
+    // delayTask('1. 커피 주문 받기')
+    //   .then(() => delayTask('2. 원두갈기'))
+    //   .then(() => delayTask('3. 물 끓이기', true))
+    //   .then(() => delayTask('4. 커피 내리가', true))
+    //   .then(() => delayTask('5. 손님에게 커피 제공', true))
+    //   .then(() => console.log('커피 제공 완료!', true))
+    //   .catch((err) => console.error('어딘가에서 에러 발생: ', err));
+
+    // ================ async/await ================
+    function delayTask(task, fail = false) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (fail) {
+            reject(`${task} 실패!`);
+          } else {
+            console.log(`${task} 완료!`);
+            resolve();
+          }
+        }, 1000);
+      });
+    }
+
+    async function makeCoffee() {
+      await delayTask('1. 커피 주문 받기');
+
+      try {
+        await delayTask('2. 원두 갈기', true); // 일부러 실패 시킴
+      } catch (err) {
+        console.warn('---- 원두 갈기 문제 발생 --- : ', err); // 원두 실패해도 계속 진행할 수 있게 처리
+        // 실행을 종료 시키는 방법
+        // 1. return 사용하기
+        // return;
+        // 2. 에러 던지기
+        // throw new Error(err);
+      }
+
+      await delayTask('3. 물 끓이기');
+      await delayTask('4. 커피 내리기');
+      await delayTask('5. 손님에게 커피 제공');
+
+      console.log('커피 제공 완료!');
+    }
+    // 1. 콜백이 왜 생기는지
+    // 2.
+    // 3.
+  </script>
+</html>
