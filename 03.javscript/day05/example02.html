@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클로저 카운터</title>
+  </head>
+  <body>
+    <h2>카운터 예제</h2>
+    <button id="btn">+1 증가</button>
+    <p id="count">0</p>
+  </body>
+  <script>
+    function createCounter() {
+      let count = 0;
+      return function () {
+        count++;
+        console.log(count);
+        document.getElementById('count').textContent = count;
+      };
+    }
+
+    // 참조를 걸었음
+    const counter = createCounter();
+    document.getElementById('btn').addEventListener('click', counter);
+
+    // 참조를 안걸었음
+    // createCounter();
+    // createCounter();
+    // createCounter();
+
+    // 딱 한 번만 이용하기
+    createCounter()();
+
+    // 참조 왕많으면,, 메모리 누수랄까..
+  </script>
+</html>
