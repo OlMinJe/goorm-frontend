@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .toast-container {
+        position: fixed;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .toast-container.top-right {
+        top: 20px;
+        right: 20px;
+        align-items: flex-end;
+      }
+
+      .toast-container.bottom-right {
+        bottom: 20px;
+        right: 20px;
+        align-items: flex-end;
+      }
+
+      .toast-container.top-left {
+        top: 20px;
+        left: 20px;
+        align-items: flex-start;
+      }
+
+      .toast-container.bottom-left {
+        bottom: 20px;
+        left: 20px;
+        align-items: flex-start;
+      }
+
+      .toast-container.center {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+      }
+
+      .toast {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 200px;
+        max-width: 300px;
+        background-color: #444;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 3s ease;
+        position: relative;
+        font-family: sans-serif;
+      }
+
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .toast .icon {
+        font-size: 18px;
+      }
+
+      .toast .close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      /* 상태별 색상 */
+      .toast.success {
+        background-color: #2ecc71;
+      }
+
+      .toast.error {
+        background-color: #e74c3c;
+      }
+
+      .toast.warning {
+        background-color: #f39c12;
+      }
+
+      .toast.info {
+        background-color: #3498db;
+      }
+    </style>
+
+    <title>Toast Class로 변경</title>
+  </head>
+
+  <body>
+    <button onclick="new Toast('저장 완료!', { type: 'success', duration: 3000, position:'top-right' })">
+      토스트 띄우기
+    </button>
+  </body>
+  <script>
+    class Toast {
+      static ICONS = {
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        info: 'ℹ️',
+      };
+      static VALID_TYPES = ['success', 'error', 'warning', 'info'];
+      static VALID_POSITIONS = ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center'];
+      static DEFAULTS = { type: 'info', duration: 2000, position: 'top-right' };
+
+      constructor(message, options = {}) {
+        const settings = { ...Toast.DEFAULTS, ...options };
+        this.message = message;
+        this.type = Toast.VALID_TYPES.includes(settings.type) ? settings.type : 'info';
+        this.duration = settings.duration;
+        this.position = Toast.VALID_POSITIONS.includes(settings.position) ? settings.position : 'top-right';
+        this._create();
+      }
+
+      _create() {
+        let container = document.querySelector(`.toast-container.${this.position}`);
+        if (!container) {
+          container = document.createElement('div');
+          container.classList.add('toast-container', this.position);
+          document.body.appendChild(container);
+        }
+
+        const toast = document.createElement('div');
+        toast.className = `toast ${this.type}`;
+        toast.innerHTML = `<span class="icon">${Toast.ICONS[this.type]}</span>
+                          <span class="message">${this.message}</span>
+                          <span class="close">&times;</span>`;
+        container.appendChild(toast);
+
+        requestAnimationFrame(() => toast.classList.add('show'));
+
+        // 닫기 버튼 이벤트
+        const closeBtn = toast.querySelector('.close');
+        const timer = setTimeout(() => this._remove(toast), this.duration);
+        closeBtn.addEventListener('click', () => {
+          clearTimeout(timer);
+          this._remove(toast);
+        });
+      }
+
+      _remove(toast) {
+        toast.classList.remove('show');
+        setTimeout(() => {
+          const container = toast.parentElement;
+          toast.remove();
+          if (container && container.children.length === 0) container.remove();
+        }, 300);
+      }
+    }
+  </script>
+</html>

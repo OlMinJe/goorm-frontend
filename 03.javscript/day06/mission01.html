@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .toast-container {
+        position: fixed;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .toast-container.top-right {
+        top: 20px;
+        right: 20px;
+        align-items: flex-end;
+      }
+
+      .toast-container.bottom-right {
+        bottom: 20px;
+        right: 20px;
+        align-items: flex-end;
+      }
+
+      .toast-container.top-left {
+        top: 20px;
+        left: 20px;
+        align-items: flex-start;
+      }
+
+      .toast-container.bottom-left {
+        bottom: 20px;
+        left: 20px;
+        align-items: flex-start;
+      }
+
+      .toast-container.center {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+      }
+
+      .toast {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 200px;
+        max-width: 300px;
+        background-color: #444;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        position: relative;
+        font-family: sans-serif;
+      }
+
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .toast .icon {
+        font-size: 18px;
+      }
+
+      .toast .close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      /* 상태별 색상 */
+      .toast.success {
+        background-color: #2ecc71;
+      }
+
+      .toast.error {
+        background-color: #e74c3c;
+      }
+
+      .toast.warning {
+        background-color: #f39c12;
+      }
+
+      .toast.info {
+        background-color: #3498db;
+      }
+    </style>
+
+    <title>Toast</title>
+  </head>
+
+  <body>
+    <button onclick="new Toast('저장 완료!', { type: 'success', duration: 1000, position:'top-right' })">
+      토스트 띄우기
+    </button>
+  </body>
+  <script>
+    const ICON_TYPES = {
+      success: '✅',
+      error: '❌',
+      warning: '⚠️',
+      info: 'ℹ️',
+    };
+    const VALID_TYPES = ['success', 'error', 'warning', 'info'];
+    const VALID_POSITIONS = ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center'];
+
+    // 메시지를 전달하면, 화면에 작은 알림창이 잠시 표시되었다가 사라짐
+    function Toast(message, option = {}) {
+      const settings = { type: 'info', duration: 1000, position: 'top-right', ...option };
+
+      this.message = message;
+      this.type = VALID_TYPES.includes(settings.type) ? settings.type : 'info';
+      this.duration = settings.duration;
+      this.position = VALID_POSITIONS.includes(settings.position) ? settings.position : 'top-right';
+      this._create();
+    }
+
+    // 메시지, { 타입, 위치, 시간 }
+    Toast.prototype._create = function () {
+      // 1. 위치별 컨테이너 확인 또는 생성
+      let container = document.querySelector(`.toast-container.${this.position}`);
+      if (!container) {
+        container = document.createElement('div');
+        container.classList.add('toast-container', this.position);
+        document.body.appendChild(container);
+      }
+
+      // 2. 각각의 알림 생성 후 추가
+      const newToast = document.createElement('div');
+      newToast.className = `toast ${this.type}`;
+      newToast.innerHTML = `<span class="icon">${ICON_TYPES[this.type]}</span>
+                            <span class="message">${this.message}</span>
+                            <span class="close">&times;</span>`;
+      container.appendChild(newToast);
+
+      requestAnimationFrame(() => newToast.classList.add('show'), 30);
+
+      // 닫기 버튼 클릭 이벤트
+      const closeBtn = newToast.querySelector('.close');
+      closeBtn.addEventListener('click', () => this._remove(newToast));
+
+      // setTimeout으로 자동 제거
+      setTimeout(() => this._remove(newToast), this.duration);
+    };
+
+    // 4. 닫기 버튼 클릭 시 수동 제거
+    Toast.prototype._remove = function (toastElement) {
+      if (!toastElement) return;
+      toastElement.classList.remove('show');
+
+      setTimeout(() => {
+        const container = toastElement.parentElement;
+        toastElement.remove();
+        if (container && container.children.length === 0) container.remove();
+      }, 300);
+    };
+  </script>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      select,
+      input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      select {
+        margin-bottom: 15px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #34699a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      .status-message {
+        width: 700px;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+
+      .status-success {
+        color: #004030;
+      }
+
+      .status-error {
+        color: #722323;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-group">
+      <label for="user-select">유저 목록:</label>
+      <select id="user-select">
+        <option value="">유저를 선택해 주세요</option>
+      </select>
+    </div>
+
+    <form id="user-form">
+      <div class="form-group">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="username">닉네임</label>
+        <input type="text" id="username" name="username" />
+      </div>
+      <div class="form-group">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      <button type="submit" id="save-btn" disabled>정보 저장</button>
+    </form>
+
+    <div id="status-message" class="status-message" style="display: none"></div>
+  </body>
+  <script>
+    const select = document.getElementById('user-select');
+    const saveBtn = document.getElementById('save-btn');
+    const statusMessage = document.getElementById('status-message');
+    const userForm = document.getElementById('user-form');
+    // DOM 요소 중복 호출 방지?
+    const name = document.getElementById('name');
+    const userName = document.getElementById('username');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+
+    let currUserId = null;
+
+    const hideStatusMessage = () => (statusMessage.style.display = 'none');
+
+    async function loadUsers() {
+      const res = await fetch('https://jsonplaceholder.typicode.com/users');
+
+      if (!res.ok) throw new Error(`요청 실패: ${res.status}`);
+
+      const users = await res.json();
+
+      users.forEach(({ id, name }) => {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = `${name}`;
+        select.appendChild(option);
+      });
+    }
+
+    async function loadUserDetails(userId) {
+      // '유저를 선택해주세요' 선택 시 기존 값들을 초기화
+      if (!userId) {
+        name.value = '';
+        userName.value = '';
+        email.value = '';
+        phone.value = '';
+
+        currUserId = null;
+        saveBtn.disabled = true;
+        hideStatusMessage();
+
+        return;
+      }
+
+      const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+
+      if (!res.ok) throw new Error(`요청 실패: ${res.status}`);
+
+      const { name, userName, email, phone } = await res.json();
+
+      name.value = name;
+      userName.value = username;
+      email.value = email;
+      phone.value = phone;
+
+      currUserId = userId;
+      saveBtn.disabled = false;
+
+      hideStatusMessage();
+    }
+
+    async function updateUser(userData) {
+      try {
+        saveBtn.disabled = true;
+        saveBtn.textContent = '저장 중';
+
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${currUserId}`, {
+          method: 'PUT',
+          body: JSON.stringify(userData),
+        });
+
+        if (res.ok) showStatusMessage(`성공! 유저 정보가 업데이트되었습니다. (상태코드: ${res.status})`, 'success');
+        // else showStatusMessage(`실패! 에러가 발생했습니다. (상태코드: ${res.status})`, 'error');
+      } catch (error) {
+        console.error('Error:', error);
+        showStatusMessage(`오류가 발생했습니다. 네트워크 연결을 확인해주세요. (${error.message})`, 'error');
+      } finally {
+        // 요청 성공/실패 여부와 관계없이 버튼은 다시 활성화
+        saveBtn.disabled = false;
+        saveBtn.textContent = '정보 저장';
+      }
+    }
+
+    // 성공/실패 메시지 관련 함수
+    const showStatusMessage = (message, statusType) => {
+      statusMessage.textContent = message;
+      statusMessage.className = `status-message status-${statusType}`;
+      statusMessage.style.display = 'block';
+    };
+
+    // 이벤트 리스너
+    select.addEventListener('change', (e) => loadUserDetails(e.target.value));
+
+    // 폼 제출 시 새로고침 되는 기본 동작 방지
+    userForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!currUserId) return;
+
+      const userData = {
+        id: currUserId,
+        name: document.getElementById('name').value,
+        username: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+      };
+
+      updateUser(userData);
+    });
+
+    loadUsers();
+  </script>
+</html>

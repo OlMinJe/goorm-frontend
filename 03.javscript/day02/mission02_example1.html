@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tel</title>
+  </head>
+  <body>
+    <main>
+      <!-- 정규식과 input pattern 속성 사용 -->
+      <!-- <form>
+        <label for="tel">전화번호</label>
+        <input id="tel" pattern="[0-9]{3} - [0-9]{4} - [0,9]{4}" type="tel" />
+        <button id="btn" type="submit">제출</button>
+      </form> -->
+
+      <label for="tel">전화번호</label>
+      <input id="tel" oninput="onChangeTel()" type="tel" />
+      <button id="btn" type="submit" onclick="validation()">제출</button>
+      <p class="error-message"></p>
+    </main>
+  </body>
+  <script>
+    const validation = () => {
+      const telInput = document.getElementById('tel');
+      let telNumber = telInput.value.trim();
+      const errorMessage = document.querySelector('.error-message');
+      errorMessage.textContent = '';
+
+      if (telNumber === '') {
+        errorMessage.textContent = '휴대폰 번호를 입력해 주세요.';
+        return;
+      }
+
+      // 정규식
+      // let onlyNumber = telNumber.replace(/[^0-9]/g, '');
+
+      // if (onlyNumber.length !== 11) {
+      //   errorMessage.textContent = '올바른 휴대폰 번호 형식이 아닙니다.';
+      //   return;
+      // }
+
+      // telInput.value = onlyNumber.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+
+      // 정규식 x
+      let onlyNumber = '';
+
+      for (const ch of telNumber) {
+        if (ch >= '0' && ch <= '9') {
+          onlyNumber += ch;
+        }
+      }
+
+      if (onlyNumber.length !== 11) {
+        errorMessage.textContent = '올바른 휴대폰 번호 형식이 아닙니다.';
+        return;
+      }
+
+      errorMessage.textContent = `당신의 번호는 ${telInput.value}이군요`;
+    };
+
+    const onChangeTel = () => {
+      // 정규식
+      const telInput = document.getElementById('tel');
+      let onlyNumber = telInput.value.replace(/[^0-9]/g, '');
+
+      if (onlyNumber.length > 11) {
+        onlyNumber = onlyNumber.slice(0, 11);
+      }
+
+      let formatted = onlyNumber;
+
+      if (onlyNumber.length >= 7) {
+        formatted = onlyNumber.replace(/(\d{3})(\d{4})(\d{0,4})/, '$1-$2-$3');
+      } else if (onlyNumber.length >= 4) {
+        formatted = onlyNumber.replace(/(\d{3})(\d{4})/, '$1-$2');
+      }
+
+      // telInput.value = formatted;
+
+      if (formatted !== prevValue) {
+        telInput.value = formatted;
+      }
+
+      // 정규식 X
+      // let value = telInput.value;
+      // let onlyNumber = '';
+
+      // for (let i = 0; i < value.length; i++) {
+      //   let ch = value[i];
+      //   if (ch >= '0' && ch <= '9') {
+      //     onlyNumber += ch;
+      //   }
+      // }
+
+      // if (onlyNumber.length > 11) {
+      //   onlyNumber = onlyNumber.slice(0, 11);
+      // }
+
+      // let formatted = '';
+
+      // if (onlyNumber.length > 7) {
+      //   // 3-4-4
+      //   formatted = onlyNumber.slice(0, 3) + '-' + onlyNumber.slice(3, 7) + '-' + onlyNumber.slice(7);
+      // } else if (onlyNumber.length > 3) {
+      //   // 3-4
+      //   formatted = onlyNumber.slice(0, 3) + '-' + onlyNumber.slice(3);
+      // } else {
+      //   // 3자리 이하 그냥 출력
+      //   formatted = onlyNumber;
+      // }
+
+      // telInput.value = formatted;
+    };
+  </script>
+</html>

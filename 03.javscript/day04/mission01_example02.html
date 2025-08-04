@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        margin-top: 100px;
+        text-align: center;
+      }
+      .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .input-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+      }
+      label {
+        display: block;
+        margin-right: 30px;
+        font-size: 18px;
+        min-width: 100px;
+      }
+      select,
+      input {
+        width: 400px;
+        height: 50px;
+        border: 1px solid #ccc;
+        font-size: 18px;
+        padding: 10px;
+      }
+      button {
+        width: 100%;
+        height: 50px;
+        margin-top: 15px;
+        border: 1px solid #ccc;
+        background-color: #4a90e2;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>유저 정보</h1>
+    <div class="form-container">
+      <div class="input-container">
+        <div class="input-wrap">
+          <label for="users">유저 리스트</label>
+          <select name="users" id="users" onchange="onchangeSelect(this)">
+            <option value="">유저를 선택하세요</option>
+          </select>
+        </div>
+        <div class="input-wrap">
+          <label for="name">이름</label>
+          <input name="name" id="name" type="text" />
+        </div>
+        <div class="input-wrap">
+          <label for="userName">닉네임</label>
+          <input name="userName" id="userName" type="text" />
+        </div>
+        <div class="input-wrap">
+          <label for="phone">전화번호</label>
+          <input name="phone" id="phone" type="text" />
+        </div>
+        <div class="input-wrap">
+          <label for="email">이메일</label>
+          <input name="email" id="email" type="text" />
+        </div>
+        <div class="input-wrap">
+          <label for="addressCity">주소</label>
+          <input name="addressCity" id="addressCity" type="text" />
+          <input name="addressStreet" id="addressStreet" type="text" />
+          <input name="addressSuite" id="addressSuite" type="text" />
+        </div>
+        <div class="input-wrap">
+          <label for="company">회사</label>
+          <input name="company" id="company" type="text" />
+        </div>
+        <div class="input-wrap">
+          <label for="website">URL</label>
+          <input name="website" id="website" type="text" />
+        </div>
+        <button id="btnSubmit" onclick="submit()">저장</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const url = 'https://jsonplaceholder.typicode.com/users';
+
+    const select = document.getElementById('users');
+    const name = document.getElementById('name');
+    const userName = document.getElementById('userName');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const addressCity = document.getElementById('addressCity');
+    const addressStreet = document.getElementById('addressStreet');
+    const addressSuite = document.getElementById('addressSuite');
+    const company = document.getElementById('company');
+    const website = document.getElementById('website');
+
+    let data = [];
+    let id = '';
+
+    // get user data
+    const getUser = async () => {
+      data = await (await fetch(url)).json();
+
+      if (!data) console.error('오류');
+
+      data.map((item) => {
+        const option = document.createElement('option');
+        option.value = item.id;
+        option.innerText = item.name;
+        select.appendChild(option);
+      });
+    };
+
+    // select box event
+    const onchangeSelect = (e) => {
+      id = e.value;
+
+      if (id === '') {
+        alert('유저를 선택하세요');
+        return;
+      }
+
+      const user = data.filter((x) => Number(x.id) === Number(id))[0];
+
+      name.value = user.name;
+      userName.value = user.username;
+      phone.value = user.phone;
+      email.value = user.email;
+      addressCity.value = user.address.city;
+      addressStreet.value = user.address.street;
+      addressSuite.value = user.address.suite;
+      company.value = user.company.name;
+      website.value = user.website;
+    };
+
+    // modify user data
+    const submit = async () => {
+      const submitData = {
+        name: name.value,
+        userName: userName.value,
+        phone: phone.value,
+        email: email.value,
+        address: {
+          city: addressCity.value,
+          street: addressStreet.value,
+          suite: addressSuite.value,
+        },
+        company: {
+          name: company.value,
+        },
+        website: website.value,
+      };
+
+      try {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+          method: 'PUT',
+          body: JSON.stringify(submitData),
+        });
+
+        if (res.ok) {
+          alert('업데이트 성공');
+          await getUser();
+        } else {
+          alert('업데이트 실패');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('에러 발생');
+      }
+    };
+
+    getUser();
+  </script>
+</html>
