@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modal (정상 동작 개선)</title>
+    <style>
+      button {
+        margin: 5px;
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .modal.dimmed {
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        background: #bdafaf;
+        border-radius: 6px;
+        padding: 20px 30px;
+        font-family: sans-serif;
+        text-align: center;
+        position: relative;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .modal.show .modal-content.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .modal-content.sm {
+        width: 300px;
+      }
+      .modal-content.md {
+        width: 500px;
+      }
+      .modal-content.lg {
+        width: 800px;
+      }
+      .modal-content.fullscreen {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+      }
+
+      .modal.top {
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+      .modal.bottom {
+        align-items: flex-end;
+        padding-bottom: 50px;
+      }
+      .modal.center {
+        align-items: center;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="openModal({ title: '기본 모달', message: '기본 옵션' })">1. 기본 모달</button>
+      <button onclick="openModal({ title: '닫기 버튼 있음', message: '우측 상단 ×', closable: true })">
+        2. closable
+      </button>
+      <button onclick="openModal({ title: '배경 딤드', message: '배경 어둡게', dimmed: true })">3. dimmed</button>
+      <button onclick="openModal({ title: '배경 클릭 시 닫힘', clickToClose: true })">4. clickToClose</button>
+      <button onclick="openModal({ title: '애니메이션', message: '슬라이드 인', animation: true })">
+        5. animation
+      </button>
+      <button onclick="openModal({ title: '작은 사이즈', size: 'sm' })">6. size: sm</button>
+      <button onclick="openModal({ title: '중간 사이즈', size: 'md' })">7. size: md</button>
+      <button onclick="openModal({ title: '큰 사이즈', size: 'lg' })">8. size: lg</button>
+      <button onclick="openModal({ title: '전체화면', type: 'fullpage', size: 'fullscreen', closable: true })">
+        9. fullpage
+      </button>
+      <button onclick="openModal({ title: '위쪽 정렬', position: 'top' })">10. position: top</button>
+      <button onclick="openModal({ title: '아래쪽 정렬', position: 'bottom' })">11. position: bottom</button>
+    </div>
+
+    <script>
+      function openModal(options = {}) {
+        const defaults = {
+          type: 'alert',
+          title: '제목 없음',
+          message: '내용 없음',
+          dimmed: false,
+          closable: false,
+          clickToClose: false,
+          animation: false,
+          size: 'md',
+          position: 'center',
+        };
+
+        const settings = { ...defaults, ...options };
+
+        const modal = document.createElement('div');
+        modal.className = `modal ${settings.position}`;
+        if (settings.dimmed) modal.classList.add('dimmed');
+
+        const content = document.createElement('div');
+        content.className = `modal-content ${settings.size}`;
+        content.innerHTML = `
+        <div class="modal-title">${settings.title}</div>
+        <div class="modal-message">${settings.message}</div>
+      `;
+
+        if (!settings.closable) {
+          const closeBtn = document.createElement('div');
+          closeBtn.className = 'close-btn';
+          closeBtn.innerHTML = '&times;';
+          closeBtn.onclick = () => document.body.removeChild(modal);
+          content.appendChild(closeBtn);
+        }
+
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+
+        // 외부 클릭 시 닫기
+        if (settings.clickToClose) {
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) document.body.removeChild(modal);
+          });
+        }
+
+        // 애니메이션 처리
+        if (settings.animation) {
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              modal.classList.add('show');
+              content.classList.add('animate');
+            });
+          });
+        } else {
+          modal.classList.add('show');
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0)';
+        }
+      }
+    </script>
+  </body>
+</html>

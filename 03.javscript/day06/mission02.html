@@ -3,161 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <style>
-      .toast-container {
+      .modal {
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 9999;
+      }
+
+      .modal-box {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-      }
-
-      .toast-container.top-right {
-        top: 20px;
-        right: 20px;
-        align-items: flex-end;
-      }
-
-      .toast-container.bottom-right {
-        bottom: 20px;
-        right: 20px;
-        align-items: flex-end;
-      }
-
-      .toast-container.top-left {
-        top: 20px;
-        left: 20px;
-        align-items: flex-start;
-      }
-
-      .toast-container.bottom-left {
-        bottom: 20px;
-        left: 20px;
-        align-items: flex-start;
-      }
-
-      .toast-container.center {
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        align-items: center;
-      }
-
-      .toast {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-width: 200px;
-        max-width: 300px;
-        background-color: #444;
-        color: white;
-        padding: 12px 18px;
+        justify-content: space-between;
+        background: white;
+        padding: 20px 30px;
         border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 3s ease;
-        position: relative;
+        min-width: 300px;
+        min-height: 300px;
+        width: 300px;
+        height: 300px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         font-family: sans-serif;
+        text-align: center;
       }
 
-      .toast.show {
-        opacity: 1;
-        transform: translateY(0);
+      .modal-box .modal-icon {
+        margin-bottom: 10px;
       }
 
-      .toast .icon {
-        font-size: 18px;
+      .modal-box .modal-title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 1.4rem;
       }
 
-      .toast .close {
-        position: absolute;
-        top: 8px;
-        right: 10px;
+      .modal-box button {
+        margin-top: 15px;
+        padding: 6px 16px;
+        font-size: 14px;
         cursor: pointer;
-        font-weight: bold;
-      }
-
-      /* 상태별 색상 */
-      .toast.success {
-        background-color: #2ecc71;
-      }
-
-      .toast.error {
-        background-color: #e74c3c;
-      }
-
-      .toast.warning {
-        background-color: #f39c12;
-      }
-
-      .toast.info {
-        background-color: #3498db;
       }
     </style>
-
-    <title>Toast Class로 변경</title>
+    <title>Modal</title>
   </head>
-
   <body>
-    <button onclick="new Toast('저장 완료!', { type: 'success', duration: 3000, position:'top-right' })">
-      토스트 띄우기
+    <button onclick="new Modal({type: 'success',title: '저장이 완료되었습니다.', message: '안내 메시지...'})">
+      기본 모달 띄우기
     </button>
-  </body>
-  <script>
-    class Toast {
-      static ICONS = {
-        success: '✅',
-        error: '❌',
-        warning: '⚠️',
-        info: 'ℹ️',
-      };
-      static VALID_TYPES = ['success', 'error', 'warning', 'info'];
-      static VALID_POSITIONS = ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center'];
-      static DEFAULTS = { type: 'info', duration: 2000, position: 'top-right' };
 
-      constructor(message, options = {}) {
-        const settings = { ...Toast.DEFAULTS, ...options };
-        this.message = message;
-        this.type = Toast.VALID_TYPES.includes(settings.type) ? settings.type : 'info';
-        this.duration = settings.duration;
-        this.position = Toast.VALID_POSITIONS.includes(settings.position) ? settings.position : 'top-right';
+    <button onclick="new Modal({})">모달 데이터 없음</button>
+
+    <script>
+      const ICON_TYPES = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+      const DEFAULTS = { type: 'error', title: '데이터가 없습니다.', message: '모달 옵션 데이터 미할당' };
+
+      function Modal(options = {}) {
+        const setting = { ...DEFAULTS, ...options };
+        this.type = ICON_TYPES[options.type] ? setting.type : DEFAULTS.type;
+        this.title = setting.title;
+        this.message = setting.message;
         this._create();
       }
 
-      _create() {
-        let container = document.querySelector(`.toast-container.${this.position}`);
-        if (!container) {
-          container = document.createElement('div');
-          container.classList.add('toast-container', this.position);
-          document.body.appendChild(container);
-        }
+      Modal.prototype._create = function () {
+        const isModal = document.querySelector('.modal');
+        if (isModal) isModal.remove();
 
-        const toast = document.createElement('div');
-        toast.className = `toast ${this.type}`;
-        toast.innerHTML = `<span class="icon">${Toast.ICONS[this.type]}</span>
-                          <span class="message">${this.message}</span>
-                          <span class="close">&times;</span>`;
-        container.appendChild(toast);
+        const newModal = document.createElement('div');
+        newModal.className = 'modal';
 
-        requestAnimationFrame(() => toast.classList.add('show'));
+        const modalBox = document.createElement('div');
+        modalBox.className = 'modal-box';
+        modalBox.innerHTML = `<div>
+                               <div class="modal-icon">${ICON_TYPES[this.type]}</div>
+                               <div class="modal-title">${this.title}</div>
+                               <div>${this.message}</div>
+                              </div>
+                              <button>닫기</button>`;
 
-        // 닫기 버튼 이벤트
-        const closeBtn = toast.querySelector('.close');
-        const timer = setTimeout(() => this._remove(toast), this.duration);
-        closeBtn.addEventListener('click', () => {
-          clearTimeout(timer);
-          this._remove(toast);
-        });
-      }
+        newModal.appendChild(modalBox);
+        document.body.appendChild(newModal);
 
-      _remove(toast) {
-        toast.classList.remove('show');
-        setTimeout(() => {
-          const container = toast.parentElement;
-          toast.remove();
-          if (container && container.children.length === 0) container.remove();
-        }, 300);
-      }
-    }
-  </script>
+        modalBox.querySelector('button').addEventListener('click', () => this._remove(newModal));
+      };
+
+      Modal.prototype._remove = function (modalElement) {
+        if (modalElement) modalElement.remove();
+      };
+    </script>
+  </body>
 </html>

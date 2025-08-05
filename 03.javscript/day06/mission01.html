@@ -104,23 +104,22 @@
     </button>
   </body>
   <script>
-    const ICON_TYPES = {
-      success: '✅',
-      error: '❌',
-      warning: '⚠️',
-      info: 'ℹ️',
-    };
+    const ICON_TYPES = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+    const DEFAULTS = { type: 'info', duration: 1000, position: 'top-right' };
+
     const VALID_TYPES = ['success', 'error', 'warning', 'info'];
     const VALID_POSITIONS = ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center'];
 
-    // 메시지를 전달하면, 화면에 작은 알림창이 잠시 표시되었다가 사라짐
+    const validateOrDefault = (value, validList, fallback) => (validList.includes(value) ? value : fallback);
+
     function Toast(message, option = {}) {
-      const settings = { type: 'info', duration: 1000, position: 'top-right', ...option };
+      const settings = { ...DEFAULTS, ...option };
 
       this.message = message;
-      this.type = VALID_TYPES.includes(settings.type) ? settings.type : 'info';
+      this.type = validateOrDefault(settings.type, VALID_TYPES, DEFAULTS.type);
       this.duration = settings.duration;
-      this.position = VALID_POSITIONS.includes(settings.position) ? settings.position : 'top-right';
+      this.position = validateOrDefault(settings.position, VALID_POSITIONS, DEFAULTS.position);
+
       this._create();
     }
 
@@ -142,11 +141,27 @@
                             <span class="close">&times;</span>`;
       container.appendChild(newToast);
 
-      requestAnimationFrame(() => newToast.classList.add('show'), 30);
+      /**setTimeout 대신 requestAnimationFrame을 사용하는가
+       * - 화면이 부드럽게 에니메이션되고, 깜빡임 없이 잘 보이게 하기 위함!
+       *
+       * requestAnimationFrame란?
+       * - 브라우저가 다음 화면을 그리기 직전에 실행해줘!의 메서드..랄까..
+       *
+       * setTimeout을 사용하면 실행하는 시점과 브라우저 화면에 그려지는 시점이 맞지 않을 수도 있음.
+       * 여기에서 requestAnimationFrame을 사용하면 화면 전환을 부드럽게 유도할 수 있음.
+       *
+       * 토스트 알림이 화면에 추가됨 => CSS로 opacity: 0 > 1 트랜지션이 있음
+       * - 이 때 classList.add('show')를 바로 실행하면 브라우저가 "어? opacity가 바로 1이네"하고 트랜지션 생략함
+       * - 그래서 requestAnimationFrame으로 "다음 그리기 타이밍에 클래스 추가해줘!" 라고 하면
+       * - 브라우저가 그 사이에 opacity: 0 상태를 기억했다가, opacity: 1로 바뀌는 걸 감지해서 애니메이션을 제대로 실행함
+       *
+       * 즉, requestAnimationFrame은 브라우저가 화면을 그릴 준비가 되었을 때 실행하니까,
+       * 애니메이션이 자연스럽게 시작되도록 도와주는 도구
+       */
+      requestAnimationFrame(() => newToast.classList.add('show'));
 
       // 닫기 버튼 클릭 이벤트
-      const closeBtn = newToast.querySelector('.close');
-      closeBtn.addEventListener('click', () => this._remove(newToast));
+      newToast.querySelector('.close').addEventListener('click', () => this._remove(newToast));
 
       // setTimeout으로 자동 제거
       setTimeout(() => this._remove(newToast), this.duration);
@@ -155,13 +170,14 @@
     // 4. 닫기 버튼 클릭 시 수동 제거
     Toast.prototype._remove = function (toastElement) {
       if (!toastElement) return;
+
       toastElement.classList.remove('show');
 
       setTimeout(() => {
         const container = toastElement.parentElement;
         toastElement.remove();
         if (container && container.children.length === 0) container.remove();
-      }, 300);
+      }, this.duration);
     };
   </script>
 </html>
