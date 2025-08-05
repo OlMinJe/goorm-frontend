@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주스 만들기 (class)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 30px;
+        font-family: sans-serif;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      .dropdown-container {
+        position: relative;
+        display: inline-block;
+        margin-right: 30px;
+      }
+
+      .dropdown-container button {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px;
+        background-color: antiquewhite;
+        display: none;
+        z-index: 1000;
+      }
+
+      .dropdown-menu li {
+        cursor: pointer;
+      }
+
+      .dropdown-menu.show {
+        display: block;
+      }
+
+      #result {
+        margin-top: 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="dropdown-container">
+        <button id="fruitBtn">과일 선택</button>
+        <span id="selectedFruit"></span>
+        <ul class="dropdown-menu" id="fruitMenu">
+          <li>사과</li>
+          <li>포도</li>
+          <li>오렌지</li>
+        </ul>
+      </div>
+
+      <div class="dropdown-container">
+        <button id="drinkBtn">음료 선택</button>
+        <span id="selectedDrink"></span>
+        <ul class="dropdown-menu" id="drinkMenu">
+          <li>우유</li>
+          <li>사이다</li>
+          <li>커피</li>
+        </ul>
+      </div>
+
+      <div id="result">주스 만들기!</div>
+      <ul id="log"></ul>
+    </main>
+
+    <script>
+      class Dropdown {
+        // dom element의 여부 확인 함수
+        static get(id) {
+          const el = document.getElementById(id);
+          if (!el) throw new Error(`${id} 요소를 찾을 수 없습니다.`);
+          return el;
+        }
+
+        // 생성자
+        constructor(dropdownBtn, menu, onSelect) {
+          this.button = Dropdown.get(dropdownBtn); // 토글 버튼
+          this.menu = Dropdown.get(menu); // 메뉴 리스트
+          this.onSelect = onSelect; // 메뉴 선택 이벤트 콜백 함수(다른 함수에게 인자로 전달 -> 특정 시점에 호출하기 위한 함수)
+          this.bindEvents(); // 초기 실행으로 필요한거 등록하기
+        }
+
+        // 초기 실행 등록
+        bindEvents() {
+          // 토글 이벤트 등록하기
+          this.button.addEventListener('click', () => this.toggleMenu());
+
+          /** 메뉴 선택 이벤트 등록하기
+           * - 콘솔로 this.menu.querySelectorAll('li') 출력했더니 NodeList로 나옴
+           * => NodeList는 찐배열은 아니라고 알고 있음
+           * => 배열 메서드를 짭배열에 사용하면 위험하지 않을까 생각하여, 배열로 만들어서 사용함
+           */
+          [...this.menu.querySelectorAll('li')].forEach((item) => {
+            // 메뉴 선택 시에 동작할 이벤트
+            item.addEventListener('click', () => {
+              this.menu.classList.remove('show');
+              this.onSelect?.(item.textContent);
+            });
+          });
+        }
+
+        // 토글 이벤트
+        toggleMenu() {
+          this.menu.classList.toggle('show');
+        }
+      }
+
+      class JuiceMaker {
+        static TYPES = ['fruit', 'drink'];
+
+        constructor(resultId) {
+          this.result = Dropdown.get(resultId);
+          this.log = Dropdown.get('log');
+          this.selected = { fruit: '', drink: '' };
+          this.selectedLabels = {
+            fruit: Dropdown.get('selectedFruit'),
+            drink: Dropdown.get('selectedDrink'),
+          };
+        }
+
+        setItem(type, value) {
+          if (!JuiceMaker.TYPES.includes(type)) throw new Error('"fruit" 또는 "drink"만 허용됩니다.');
+
+          this.selected[type] = value;
+          this.selectedLabels[type].textContent = value;
+          this.updateResult();
+        }
+
+        updateResult() {
+          const { fruit, drink } = this.selected;
+
+          if (fruit && drink) {
+            const makerResult = `${fruit}${drink}`;
+            this.result.textContent = `🥤 ${makerResult} 완성!`;
+            this.addLog(makerResult);
+            // 초기화
+            this.selected = { fruit: '', drink: '' };
+            this.selectedLabels.fruit.textContent = '';
+            this.selectedLabels.drink.textContent = '';
+          } else {
+            this.result.textContent = '주스 만들기!';
+          }
+        }
+
+        addLog(makerResult) {
+          const li = document.createElement('li');
+          li.textContent = `✅ ${makerResult}`;
+          this.log.appendChild(li);
+        }
+      }
+
+      const juiceMaker = new JuiceMaker('result');
+
+      new Dropdown('fruitBtn', 'fruitMenu', (value) => juiceMaker.setItem('fruit', value));
+      new Dropdown('drinkBtn', 'drinkMenu', (value) => juiceMaker.setItem('drink', value));
+    </script>
+  </body>
+</html>

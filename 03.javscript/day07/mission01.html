@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과일 선택(class)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 30px;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      .dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-container #toggleMenuBtn {
+        padding: 10px;
+      }
+
+      .dropdown-container .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px;
+        background-color: antiquewhite;
+        display: none;
+        z-index: 1000;
+      }
+
+      .dropdown-container .dropdown-menu.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="dropdown-container">
+        <button id="toggleMenuBtn">과일 선택</button>
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li>사과</li>
+          <li>포도</li>
+          <li>오렌지</li>
+        </ul>
+      </div>
+
+      <div id="result"></div>
+    </main>
+  </body>
+  <script>
+    class Dropdown {
+      static DEFAULT_LABEL = '과일 선택';
+      static FRUITS = {
+        사과: '🍎',
+        포도: '🍇',
+        오렌지: '🍊',
+      };
+
+      constructor(toggleMenuBtn, dropdownMenu, result) {
+        this.toggleBtn = document.getElementById(toggleMenuBtn);
+        this.menu = document.getElementById(dropdownMenu);
+        this.result = document.getElementById(result);
+
+        if (!this.toggleBtn || !this.menu || !this.result) {
+          throw new Error('필수 요소가 없습니다.');
+        }
+
+        this._bindEvent();
+      }
+
+      _bindEvent() {
+        this.toggleBtn.addEventListener('click', () => this._toggleMenu());
+        this.menu.querySelectorAll('li').forEach((item) => {
+          item.addEventListener('click', () => this._selectMenu(item));
+        });
+      }
+
+      _toggleMenu() {
+        this.menu.classList.toggle('show');
+      }
+
+      _selectMenu(item) {
+        const selectedText = item.textContent;
+        const fruitIcon = Dropdown.FRUITS[selectedText] || '';
+
+        this.toggleBtn.textContent = `과일 선택 ${fruitIcon} `;
+
+        const selectedElement = document.createElement('span');
+        selectedElement.textContent = `선택된 메뉴: ${fruitIcon} ${selectedText}`;
+
+        this.result.innerHTML = '';
+        this.result.appendChild(selectedElement);
+
+        this._toggleMenu();
+      }
+    }
+
+    new Dropdown('toggleMenuBtn', 'dropdownMenu', 'result');
+  </script>
+</html>

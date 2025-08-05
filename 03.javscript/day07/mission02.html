@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입_2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding: 30px;
+      }
+
+      .form-container {
+        margin: 0 auto;
+        padding: 20px;
+        width: 300px;
+        min-width: 300px;
+        border: 1px solid #f0f0f0;
+      }
+
+      .form-container fieldset {
+        margin-bottom: 10px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-container legend {
+        margin-bottom: 10px;
+      }
+
+      .form-container input,
+      .form-container button,
+      .form-container #error {
+        padding: 5px;
+        width: 100%;
+        border: 1px solid #bebebe;
+      }
+
+      .form-container #error {
+        background-color: rgb(239, 239, 239);
+        display: none;
+      }
+
+      .form-container #user-count {
+        min-height: 20px;
+        color: #8c8c98;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="form-container">
+        <form>
+          <fieldset>
+            <legend>👤 사용자 생성</legend>
+            <input type="text" id="userName" name="userName" placeholder="이름" />
+            <input type="password" id="userPassword" name="userPassword" placeholder="비밀번호" />
+            <button type="button" onclick="User.create()">사용자 만들기</button>
+          </fieldset>
+
+          <fieldset>
+            <legend>🔐 비밀번호 확인</legend>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="비밀번호 확인" />
+            <button type="button" onclick="User.checkPassword()">비밀번호 확인</button>
+          </fieldset>
+
+          <fieldset>
+            <legend>📊 전체 사용자 수 확인</legend>
+            <p id="user-count">현재 사용자 수</p>
+            <button type="button" onclick="User.showCount()">현재 생성된 사용자 수 보기</button>
+          </fieldset>
+
+          <p id="error"></p>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      const ERRORS = {
+        NO_NAME: '❌ 이름을 입력해 주세요.',
+        NAME_VALIDITY: '❌ 이름은 2자 이상이어야 합니다.',
+        NO_PASSWORD: '❌ 비밀번호를 입력해 주세요.',
+        NO_NAME_AND_PASSWORD: '❌ 이름과 비밀번호를 모두 입력하세요.',
+        NO_CURRENT_USER: '❌ 먼저 사용자를 생성하세요.',
+        NO_INPUT_PASSWORD: '❌ 비밀번호를 입력해주세요.',
+        PASSWORD_VALIDITY: '❌ 비밀번호는 6자 이상이어야 합니다.',
+        PASSWORD_MISMATCH: '❌ 비밀번호가 틀립니다.',
+      };
+
+      class User {
+        static count = 0;
+        static currentUser = null;
+
+        #password = '';
+        _name = '';
+
+        constructor(name, password) {
+          this.name = name;
+          this.#password = password;
+          User.count++;
+        }
+
+        get name() {
+          return this._name.toUpperCase();
+        }
+
+        set name(value) {
+          if (value.length < 2) throw new Error(ERRORS.NAME_VALIDITY);
+          this._name = value;
+        }
+
+        checkPassword(inputPassword) {
+          return this.#password === inputPassword;
+        }
+
+        static showMessage(text, isError = true) {
+          const messageBox = document.getElementById('error');
+          messageBox.textContent = text;
+          messageBox.style.color = isError ? 'red' : 'green';
+          messageBox.style.display = messageBox ? 'block' : 'none';
+        }
+
+        static create() {
+          const name = document.getElementById('userName').value.trim();
+          const password = document.getElementById('userPassword').value;
+
+          if (!name) return this.showMessage(ERRORS.NO_NAME);
+          if (!password) return this.showMessage(ERRORS.NO_PASSWORD);
+          if (password.length < 6) return this.showMessage(ERRORS.PASSWORD_VALIDITY);
+
+          try {
+            User.currentUser = new User(name, password);
+            /**클래스가 객체처럼 동작하므로, 정적 속성인 currentUser에 새 인스턴스를 저장
+             * 아래와 동일한 효과
+             * function User() {  }
+             * User.currentUser = null;
+             *
+             * 애초에 User는 클래스 = 함수형 객체로 객체처럼 사용이 가능함
+             * ser.currentUser는 User.prototype.currentUser가 아니라, User.currentUser에 속성이 있다는 뜻
+             * console.log(User.currentUser.name); 이렇게 접근 가능
+             */
+
+            this.showMessage(`✅ 사용자 ${User.currentUser.name} 생성 완료!`);
+          } catch (err) {
+            this.showMessage(`❌ ${err.message}`);
+          }
+        }
+
+        static checkPassword() {
+          const inputPw = document.getElementById('confirm-password').value;
+
+          if (!inputPw) return this.showMessage(ERRORS.NO_PASSWORD);
+          if (!User.currentUser) return showMessage(ERRORS.NO_CURRENT_USER);
+
+          const isMatch = User.currentUser.checkPassword(inputPw);
+          showMessage(isMatch ? '✅ 비밀번호가 일치합니다!' : ERRORS.PASSWORD_MISMATCH, !isMatch);
+        }
+
+        static getCount() {
+          return this.count;
+        }
+
+        static showCount() {
+          document.getElementById('user-count').textContent = `현재 사용자 수: ${this.getCount()}명`;
+        }
+      }
+    </script>
+  </body>
+</html>
