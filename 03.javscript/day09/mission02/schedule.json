@@ -1,0 +1,5638 @@
+{
+  "pagingInfo": {
+    "page": 1,
+    "pageSize": 135,
+    "totalCount": 135
+  },
+  "schedule": {
+    "20250801": [
+      {
+        "gameId": 80090888,
+        "matchSeq": 12,
+        "startDate": "20250801",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV",
+          "gameMvpPollId": "34566",
+          "importance": 1,
+          "vod": 6016298,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": "W",
+        "homeResult": "3",
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": "L",
+        "awayResult": "2",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": "이의리",
+        "awayStartPitcher": "류현진",
+        "winPitcher": "김시훈",
+        "losePitcher": "류현진"
+      },
+      {
+        "gameId": 80090889,
+        "matchSeq": 13,
+        "startDate": "20250801",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV2",
+          "gameMvpPollId": "34559",
+          "importance": 1,
+          "vod": 6016333,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": "W",
+        "awayResult": "4",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": "후라도",
+        "awayStartPitcher": "임찬규",
+        "winPitcher": "임찬규",
+        "losePitcher": "후라도"
+      },
+      {
+        "gameId": 80090890,
+        "matchSeq": 13,
+        "startDate": "20250801",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "gameMvpPollId": "34545",
+          "importance": 1,
+          "vod": 6016229,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": "W",
+        "homeResult": "2",
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": "L",
+        "awayResult": "0",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": "알칸타라",
+        "awayStartPitcher": "이민석",
+        "winPitcher": "알칸타라",
+        "losePitcher": "이민석"
+      },
+      {
+        "gameId": 80090892,
+        "matchSeq": 10,
+        "startDate": "20250801",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "gameMvpPollId": "34573",
+          "importance": 1,
+          "vod": 6016326,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": "W",
+        "awayResult": "7",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": "곽빈",
+        "awayStartPitcher": "김광현",
+        "winPitcher": "김광현",
+        "losePitcher": "곽빈"
+      },
+      {
+        "gameId": 80095309,
+        "matchSeq": 12,
+        "startDate": "20250801",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "gameMvpPollId": "34552",
+          "importance": 1,
+          "vod": 6072515,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": "W",
+        "homeResult": "5",
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": "L",
+        "awayResult": "3",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": "신민혁",
+        "awayStartPitcher": "소형준",
+        "winPitcher": "전사민",
+        "losePitcher": "소형준"
+      }
+    ],
+    "20250802": [
+      {
+        "gameId": 80090893,
+        "matchSeq": 13,
+        "startDate": "20250802",
+        "startTime": "1800",
+        "periodType": "CANCEL",
+        "gameStatus": "CANCEL",
+        "op": {
+          "broadcast": "SPOTV",
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": "네일",
+        "awayStartPitcher": "문동주",
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090894,
+        "matchSeq": 14,
+        "startDate": "20250802",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV2",
+          "gameMvpPollId": "34580",
+          "importance": 1,
+          "vod": 6016301,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": "W",
+        "awayResult": "3",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": "원태인",
+        "awayStartPitcher": "에르난데스",
+        "winPitcher": "유영찬",
+        "losePitcher": "김재윤"
+      },
+      {
+        "gameId": 80090895,
+        "matchSeq": 14,
+        "startDate": "20250802",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "gameMvpPollId": "34587",
+          "importance": 1,
+          "vod": 6016262,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": "W",
+        "awayResult": "3",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": "김윤하",
+        "awayStartPitcher": "나균안",
+        "winPitcher": "정철원",
+        "losePitcher": "주승우"
+      },
+      {
+        "gameId": 80090897,
+        "matchSeq": 11,
+        "startDate": "20250802",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "gameMvpPollId": "34594",
+          "importance": 1,
+          "vod": 6016344,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": "W",
+        "homeResult": "5",
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": "L",
+        "awayResult": "4",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": "잭로그",
+        "awayStartPitcher": "화이트",
+        "winPitcher": "잭로그",
+        "losePitcher": "박시후"
+      },
+      {
+        "gameId": 80095310,
+        "matchSeq": 13,
+        "startDate": "20250802",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "gameMvpPollId": "34608",
+          "importance": 1,
+          "vod": 6072513,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": "W",
+        "homeResult": "7",
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": "L",
+        "awayResult": "6",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": "라일리",
+        "awayStartPitcher": "이채호",
+        "winPitcher": "김영규",
+        "losePitcher": "박영현"
+      }
+    ],
+    "20250803": [
+      {
+        "gameId": 80090898,
+        "matchSeq": 15,
+        "startDate": "20250803",
+        "startTime": "1400",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "importance": 1,
+          "vod": 6016330,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": "L",
+        "homeResult": "3",
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": "W",
+        "awayResult": "9",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": "정세영",
+        "awayStartPitcher": "박세웅",
+        "winPitcher": "박세웅",
+        "losePitcher": "정세영"
+      },
+      {
+        "gameId": 80090899,
+        "matchSeq": 13,
+        "startDate": "20250803",
+        "startTime": "1800",
+        "periodType": "CANCEL",
+        "gameStatus": "CANCEL",
+        "op": {
+          "broadcast": "SPOTV",
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090900,
+        "matchSeq": 15,
+        "startDate": "20250803",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV2",
+          "importance": 1,
+          "vod": 6016318,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": "L",
+        "homeResult": "3",
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": "W",
+        "awayResult": "6",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": "가라비토",
+        "awayStartPitcher": "치리노스",
+        "winPitcher": "치리노스",
+        "losePitcher": "가라비토"
+      },
+      {
+        "gameId": 80090902,
+        "matchSeq": 12,
+        "startDate": "20250803",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "importance": 1,
+          "vod": 6016350,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": "W",
+        "awayResult": "3",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": "최민석",
+        "awayStartPitcher": "최민준",
+        "winPitcher": "조병현",
+        "losePitcher": "박신지"
+      },
+      {
+        "gameId": 80095311,
+        "matchSeq": 14,
+        "startDate": "20250803",
+        "startTime": "1800",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "importance": 1,
+          "vod": 6072514,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": "D",
+        "homeResult": "1",
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": "D",
+        "awayResult": "1",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": "로건",
+        "awayStartPitcher": "헤이수스",
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250805": [
+      {
+        "gameId": 80090903,
+        "matchSeq": 13,
+        "startDate": "20250805",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "KBS 2TV",
+          "gameMvpPollId": "34660",
+          "importance": 1,
+          "vod": 6016231,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": "L",
+        "homeResult": "0",
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": "W",
+        "awayResult": "2",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": "감보아",
+        "awayStartPitcher": "네일",
+        "winPitcher": "네일",
+        "losePitcher": "감보아"
+      },
+      {
+        "gameId": 80090904,
+        "matchSeq": 12,
+        "startDate": "20250805",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "gameMvpPollId": "34653",
+          "importance": 1,
+          "vod": 6016282,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": "W",
+        "awayResult": "5",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": "문동주",
+        "awayStartPitcher": "패트릭",
+        "winPitcher": "이상동",
+        "losePitcher": "한승혁"
+      },
+      {
+        "gameId": 80090905,
+        "matchSeq": 12,
+        "startDate": "20250805",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV",
+          "gameMvpPollId": "34667",
+          "importance": 1,
+          "vod": 6016293,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": "W",
+        "homeResult": "4",
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": "L",
+        "awayResult": "2",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": "손주영",
+        "awayStartPitcher": "최승용",
+        "winPitcher": "함덕주",
+        "losePitcher": "이영하"
+      },
+      {
+        "gameId": 80090906,
+        "matchSeq": 13,
+        "startDate": "20250805",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV2",
+          "gameMvpPollId": "34674",
+          "importance": 1,
+          "vod": 6016277,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": "L",
+        "homeResult": "2",
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": "W",
+        "awayResult": "6",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": "문승원",
+        "awayStartPitcher": "최원태",
+        "winPitcher": "최원태",
+        "losePitcher": "문승원"
+      },
+      {
+        "gameId": 80090907,
+        "matchSeq": 13,
+        "startDate": "20250805",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "gameMvpPollId": "34681",
+          "importance": 1,
+          "vod": 6016305,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": "L",
+        "homeResult": "5",
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": "W",
+        "awayResult": "8",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": "목지훈",
+        "awayStartPitcher": "정현우",
+        "winPitcher": "조영건",
+        "losePitcher": "배재환"
+      }
+    ],
+    "20250806": [
+      {
+        "gameId": 80090908,
+        "matchSeq": 14,
+        "startDate": "20250806",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "gameMvpPollId": "34699",
+          "importance": 1,
+          "vod": 6016235,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": "W",
+        "homeResult": "7",
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": "L",
+        "awayResult": "1",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": "데이비슨",
+        "awayStartPitcher": "올러",
+        "winPitcher": "데이비슨",
+        "losePitcher": "올러"
+      },
+      {
+        "gameId": 80090909,
+        "matchSeq": 13,
+        "startDate": "20250806",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV2",
+          "gameMvpPollId": "34720",
+          "importance": 1,
+          "vod": 6016286,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": "W",
+        "homeResult": "5",
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": "L",
+        "awayResult": "4",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": "폰세",
+        "awayStartPitcher": "배제성",
+        "winPitcher": "폰세",
+        "losePitcher": "배제성"
+      },
+      {
+        "gameId": 80090910,
+        "matchSeq": 13,
+        "startDate": "20250806",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SPOTV",
+          "gameMvpPollId": "34713",
+          "importance": 1,
+          "vod": 6016340,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": "L",
+        "homeResult": "8",
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": "W",
+        "awayResult": "10",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": "최채흥",
+        "awayStartPitcher": "콜어빈",
+        "winPitcher": "최원준",
+        "losePitcher": "함덕주"
+      },
+      {
+        "gameId": 80090911,
+        "matchSeq": 14,
+        "startDate": "20250806",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "gameMvpPollId": "34692",
+          "importance": 1,
+          "vod": 6016355,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": "W",
+        "homeResult": "5",
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": "L",
+        "awayResult": "4",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": "앤더슨",
+        "awayStartPitcher": "이승현",
+        "winPitcher": "앤더슨",
+        "losePitcher": "이승현"
+      },
+      {
+        "gameId": 80090912,
+        "matchSeq": 14,
+        "startDate": "20250806",
+        "startTime": "1830",
+        "periodType": "END",
+        "gameStatus": "END",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "gameMvpPollId": "34727",
+          "importance": 1,
+          "vod": 6016324,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": "L",
+        "homeResult": "5",
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": "W",
+        "awayResult": "9",
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": "조민석",
+        "awayStartPitcher": "박주성",
+        "winPitcher": "오석주",
+        "losePitcher": "류진욱"
+      }
+    ],
+    "20250807": [
+      {
+        "gameId": 80090913,
+        "matchSeq": 15,
+        "startDate": "20250807",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": "이민석",
+        "awayStartPitcher": "양현종",
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090914,
+        "matchSeq": 14,
+        "startDate": "20250807",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV2",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": "와이스",
+        "awayStartPitcher": "고영표",
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090915,
+        "matchSeq": 14,
+        "startDate": "20250807",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": "송승기",
+        "awayStartPitcher": "곽빈",
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090916,
+        "matchSeq": 15,
+        "startDate": "20250807",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": "김광현",
+        "awayStartPitcher": "후라도",
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090917,
+        "matchSeq": 15,
+        "startDate": "20250807",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": "신민혁",
+        "awayStartPitcher": "알칸타라",
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250808": [
+      {
+        "gameId": 80090918,
+        "matchSeq": 11,
+        "startDate": "20250808",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090920,
+        "matchSeq": 11,
+        "startDate": "20250808",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090921,
+        "matchSeq": 12,
+        "startDate": "20250808",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090922,
+        "matchSeq": 11,
+        "startDate": "20250808",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV2",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80095084,
+        "matchSeq": 9,
+        "startDate": "20250808",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250809": [
+      {
+        "gameId": 80090923,
+        "matchSeq": 12,
+        "startDate": "20250809",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090925,
+        "matchSeq": 12,
+        "startDate": "20250809",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090926,
+        "matchSeq": 13,
+        "startDate": "20250809",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090927,
+        "matchSeq": 12,
+        "startDate": "20250809",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV2",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80095085,
+        "matchSeq": 10,
+        "startDate": "20250809",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250810": [
+      {
+        "gameId": 80090928,
+        "matchSeq": 13,
+        "startDate": "20250810",
+        "startTime": "1400",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "KBS N SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090929,
+        "matchSeq": 13,
+        "startDate": "20250810",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SBS SPORTS",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090931,
+        "matchSeq": 14,
+        "startDate": "20250810",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090932,
+        "matchSeq": 13,
+        "startDate": "20250810",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "SPOTV2",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80095086,
+        "matchSeq": 11,
+        "startDate": "20250810",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "broadcast": "MBC SPORTS+",
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250812": [
+      {
+        "gameId": 80090933,
+        "matchSeq": 11,
+        "startDate": "20250812",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090934,
+        "matchSeq": 11,
+        "startDate": "20250812",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090935,
+        "matchSeq": 11,
+        "startDate": "20250812",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090936,
+        "matchSeq": 10,
+        "startDate": "20250812",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 172615,
+        "awayTeamName": "NC",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090937,
+        "matchSeq": 13,
+        "startDate": "20250812",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250813": [
+      {
+        "gameId": 80090938,
+        "matchSeq": 12,
+        "startDate": "20250813",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090939,
+        "matchSeq": 12,
+        "startDate": "20250813",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090940,
+        "matchSeq": 12,
+        "startDate": "20250813",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090941,
+        "matchSeq": 11,
+        "startDate": "20250813",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 172615,
+        "awayTeamName": "NC",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090942,
+        "matchSeq": 14,
+        "startDate": "20250813",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250814": [
+      {
+        "gameId": 80090943,
+        "matchSeq": 13,
+        "startDate": "20250814",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090944,
+        "matchSeq": 13,
+        "startDate": "20250814",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090945,
+        "matchSeq": 13,
+        "startDate": "20250814",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090946,
+        "matchSeq": 12,
+        "startDate": "20250814",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 172615,
+        "awayTeamName": "NC",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090947,
+        "matchSeq": 15,
+        "startDate": "20250814",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250815": [
+      {
+        "gameId": 80090948,
+        "matchSeq": 13,
+        "startDate": "20250815",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090949,
+        "matchSeq": 13,
+        "startDate": "20250815",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090950,
+        "matchSeq": 13,
+        "startDate": "20250815",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090951,
+        "matchSeq": 13,
+        "startDate": "20250815",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090952,
+        "matchSeq": 11,
+        "startDate": "20250815",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250816": [
+      {
+        "gameId": 80090953,
+        "matchSeq": 14,
+        "startDate": "20250816",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090954,
+        "matchSeq": 14,
+        "startDate": "20250816",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090955,
+        "matchSeq": 14,
+        "startDate": "20250816",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090956,
+        "matchSeq": 14,
+        "startDate": "20250816",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090957,
+        "matchSeq": 12,
+        "startDate": "20250816",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250817": [
+      {
+        "gameId": 80090958,
+        "matchSeq": 15,
+        "startDate": "20250817",
+        "startTime": "1400",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090959,
+        "matchSeq": 15,
+        "startDate": "20250817",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090960,
+        "matchSeq": 15,
+        "startDate": "20250817",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090961,
+        "matchSeq": 15,
+        "startDate": "20250817",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090962,
+        "matchSeq": 13,
+        "startDate": "20250817",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250819": [
+      {
+        "gameId": 80090963,
+        "matchSeq": 12,
+        "startDate": "20250819",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090965,
+        "matchSeq": 13,
+        "startDate": "20250819",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090966,
+        "matchSeq": 12,
+        "startDate": "20250819",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090967,
+        "matchSeq": 13,
+        "startDate": "20250819",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80095008,
+        "matchSeq": 13,
+        "startDate": "20250819",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250820": [
+      {
+        "gameId": 80090968,
+        "matchSeq": 13,
+        "startDate": "20250820",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090970,
+        "matchSeq": 14,
+        "startDate": "20250820",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090971,
+        "matchSeq": 13,
+        "startDate": "20250820",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090972,
+        "matchSeq": 14,
+        "startDate": "20250820",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80095009,
+        "matchSeq": 14,
+        "startDate": "20250820",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250821": [
+      {
+        "gameId": 80090973,
+        "matchSeq": 14,
+        "startDate": "20250821",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090975,
+        "matchSeq": 15,
+        "startDate": "20250821",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090976,
+        "matchSeq": 14,
+        "startDate": "20250821",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090977,
+        "matchSeq": 15,
+        "startDate": "20250821",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80095010,
+        "matchSeq": 15,
+        "startDate": "20250821",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "importance": 1,
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250822": [
+      {
+        "gameId": 80090978,
+        "matchSeq": 13,
+        "startDate": "20250822",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090979,
+        "matchSeq": 12,
+        "startDate": "20250822",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090980,
+        "matchSeq": 12,
+        "startDate": "20250822",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090981,
+        "matchSeq": 13,
+        "startDate": "20250822",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090982,
+        "matchSeq": 10,
+        "startDate": "20250822",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250823": [
+      {
+        "gameId": 80090983,
+        "matchSeq": 14,
+        "startDate": "20250823",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090984,
+        "matchSeq": 13,
+        "startDate": "20250823",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090985,
+        "matchSeq": 13,
+        "startDate": "20250823",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090986,
+        "matchSeq": 14,
+        "startDate": "20250823",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090987,
+        "matchSeq": 11,
+        "startDate": "20250823",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250824": [
+      {
+        "gameId": 80090988,
+        "matchSeq": 15,
+        "startDate": "20250824",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090989,
+        "matchSeq": 14,
+        "startDate": "20250824",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "광주-기아 챔피언스필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 389,
+        "homeTeamName": "KIA",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090990,
+        "matchSeq": 14,
+        "startDate": "20250824",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 386,
+        "awayTeamName": "롯데",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090991,
+        "matchSeq": 15,
+        "startDate": "20250824",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 384,
+        "awayTeamName": "SSG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090992,
+        "matchSeq": 12,
+        "startDate": "20250824",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대구 삼성 라이온즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 383,
+        "homeTeamName": "삼성",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250826": [
+      {
+        "gameId": 80090993,
+        "matchSeq": 11,
+        "startDate": "20250826",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090994,
+        "matchSeq": 11,
+        "startDate": "20250826",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090995,
+        "matchSeq": 13,
+        "startDate": "20250826",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090996,
+        "matchSeq": 12,
+        "startDate": "20250826",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090997,
+        "matchSeq": 13,
+        "startDate": "20250826",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250827": [
+      {
+        "gameId": 80090998,
+        "matchSeq": 12,
+        "startDate": "20250827",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80090999,
+        "matchSeq": 12,
+        "startDate": "20250827",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091000,
+        "matchSeq": 14,
+        "startDate": "20250827",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091001,
+        "matchSeq": 13,
+        "startDate": "20250827",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091002,
+        "matchSeq": 14,
+        "startDate": "20250827",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250828": [
+      {
+        "gameId": 80091003,
+        "matchSeq": 13,
+        "startDate": "20250828",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "고척 스카이돔",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 382,
+        "homeTeamName": "키움",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 390,
+        "awayTeamName": "한화",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091004,
+        "matchSeq": 13,
+        "startDate": "20250828",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091005,
+        "matchSeq": 15,
+        "startDate": "20250828",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 394601,
+        "awayTeamName": "KT",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091006,
+        "matchSeq": 14,
+        "startDate": "20250828",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "창원NC파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 172615,
+        "homeTeamName": "NC",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 387,
+        "awayTeamName": "LG",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091007,
+        "matchSeq": 15,
+        "startDate": "20250828",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 385,
+        "homeTeamName": "두산",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250829": [
+      {
+        "gameId": 80091008,
+        "matchSeq": 13,
+        "startDate": "20250829",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091009,
+        "matchSeq": 10,
+        "startDate": "20250829",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 172615,
+        "awayTeamName": "NC",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091010,
+        "matchSeq": 13,
+        "startDate": "20250829",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091011,
+        "matchSeq": 12,
+        "startDate": "20250829",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091012,
+        "matchSeq": 13,
+        "startDate": "20250829",
+        "startTime": "1830",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250830": [
+      {
+        "gameId": 80091013,
+        "matchSeq": 14,
+        "startDate": "20250830",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091014,
+        "matchSeq": 11,
+        "startDate": "20250830",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 172615,
+        "awayTeamName": "NC",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091015,
+        "matchSeq": 14,
+        "startDate": "20250830",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091016,
+        "matchSeq": 13,
+        "startDate": "20250830",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091017,
+        "matchSeq": 14,
+        "startDate": "20250830",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ],
+    "20250831": [
+      {
+        "gameId": 80091018,
+        "matchSeq": 15,
+        "startDate": "20250831",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "수원 케이티위즈 파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 394601,
+        "homeTeamName": "KT",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 389,
+        "awayTeamName": "KIA",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/KT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091019,
+        "matchSeq": 12,
+        "startDate": "20250831",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "인천 SSG 랜더스 필드",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 384,
+        "homeTeamName": "SSG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 172615,
+        "awayTeamName": "NC",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SK_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/NC_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091020,
+        "matchSeq": 15,
+        "startDate": "20250831",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "사직야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 386,
+        "homeTeamName": "롯데",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 385,
+        "awayTeamName": "두산",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/OB_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091021,
+        "matchSeq": 14,
+        "startDate": "20250831",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "대전 한화생명 볼파크",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 390,
+        "homeTeamName": "한화",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 383,
+        "awayTeamName": "삼성",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HH_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/SS_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      },
+      {
+        "gameId": 80091022,
+        "matchSeq": 15,
+        "startDate": "20250831",
+        "startTime": "1800",
+        "periodType": "BEFORE",
+        "gameStatus": "BEFORE",
+        "op": {
+          "textRelay": true
+        },
+        "seasonKey": "2025",
+        "seasonName": "2025 KBO리그",
+        "leagueCode": "KBO",
+        "leagueName": "KBO리그",
+        "fieldName": "잠실야구장",
+        "gameType": {
+          "gameTypeId": 2,
+          "nameKo": "시즌",
+          "name": "시즌"
+        },
+        "gameDetailType": {
+          "gameDetailTypeId": 103,
+          "nameKo": "페넌트레이스",
+          "name": "페넌트레이스"
+        },
+        "homeTeamId": 387,
+        "homeTeamName": "LG",
+        "homeWlt": null,
+        "homeResult": null,
+        "awayTeamId": 382,
+        "awayTeamName": "키움",
+        "awayWlt": null,
+        "awayResult": null,
+        "homeTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LG_300300.png",
+        "awayTeamImageUrl": "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/WO_300300.png",
+        "homeStartPitcher": null,
+        "awayStartPitcher": null,
+        "winPitcher": null,
+        "losePitcher": null
+      }
+    ]
+  }
+}

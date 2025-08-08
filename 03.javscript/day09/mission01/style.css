@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/*  */
+body {
+  padding: 30px;
+  background-color: #f4f4f4;
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header h1,
+main h2 {
+  margin-bottom: 20px;
+}
+
+/* 국내선, 국제선 일반 카드 */
+.card {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card .title-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card .title-box h3 {
+  font-size: 18px;
+}
+
+.card .hk-badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background-color: #1e88e5;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.card .hk-badge.no-reservable {
+  background-color: red;
+}
+
+.card .info-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  color: #666666;
+  font-size: 14px;
+}
+
+.card .info-line:last-of-type {
+  margin-bottom: 0;
+}
+
+.label {
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+/* 그래프 */
+.graph-card {
+  background-color: #fff;
+}
+
+.graph-card .title-box,
+.graph-card .content-box {
+  padding: 13px 20px;
+}
+
+.graph-card .title-box,
+.graph-card .title-box div {
+  display: flex;
+  align-items: center;
+}
+
+.graph-card .title-box {
+  justify-content: space-between;
+  background-color: #eef4f8;
+  border-top: 1px solid #d9e2ed;
+}
+
+.graph-card .title {
+  font-weight: 600;
+}
+
+.graph-card .card-no {
+  padding: 4px 8px;
+  margin-right: 10px;
+  background-color: #1e88e5;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.graph-card .content-box {
+  display: flex;
+}
+
+.graph-card .air-name {
+  margin-right: 70px;
+}
+
+.graph-card .air-depdate {
+  margin-right: 40px;
+}
+
+.graph-card .air-period {
+  position: relative;
+}
+
+.graph-card .air-period::before {
+  position: absolute;
+  content: '';
+  top: 14px;
+  left: -14px;
+  width: 0px;
+  height: 62px;
+  border-left: 1px solid #666666;
+}
+
+.graph-card .air-period li {
+  margin-bottom: 5px;
+}
+
+.graph-card .air-period li:first-child,
+.graph-card .air-period li:last-child {
+  position: relative;
+}
+
+.graph-card .air-period li:first-child::before,
+.graph-card .air-period li:last-child::before {
+  position: absolute;
+  content: '';
+  top: 2px;
+  left: -20px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid #666666;
+}

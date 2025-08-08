@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>항공편 정보</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header><h1>🕓 항공편 스케줄</h1></header>
+      <div>
+        <h2>✈️ 국내선</h2>
+        <div id="domestic-container"></div>
+
+        <h2>✈️ 국제선</h2>
+        <div id="international-container"></div>
+
+        <h2>한 번에 보기</h2>
+        <div id="graph-container"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { domesticFlightData, internationalFlightData, flightGraphData } from './flightData.js';
+      import {
+        createEl,
+        createInfoLine,
+        createCardContainer,
+        getFormattedDomesticTitleBox,
+        getFormattedDomesticSchedule,
+        getFormattedDomesticInfo,
+        getFormattedInternationalTitleBox,
+        getFormattedInternationalSchedule,
+      } from './flightUtils.js';
+
+      // 국내선 렌더링
+      const renderDomesticFlights = (data) => {
+        const container = document.getElementById('domestic-container');
+        container.innerHTML = '';
+
+        data.forEach((flight) => {
+          const { seatStatus } = flight;
+          const card = createCardContainer(getFormattedDomesticTitleBox(flight), seatStatus);
+
+          card.appendChild(createInfoLine(getFormattedDomesticSchedule(flight)));
+          card.appendChild(createInfoLine(getFormattedDomesticInfo(flight)));
+
+          container.appendChild(card);
+        });
+      };
+
+      // 국제선 렌더링
+      const renderInternationalFlights = (data) => {
+        const container = document.getElementById('international-container');
+        container.innerHTML = '';
+
+        data.forEach((flight) => {
+          const { baggage, cabinclass } = flight;
+
+          const isReservable = parseInt(baggage, 10) > 0;
+          const badgeText = isReservable > 0 ? '예약 가능' : '예약 불가';
+          const card = createCardContainer(getFormattedInternationalTitleBox(flight));
+
+          card.appendChild(createInfoLine([[null, getFormattedInternationalSchedule(flight)]], badgeText));
+          card.appendChild(createInfoLine([[null, `💺 ${cabinclass} | 🧳 ${baggage}`]]));
+
+          container.appendChild(card);
+        });
+      };
+
+      // ======================== 추후에 시간되면 다시 해보쟝 ~ ========================
+      // [미완성] 날짜 포멧
+      function getFlightDuration({ depdate, deptm, arrdate, arrtm, depairportnm, arrairportcd }) {
+        const timezoneOffsets = {
+          ICN: 9 * 60, // 서울: UTC+9 → 540분
+          LAX: -8 * 60, // 로스앤젤레스: UTC-8 → -480분
+          SFO: -8 * 60,
+          LAS: -8 * 60,
+        };
+
+        function parseDateTime(dateStr, timeStr) {
+          const year = parseInt(dateStr.slice(0, 4));
+          const month = parseInt(dateStr.slice(4, 6)) - 1;
+          const day = parseInt(dateStr.slice(6, 8));
+          const hour = parseInt(timeStr.slice(0, 2));
+          const minute = parseInt(timeStr.slice(2, 4));
+          return new Date(Date.UTC(year, month, day, hour, minute));
+        }
+
+        const depUTC = parseDateTime(depdate, deptm);
+        const arrUTC = parseDateTime(arrdate, arrtm);
+
+        const depOffset = timezoneOffsets[depairportnm] ?? 0;
+        const arrOffset = timezoneOffsets[arrairportcd] ?? 0;
+
+        // 실제 시각 = UTC - 타임존 오프셋
+        const depLocalTime = new Date(depUTC.getTime() - depOffset * 60 * 1000);
+        const arrLocalTime = new Date(arrUTC.getTime() - arrOffset * 60 * 1000);
+
+        const diffMs = arrLocalTime - depLocalTime;
+        const diffMinutes = Math.round(diffMs / (1000 * 60));
+
+        const hours = Math.floor(diffMinutes / 60);
+        const minutes = diffMinutes % 60;
+
+        return `${hours}시간 ${minutes.toString().padStart(2, '0')}분`;
+      }
+
+      // [미완성] 그래프 렌더링
+      const renderFlightGraph = (data) => {
+        const container = document.getElementById('graph-container');
+        container.innerHTML = '';
+
+        data.forEach((air) => {
+          console.log(air);
+          const {
+            aircd,
+            airnm,
+            arrairportcd,
+            arrcitynm,
+            arrdate,
+            arrtm,
+            baggageinfo,
+            bookingclass,
+            cabinclassnm,
+            codeshare,
+            codesharenm,
+            depairportnm,
+            depcitynm,
+            depdate,
+            deptm,
+            fltno,
+            itinno,
+            segno,
+          } = air;
+
+          const card = createEl({ tag: 'div', className: 'graph-card' });
+
+          // Title box
+          const titleBox = createEl({ tag: 'div', className: 'title-box' });
+          const titleLeft = document.createElement('div');
+
+          const cardNo = createEl({
+            tag: 'span',
+            className: 'card-no',
+            text: `여정${itinno}`,
+          });
+
+          const title = createEl({
+            tag: 'div',
+            className: 'title',
+            text: `${depcitynm}(${depairportnm}) → ${arrcitynm}(${arrairportcd})`,
+          });
+
+          const flightData = {
+            depdate,
+            deptm,
+            arrdate,
+            arrtm,
+            depairportnm,
+            arrairportcd,
+          };
+
+          const dateRange = createEl({
+            tag: 'span',
+            text: getFlightDuration(flightData),
+          });
+
+          titleLeft.appendChild(cardNo);
+          titleLeft.appendChild(title);
+          titleBox.appendChild(titleLeft);
+          titleBox.appendChild(dateRange);
+
+          // Content box
+          const contentBox = createEl({ tag: 'div', className: 'content-box' });
+          const airline = createEl({ tag: 'div', className: 'air-name', text: `${airnm} ${fltno}` });
+          const depDate = createEl({
+            tag: 'div',
+            className: 'air-depdate',
+            text: `${depdate.slice(4, 6)}월 ${depdate.slice(6, 8)}일`,
+          });
+          const periodList = createEl({ tag: 'ul', className: 'air-period' });
+
+          const periodLiOneSpan = createEl({ tag: 'span', text: `${depcitynm}(${depairportnm})}` });
+          const periodLiOne = createEl({ tag: 'li', text: `${deptm.slice(0, 2)}:${deptm.slice(2, 4)}` });
+          periodLiOne.appendChild(periodLiOneSpan);
+
+          const periodLiTwo = createEl({ tag: 'li', text: getFlightDuration(flightData) });
+          const periodLiThree = createEl({ tag: 'li', text: `${cabinclassnm} / 무료 위탁 수하물(1인) ${baggageinfo}` });
+          const periodLiFour = createEl({ tag: 'li', text: `${arrtm.slice(0, 2)}:${arrtm.slice(2, 4)}` });
+          const periodLiFourSpan = createEl({ tag: 'span', text: `${arrcitynm}(${arrairportcd})}` });
+          periodLiFour.appendChild(periodLiFourSpan);
+
+          periodList.appendChild(periodLiOne);
+          periodList.appendChild(periodLiTwo);
+          periodList.appendChild(periodLiThree);
+          periodList.appendChild(periodLiFour);
+
+          contentBox.appendChild(airline);
+          contentBox.appendChild(depDate);
+          contentBox.appendChild(periodList);
+
+          card.appendChild(titleBox);
+          card.appendChild(contentBox);
+
+          container.appendChild(card);
+        });
+      };
+
+      renderDomesticFlights(domesticFlightData);
+      renderInternationalFlights(internationalFlightData);
+      renderFlightGraph(flightGraphData);
+    </script>
+  </body>
+</html>
