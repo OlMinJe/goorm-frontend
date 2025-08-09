@@ -22,7 +22,7 @@
     </main>
 
     <script type="module">
-      import { domesticFlightData, internationalFlightData, flightGraphData } from './flightData.js';
+      import { domesticFlightData, internationalFlightData, flightGraphData } from './mission01Data.js';
       import {
         createEl,
         createInfoLine,
@@ -32,7 +32,7 @@
         getFormattedDomesticInfo,
         getFormattedInternationalTitleBox,
         getFormattedInternationalSchedule,
-      } from './flightUtils.js';
+      } from './mission01Utils.js';
 
       // 국내선 렌더링
       const renderDomesticFlights = (data) => {

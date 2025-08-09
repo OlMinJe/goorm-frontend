@@ -108,9 +108,8 @@ export function formatDateKR(yyyymmdd) {
   const month = Number(yyyymmdd.slice(4, 6));
   const day = Number(yyyymmdd.slice(6, 8));
   const date = new Date(year, month - 1, day);
-  const dayNames = ['일', '월', '화', '수', '목', '금', '토'];
   const isToday = getIsToday(yyyymmdd);
-  const label = isToday ? '오늘' : dayNames[date.getDay()];
+  const label = isToday ? '오늘' : DAY_NAMES[date.getDay()];
 
   const wrapper = createEl('span');
   wrapper.append(
