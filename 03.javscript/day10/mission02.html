@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+      }
+      body {
+        height: 100vh;
+        background-color: #ffffb8;
+      }
+      main {
+        height: inherit;
+        padding: 40px;
+      }
+      .container {
+        height: calc(100vh - 40%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .btn-box button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border: 2px solid #ff9f06;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>⏰ 타이머</h1>
+      </header>
+      <div class="container">
+        <div class="btn-box">
+          <button id="startBtn">타이머 시작</button>
+          <button onclick="stopAlarm()">타이머 정지</button>
+        </div>
+        <div id="clock">--:--:--</div>
+        <div id="status">대기 중</div>
+      </div>
+      <audio id="alarm" src="./banana.mp3" preload="auto" loop></audio>
+    </main>
+
+    <script>
+      const clockEl = document.getElementById('clock');
+      const statusEl = document.getElementById('status');
+      const alarm = document.getElementById('alarm');
+      const startBtn = document.getElementById('startBtn');
+
+      let timerId = null;
+
+      async function startAlarm() {
+        try {
+          await alarm.play();
+          statusEl.textContent = '☕ 쉬는 시간! 오디오가 재생됩니다';
+        } catch (error) {
+          statusEl.textContent = '⚠️ 자동재생이 차단됨' + error;
+        }
+      }
+
+      function stopAlarm() {
+        if (!alarm.paused || alarm.currentTime) {
+          alarm.pause(); // 멈춰잉
+          alarm.currentTime = 0;
+        }
+        if (timerId) {
+          clearInterval(timerId);
+          timerId = null;
+        }
+        statusEl.textContent = '오디오 및 타이머 정지';
+        startBtn.disabled = false;
+      }
+
+      function tick() {
+        const now = new Date();
+        const [hour, minute, second] = [now.getHours(), now.getMinutes(), now.getSeconds()];
+        // toLocaleTimeString(undefined = 브라우저 기본 사용, {24시간제})
+        clockEl.textContent = now.toLocaleTimeString(undefined, { hour12: false });
+        if (minute === 50 && second === 0) startAlarm();
+        if (minute === 0 && second === 0) stopAlarm();
+      }
+
+      startBtn.addEventListener('click', () => {
+        if (timerId) return;
+        startBtn.disabled = true;
+        statusEl.textContent = '~ 정각 타이머 실행 중 ~';
+        timerId = setInterval(tick, 1000);
+        tick();
+      });
+    </script>
+  </body>
+</html>

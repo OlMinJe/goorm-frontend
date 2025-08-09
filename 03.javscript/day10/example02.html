@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Set 중복 방지</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        background: #f9f9f9;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        color: #333;
+      }
+
+      .user-list {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      button {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      .log {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #eef;
+        border-radius: 6px;
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🧺 Set 실무 예제 – 중복 클릭 & 사용자 추적</h1>
+
+    <h2>✅ 버튼 클릭: 중복 방지</h2>
+    <button onclick="handleClick('submit')">제출</button>
+    <button onclick="handleClick('like')">좋아요</button>
+    <button onclick="handleClick('bookmark')">북마크</button>
+
+    <div class="log" id="click-log">📝 클릭 로그:</div>
+
+    <h2>✅ 실시간 접속 유저</h2>
+    <button onclick="userConnect('userA')">userA 접속</button>
+    <button onclick="userConnect('userB')">userB 접속</button>
+    <button onclick="userConnect('userA')">userA 재접속 시도</button>
+    <button onclick="userDisconnect('userA')">userA 로그아웃</button>
+
+    <div class="user-list" id="user-list">👥 접속 중인 유저: 없음</div>
+
+    <script>
+      // 1. 중복 클릭 방지
+      const clickedButtons = new Set();
+
+      function handleClick(action) {
+        const log = document.getElementById('click-log');
+
+        if (clickedButtons.has(action)) {
+          log.textContent += `\n ${action} 버튼은 이미 클릭됨`;
+          return;
+        }
+
+        clickedButtons.add(action);
+        log.textContent += `\n ${action} 버튼 클릭 처리됨`;
+      }
+
+      // 2. 중복 없이 사용자 ID 추적
+      const onlineUsers = new Set();
+
+      function userConnect(userId) {
+        if (onlineUsers.has(userId)) {
+          alert(`${userId}는 이미 접속 중입니다...`);
+          return;
+        }
+
+        onlineUsers.add(userId);
+        updateUserList();
+      }
+
+      function userDisconnect(userId) {
+        if (onlineUsers.has(userId)) {
+          onlineUsers.delete(userId);
+          updateUserList();
+        } else {
+          alert(`${userId}는 현재 접속 목록에 없습니다..`);
+        }
+      }
+
+      function updateUserList() {
+        const userList = document.getElementById('user-list');
+
+        if (onlineUsers.size === 0) {
+          userList.textContent = '👥 접속 중인 유저: 없음';
+        } else {
+          const users = Array.from(onlineUsers).sort();
+          userList.textContent = `👥 접속 중인 유저(${users.length}명): ${users.join(', ')}`;
+        }
+      }
+    </script>
+  </body>
+</html>

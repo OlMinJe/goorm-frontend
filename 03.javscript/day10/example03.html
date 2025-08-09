@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spread + rest</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      input {
+        display: block;
+        margin: 10px 0;
+        padding: 6px;
+        width: 300px;
+      }
+      .info-box {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+      }
+      .info-box h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const user = {
+        id: 101,
+        name: '민제',
+        email: 'olminje@gmail.com',
+        role: 'admin',
+        createdAt: '2025-08-08',
+      };
+
+      function renderUserForm({ name, email, ...rest }) {
+        const form = document.createElement('form');
+
+        form.appendChild(createInput({ label: '이름', value: name, name: 'name' }));
+        form.appendChild(createInput({ label: '이름', value: email, name: 'email' }));
+
+        const infoBox = document.createElement('div');
+        infoBox.className = 'info-box';
+
+        const title = document.createElement('h3');
+        title.textContent = '추가 정보';
+
+        infoBox.appendChild(title);
+
+        for (const [key, value] of Object.entries(rest)) {
+          const p = document.createElement('p');
+          p.textContent = `${key}: ${value}`;
+          infoBox.appendChild(p);
+        }
+
+        const app = document.getElementById('app');
+        app.appendChild(form);
+        app.appendChild(infoBox);
+      }
+
+      function createInput({ label, ...inputProps }) {
+        const labelEl = document.createElement('label');
+        labelEl.textContent = label;
+
+        const inputEl = document.createElement('input');
+        Object.assign(inputEl, inputProps);
+
+        const container = document.createElement('div');
+        container.appendChild(labelEl);
+        container.appendChild(inputEl);
+
+        return container;
+      }
+
+      renderUserForm();
+    </script>
+  </body>
+</html>
