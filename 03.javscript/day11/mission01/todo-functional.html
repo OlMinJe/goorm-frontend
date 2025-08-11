@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>함수형 Todo</title>
+    <style>
+      :root {
+        --bg: #f7f7fb;
+        --card: #fff;
+        --text: #222;
+        --muted: #666;
+        --accent: #4f46e5;
+        --border: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, Segoe UI, Apple SD Gothic Neo, -apple-system, sans-serif;
+      }
+
+      .wrap {
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+
+      h1 {
+        margin: 4px 0 16px;
+        font-size: 24px;
+      }
+
+      form {
+        display: flex;
+        gap: 8px;
+      }
+
+      input[type='text'] {
+        flex: 1;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 16px;
+      }
+
+      button {
+        border: 0;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #fff;
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0 8px;
+      }
+
+      .filters {
+        display: flex;
+        gap: 8px;
+      }
+
+      .filter {
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+      }
+
+      .filter.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: transparent;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      li.done {
+        opacity: 0.7;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      .meta {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .del {
+        background: #ef4444;
+      }
+
+      .empty {
+        padding: 28px;
+        text-align: center;
+        color: var(--muted);
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      .stats {
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>✅ 함수형 Todo</h1>
+
+        <form id="form" autocomplete="off">
+          <label class="visually-hidden" for="todo-input">할 일</label>
+          <input id="todo-input" type="text" placeholder="할 일을 입력하고 Enter" minlength="1" maxlength="100" required />
+          <button type="submit">추가</button>
+        </form>
+
+        <div class="toolbar">
+          <div class="filters">
+            <button class="filter" data-mode="all">전체</button>
+            <button class="filter" data-mode="active">미완료</button>
+            <button class="filter" data-mode="done">완료</button>
+          </div>
+          <div class="stats" id="stats">총 0 · 완료 0 · 미완료 0</div>
+        </div>
+
+        <ul id="list"></ul>
+        <div class="empty" id="empty" hidden>아직 할 일이 없어요 ✨</div>
+      </div>
+    </div>
+
+    <script>
+      /* =========================
+       순수 유틸 함수
+       ========================= */
+      const uid = () =>
+        crypto.randomUUID?.() /* 브라우저가 randomUUID 지원 시 */ || Date.now() + Math.random().toString(16).slice(2); /* 폴백: 타임스탬프+랜덤 */
+
+      const clamp = (s) => s.trim(); // 앞뒤 공백 제거(텍스트 정리)
+
+      /* =========================
+       순수 도메인 함수(불변 반환)
+       ========================= */
+
+      // 새 아이템을 "앞에" 붙여 최신순을 유지
+      const addTodo = (list, text) =>
+        text.trim()
+          ? [{ id: uid(), text: clamp(text), done: false }, ...list] // 새 배열 반환
+          : list; // 공백이면 원본 유지
+
+      // 특정 id의 done 토글 (새 배열 반환)
+      const toggleTodo = (list, id) => list.map((t) => (t.id === id ? { ...t, done: !t.done } : t));
+
+      // 특정 id 삭제 (새 배열 반환)
+      const removeTodo = (list, id) => list.filter((t) => t.id !== id);
+
+      // 리스트 필터링 (보기 모드에 따라 분기)
+      const filterTodos = (list, mode = 'all') =>
+        mode === 'active' ? list.filter((t) => !t.done) : mode === 'done' ? list.filter((t) => t.done) : list;
+
+      // 통계 계산(총/완료/미완료)
+      const stats = (list) => {
+        const total = list.length; // 전체 개수
+        const done = list.filter((t) => t.done).length; // 완료 개수
+        return { total, done, active: total - done }; // 미완료 = 전체-완료
+      };
+
+      /* =========================
+       상태 (항상 불변 업데이트)
+       ========================= */
+      let todos = []; // Todo 배열 상태
+      let mode = 'all'; // 필터 모드 상태
+
+      /* =========================
+       렌더링
+       ========================= */
+      const $list = document.getElementById('list'); // 목록 DOM
+      const $empty = document.getElementById('empty'); // 빈 안내 DOM
+      const $stats = document.getElementById('stats'); // 통계 DOM
+
+      // 간단 XSS 방지(텍스트를 HTML 이스케이프)
+      function escapeHtml(s) {
+        return s.replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+      }
+
+      // 실제 화면 그리기
+      function render() {
+        const visible = filterTodos(todos, mode);
+
+        // 각 항목을 li로 렌더링
+        $list.innerHTML = visible
+          .map(
+            (t) => `<li class="${t.done ? 'done' : ''}" data-id="${t.id}">
+                      <input type="checkbox" ${t.done ? 'checked' : ''} />
+                      <div class="text">${escapeHtml(t.text)}</div>
+                      <button class="del">삭제</button>
+                    </li>`
+          )
+          .join('');
+
+        // 비어 있으면 안내 표시
+        $empty.hidden = visible.length !== 0;
+
+        // 통계 갱신
+        const { total, done, active } = stats(todos);
+
+        // 활성 필터 버튼 표시
+        document.querySelectorAll('.filter').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.mode === mode);
+        });
+      }
+
+      /* =========================
+       이벤트 바인딩
+       ========================= */
+
+      // 입력 폼 제출 → 항목 추가
+      document.getElementById('form').addEventListener('submit', (e) => {
+        e.preventDefault(); // 새로고침 방지
+        const input = document.getElementById('todo-input'); // 입력 DOM
+        todos = addTodo(todos, input.value); // 불변 추가
+        input.value = ''; // 입력값 초기화
+        render(); // 갱신
+      });
+
+      // 필터 버튼들 클릭 → 보기 모드 변경
+      document.querySelectorAll('.filter').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          mode = btn.dataset.mode; // data-mode 값을 상태에 반영
+          render(); // 갱신
+        });
+      });
+
+      // 삭제
+      $list.addEventListener('click', (e) => {
+        const li = e.target.closest('li[data-id]');
+        if (!li) return;
+        const id = li.getAttribute('data-id');
+
+        const actions = [
+          { match: 'input[type="checkbox"]', fn: () => (todos = toggleTodo(todos, id)) },
+          { match: '.del', fn: () => (todos = removeTodo(todos, id)) },
+        ];
+
+        const action = actions.find((a) => e.target.matches(a.match) || e.target.closest(a.match));
+        if (action) {
+          action.fn();
+          render();
+        }
+      });
+
+      render(); // 최초 1회 렌더
+    </script>
+  </body>
+</html>

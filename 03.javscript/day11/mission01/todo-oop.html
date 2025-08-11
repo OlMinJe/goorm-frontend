@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>객체지향 Todo</title>
+    <style>
+      :root {
+        --bg: #f7fbf7;
+        --card: #fff;
+        --text: #222;
+        --muted: #667;
+        --accent: #16a34a;
+        --border: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, Segoe UI, Apple SD Gothic Neo, -apple-system, sans-serif;
+      }
+
+      .wrap {
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+
+      h1 {
+        margin: 4px 0 16px;
+        font-size: 24px;
+      }
+
+      form {
+        display: flex;
+        gap: 8px;
+      }
+
+      input[type='text'] {
+        flex: 1;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 16px;
+      }
+
+      button {
+        border: 0;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #fff;
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0 8px;
+      }
+
+      .filters {
+        display: flex;
+        gap: 8px;
+      }
+
+      .filter {
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+      }
+
+      .filter.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: transparent;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      li.done {
+        opacity: 0.7;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      .del {
+        background: #ef4444;
+      }
+
+      .empty {
+        padding: 28px;
+        text-align: center;
+        color: var(--muted);
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      .stats {
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>🧩 객체지향 Todo</h1>
+
+        <form id="form" autocomplete="off">
+          <input id="todo-input" type="text" placeholder="할 일을 입력하고 Enter" minlength="1" maxlength="100" required />
+          <button type="submit">추가</button>
+        </form>
+
+        <div class="toolbar">
+          <div class="filters">
+            <button class="filter" data-mode="all">전체</button>
+            <button class="filter" data-mode="active">미완료</button>
+            <button class="filter" data-mode="done">완료</button>
+          </div>
+          <div class="stats" id="stats">총 0 · 완료 0 · 미완료 0</div>
+        </div>
+
+        <ul id="list"></ul>
+        <div class="empty" id="empty" hidden>아직 할 일이 없어요 ✨</div>
+      </div>
+    </div>
+
+    <script>
+      /* ===== 유틸 ===== */
+      const uid = () => crypto.randomUUID?.() || Date.now() + Math.random().toString(16).slice(2); // 고유 ID
+      const escapeHtml = (s) => s.replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m])); // XSS 방지
+
+      /* ===== 스토어(객체지향) ===== */
+      class TodoStore {
+        #list = []; // 비공개 상태(캡슐화)
+
+        add(text) {
+          // 항목 추가
+          const t = { id: uid(), text: text.trim(), done: false }; // 새 항목
+          if (!t.text) return; // 공백이면 무시
+          this.#list.unshift(t); // 앞에 추가(최신순)
+          return t.id; // 생성된 id 반환
+        }
+
+        toggle(id) {
+          // 완료 토글
+          const i = this.#list.findIndex((t) => t.id === id); // 대상 인덱스
+          if (i >= 0) this.#list[i] = { ...this.#list[i], done: !this.#list[i].done }; // 불변 업데이트처럼 교체
+        }
+
+        remove(id) {
+          // 삭제
+          this.#list = this.#list.filter((t) => t.id !== id); // 필터로 제거
+        }
+
+        filter(mode = 'all') {
+          // 보기 모드별 목록
+          const arr = mode === 'active' ? this.#list.filter((t) => !t.done) : mode === 'done' ? this.#list.filter((t) => t.done) : this.#list;
+          return arr.map((t) => ({ ...t })); // 외부로는 복제(내부 보호)
+        }
+
+        stats() {
+          // 통계
+          const total = this.#list.length; // 전체
+          const done = this.#list.filter((t) => t.done).length; // 완료
+          return { total, done, active: total - done }; // 미완료 계산
+        }
+
+        snapshot() {
+          return this.filter('all');
+        } // 전체 복제 반환(읽기용)
+      }
+
+      /* ===== 인스턴스 & UI 상태 ===== */
+      const store = new TodoStore(); // 스토어 생성
+      let mode = 'all'; // 보기 모드 상태
+
+      /* ===== 렌더 ===== */
+      const $list = document.getElementById('list'); // 목록 DOM
+      const $empty = document.getElementById('empty'); // 빈 안내 DOM
+      const $stats = document.getElementById('stats'); // 통계 DOM
+
+      function render() {
+        // 화면 갱신
+        const visible = store.filter(mode);
+
+        // 목록
+        $list.innerHTML = visible
+          .map(
+            (t) => `<li class="${t.done ? 'done' : ''}" data-id="${t.id}">
+                      <input type="checkbox" ${t.done ? 'checked' : ''}  />
+                      <div class="text">${escapeHtml(t.text)}</div>
+                      <button class="del" >삭제</button>
+                    </li>`
+          )
+          .join('');
+
+        $empty.hidden = visible.length !== 0;
+
+        const { total, done, active } = store.stats();
+        $stats.textContent = `총 ${total} · 완료 ${done} · 미완료 ${active}`;
+
+        document.querySelectorAll('.filter').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.mode === mode);
+        });
+      }
+
+      /* ===== 이벤트 ===== */
+
+      // 폼 제출 → 추가
+      document.getElementById('form').addEventListener('submit', (e) => {
+        e.preventDefault(); // 새로고침 방지
+        const input = document.getElementById('todo-input'); // 입력 DOM
+        store.add(input.value); // 스토어에 추가
+        input.value = ''; // 입력 초기화
+        render(); // 화면 갱신
+      });
+
+      // 필터 버튼 클릭 → 모드 변경
+      document.querySelectorAll('.filter').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          mode = btn.dataset.mode; // 모드 상태 반영
+          render(); // 갱신
+        });
+      });
+
+      // 체크 및 삭제
+      $list.addEventListener('click', (e) => {
+        const li = e.target.closest('li[data-id]');
+        if (!li) return;
+        const id = li.dataset.id;
+
+        if (e.target.matches('input[type="checkbox"]')) {
+          store.toggle(id);
+          render();
+          return;
+        }
+
+        if (e.target.closest('.del')) {
+          store.remove(id);
+          render();
+          return;
+        }
+      });
+
+      render(); // 최초 1회 렌더
+    </script>
+  </body>
+</html>
