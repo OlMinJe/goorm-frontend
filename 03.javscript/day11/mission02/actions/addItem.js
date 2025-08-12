@@ -7,10 +7,16 @@ export function addItem() {
     e.preventDefault();
 
     const id = Date.now() + Math.random() * 1000;
-    const title = String(titleEl.value || '').trim();
-    const url = String(urlEl.value || '').trim();
-    // prettier-ignore
-    const tags = (tagsEl.value || '').split(',').map((s) => s.trim()).filter(Boolean);
+    const title = (titleEl.value || '').trim();
+    const url = (urlEl.value || '').trim();
+    const tags = Array.from(
+      new Set(
+        (tagsEl.value ?? '')
+          .split(',')
+          .map((s) => s.trim().toLowerCase())
+          .filter(Boolean)
+      )
+    );
     const createdAt = Date.now();
 
     const item = { id, title, url, tags, createdAt };

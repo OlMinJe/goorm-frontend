@@ -1,4 +1,5 @@
 import { SORT } from '../../constants.js';
+import { asNumber, asString, isArray } from '../utils.js';
 
 export function debounce(fn, delay = 300) {
   let timer;
@@ -8,41 +9,19 @@ export function debounce(fn, delay = 300) {
   };
 }
 
-export const toLower = (v) => String(v || '').toLowerCase();
+// 정렬 기준별 정렬 함수 모음 ======================
+export const sortFn = (() => {
+  const tagCount = ({ tags }) => (isArray(tags) ? tags.length : 0);
 
-export const sortFn = {
-  [SORT.TITLE]: (a, b) => String(a.title || '').localeCompare(String(b.title || ''), 'ko'),
-  [SORT.TAGS]: (a, b) => (b.tags?.length ?? 0) - (a.tags?.length ?? 0) || (b.createdAt ?? 0) - (a.createdAt ?? 0),
-  [SORT.RECENT]: (a, b) => (b.createdAt ?? 0) - (a.createdAt ?? 0),
-};
+  return {
+    [SORT.TITLE]: (a, b) => asString(a.title).localeCompare(asString(b.title), 'ko'),
+    [SORT.TAGS]: (a, b) => tagCount(b) - tagCount(a) || asNumber(b?.createdAt) - asNumber(a?.createdAt),
+    [SORT.RECENT]: (a, b) => asNumber(b?.createdAt) - asNumber(a?.createdAt),
+  };
+})();
 
-export const getSelectedSet = (sel) => (sel instanceof Set ? sel : new Set(Array.isArray(sel) ? sel.filter(Boolean) : []));
-
-export const getMatchesWords = (item, words) => {
+// 검색어가 제목 및 태그에 포함되는지 확인하는 함수(OR 조건) ======================
+export const getMatchesWords = ({ title, tags }, words) => {
   if (!words.length) return true;
-  const title = toLower(item.title);
-  const tags = (item.tags || []).map(toLower);
   return words.some((w) => title.includes(w) || tags.some((t) => t.includes(w)));
 };
-
-export const getHasTags = (itemTags = [], requiredTags = []) => {
-  if (!requiredTags.length) return true;
-  const set = new Set(itemTags.map(toLower));
-  return requiredTags.every((t) => set.has(t));
-};
-
-export function parseQuery(raw) {
-  const parse = String(raw || '')
-    .split('#')
-    .map((s) => s.trim())
-    .filter(Boolean);
-
-  const tags = [];
-  const words = [];
-
-  for (const t of parse) {
-    if (t.startsWith('#')) tags.push(t.slice(1).toLowerCase());
-    else words.push(t.toLowerCase());
-  }
-  return { tags, words };
-}

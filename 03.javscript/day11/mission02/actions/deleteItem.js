@@ -14,7 +14,8 @@ export function deleteItem() {
 
     store.set((prev) => {
       const newItems = prev.items.filter((item) => item.id !== id);
-      return newItems.length === prev.items.length ? prev : { ...prev, items: newItems };
+      const isNewItems = newItems.length === prev.items.length;
+      return isNewItems ? prev : { ...prev, items: newItems };
     });
 
     const toast = new Toast();

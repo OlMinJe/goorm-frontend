@@ -46,27 +46,15 @@
       import { addItem } from './actions/addItem.js';
       import { deleteItem } from './actions/deleteItem.js';
 
+      // 새로고침 필터 유지 ==================================
       (() => {
         const state = store.get() ?? {};
-        const filter = state.filter ?? INITIAL_STATE.filter;
-
-        if (qInputEl) qInputEl.value = filter.q ?? INITIAL_STATE.filter.q;
-
-        if (sortEl) {
-          const savedSort = filter.sort ?? INITIAL_STATE.filter.sort;
-          const has = Array.from(sortEl.options).some((opt) => opt.value === savedSort);
-          sortEl.value = has ? savedSort : INITIAL_STATE.filter.sort;
-        }
-
-        // 태그 안날아가게 가능./..?
-        // const selected = filter.selected instanceof Set ? filter.selected : new Set(Array.isArray(filter.selected) ? filter.selected : []);
-
-        // if (qInputEl && !filter.q && selected.size) {
-        //   qInputEl.value = [...selected].join(', ');
-        // }
+        const { q, sort, selected } = state.filter ?? INITIAL_STATE.filter;
+        if (qInputEl) qInputEl.value = q;
+        if (sortEl) sortEl.value = sort;
       })();
 
-      if (localStorage.getItem(THEME_KEY)) document.body.classList.add('light');
+      if (localStorage.getItem(THEME_KEY)) document.body.classList.add(THEME_KEY);
 
       // 생성 및 구독 ==================================
       const render = createCardsRenderer();
@@ -74,7 +62,7 @@
 
       // 이벤트 등록 ==================================
       themeBtnEl.addEventListener('click', () => {
-        const isLight = document.body.classList.toggle('light');
+        const isLight = document.body.classList.toggle(THEME_KEY);
         localStorage.setItem(THEME_KEY, isLight);
       });
       addItem();

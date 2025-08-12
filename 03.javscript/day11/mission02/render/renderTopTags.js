@@ -10,8 +10,10 @@ export function rednerTopTags(items) {
     });
   });
 
-  const sortedTags = [...tagCountMap.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const tagCountArray = Array.from(tagCountMap, ([tag, count]) => ({ tag, count }));
+  const sortedTags = tagCountArray.sort((a, b) => b.count - a.count).slice(0, 5);
 
-  const result = sortedTags.length ? sortedTags.map(([tag, count]) => `#${tag}(${count})`).join(' ') : '태그 없음';
-  statsEl.textContent += result;
+  const formatTag = ({ tag, count }) => `#${tag}(${count})`;
+  const topFiveText = !sortedTags.length ? '태그 없음' : sortedTags.map(formatTag).join(' ');
+  statsEl.textContent += topFiveText;
 }

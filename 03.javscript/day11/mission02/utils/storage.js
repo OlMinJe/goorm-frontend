@@ -1,38 +1,38 @@
 import { INITIAL_STATE, STORAGE_KEY } from '../constants.js';
+import { isArray, reviveSelected, serializeSelected } from './utils.js';
 
-const reviveSelected = (sel) => new Set(Array.isArray(sel) ? sel : []);
-const serializeSelected = (sel) => (Array.isArray(sel) ? sel : [...(sel ?? [])]);
+const parseJSON = (str) => {
+  try {
+    return JSON.parse(str);
+  } catch {
+    return null;
+  }
+};
 
 export function loadItem() {
-  const raw = localStorage.getItem(STORAGE_KEY) ?? [];
-  const parsed = JSON.parse(raw);
-  if (!parsed) return { ...INITIAL_STATE };
+  const raw = localStorage.getItem(STORAGE_KEY);
+  const parsed = parseJSON(raw);
+  if (!parsed) return { ...INITIAL_STATE, selected: reviveSelected(INITIAL_STATE.filter?.selected) };
 
-  return parsed
-    ? {
-        ...INITIAL_STATE,
-        ...parsed,
-        filter: {
-          ...INITIAL_STATE.filter,
-          ...parsed.filter,
-          selected: reviveSelected(parsed.filter?.selected),
-        },
-      }
-    : INITIAL_STATE;
+  const items = isArray(parsed.items) ? parsed.items : INITIAL_STATE.items ?? [];
+
+  const filter = {
+    ...INITIAL_STATE.filter,
+    ...parsed.filter,
+    selected: reviveSelected(parsed.filter?.selected ?? INITIAL_STATE.filter?.selected),
+  };
+
+  return { ...INITIAL_STATE, ...parsed, items, filter };
 }
 
 // 로컬 스토리지 저장하기
 export function saveItem(state) {
-  // localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...state, items: state.items }));
-
-  const { filter, ...rest } = state ?? {};
-  const serializable = {
-    ...rest,
-    items: Array.isArray(state?.items) ? state.items : [],
-    filter: {
-      ...filter,
-      selected: serializeSelected(filter?.selected),
-    },
+  const items = isArray(state.items) ? state.items : [];
+  const filter = {
+    ...state.filter,
+    selected: serializeSelected(state.filter?.selected),
   };
+
+  const serializable = { ...state, items, filter };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(serializable));
 }
