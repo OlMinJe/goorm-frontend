@@ -20,38 +20,35 @@ export function sarchFilter() {
   qInputEl.addEventListener('input', (e) => run(e.target?.value ?? ''));
 }
 
+// 태그
+export function tagFilter() {
+  listEl.addEventListener('click', (e) => {
+    const tagEl = e.target;
+    if (!tagEl) return;
+
+    const tagValue = (tagEl.dataset.tag || '').trim();
+    if (!tagValue) return;
+
+    store.set((prev) => {
+      const prevSel = prev.filter?.selected ?? [];
+      const selected = new Set([...prevSel].filter(Boolean));
+
+      selected.has(tagValue) ? selected.delete(tagValue) : selected.add(tagValue);
+
+      const q = [...selected].map((t) => `#${t}`);
+
+      if (qInputEl) qInputEl.value = q.join('');
+      return { ...prev, filter: { ...prev.filter, selected, q } };
+    });
+  });
+}
+
 // 정렬
 export function sortFilter() {
   if (!sortEl) return;
   sortEl.value = store.get()?.filter?.sort || INITIAL_STATE.filter?.sort;
   sortEl.addEventListener('change', (e) => {
     store.set((prev) => ({ ...prev, filter: { ...prev.filter, sort: e.target.value } }));
-  });
-}
-
-// 태그
-export function tagFilter() {
-  listEl.addEventListener('click', (e) => {
-    const tag = e.target;
-    if (!tag || !tag.matches('.tag')) return;
-
-    const tagValue = tag.dataset.tag;
-    if (!tagValue) return;
-
-    store.set((prev) => {
-      const selected = new Set([...prev.filter?.selected].filter(Boolean));
-
-      if (selected.has(tagValue)) {
-        // 여러 개 넣으면,,, 당연히,, ,삭제가 에바겠지...
-        selected.delete(tagValue);
-      } else {
-        selected.add(tagValue);
-        // TODO: ,넣으면 검색이 안되지......허허허
-        // qInputEl.value = [...selected].join(', ');
-      }
-
-      return { ...prev, filter: { ...prev.filter, selected } };
-    });
   });
 }
 
