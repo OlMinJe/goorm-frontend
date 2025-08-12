@@ -39,44 +39,52 @@
 
     <script type="module">
       import { store } from './store.js';
-      import { THEME } from './constants.js';
+      import { THEME_KEY } from './constants.js';
       import { themeBtnEl, qInputEl, sortEl } from './utils/dom.js';
-      import { inputSearchFilter, inputSortFilter, clearFilter } from './utils/filter.js';
+      import { sarchFilter, sortFilter, tagFilter, clearFilter } from './utils/filter.js';
       import { createCardsRenderer } from './render/renderCards.js';
+      import { rednerTopTags } from './render/renderTopTags.js';
       import { addItem } from './actions/addItem.js';
       import { deleteItem } from './actions/deleteItem.js';
 
       (() => {
-        const { filter } = store.get() ?? {};
+        const state = store.get() ?? {};
+        const filter = state.filter ?? INITIAL_STATE.filter;
 
-        const savedQuery = filter.q ?? INITIAL_STATE.filter.q;
-        if (qInputEl) qInputEl.value = savedQuery;
+        if (qInputEl) qInputEl.value = filter.q ?? INITIAL_STATE.filter.q;
 
-        const savedSort = filter.sort ?? INITIAL_STATE.filter.sort;
         if (sortEl) {
-          sortEl.value = savedSort;
-
-          const isValidOption = Array.from(sortEl.options).some((opt) => opt.value === savedSort);
-          if (!isValidOption) {
-            sortEl.value = INITIAL_STATE.filter.sort;
-          }
+          const savedSort = filter.sort ?? INITIAL_STATE.filter.sort;
+          const has = Array.from(sortEl.options).some((opt) => opt.value === savedSort);
+          sortEl.value = has ? savedSort : INITIAL_STATE.filter.sort;
         }
+
+        // const selected = filter.selected instanceof Set ? filter.selected : new Set(Array.isArray(filter.selected) ? filter.selected : []);
+
+        // if (qInputEl && !filter.q && selected.size) {
+        //   qInputEl.value = [...selected].join(', ');
+        // }
       })();
+
+      if (localStorage.getItem(THEME_KEY) === '1') document.body.classList.add('light');
 
       // ================= 생성 및 구독 =================
       const render = createCardsRenderer();
       store.subscribe(render);
-      store.subscribe((state) => document.body.classList.toggle(THEME.LIGHT, state.themeMode === THEME.LIGHT));
 
       // ================= 이벤트 =================
+      // 테마
       themeBtnEl.addEventListener('click', () => {
-        const isLight = document.body.classList.toggle(THEME.LIGHT);
-        store.set((state) => ({ ...state, themeMode: isLight ? THEME.LIGHT : THEME.DARK }));
+        // TODO: boolean 으로 변경
+        const isLight = document.body.classList.toggle('light');
+        localStorage.setItem(THEME_KEY, isLight ? '1' : '0');
       });
+
       addItem();
       deleteItem();
-      inputSearchFilter(); // 검색
-      inputSortFilter(); // 정렬
+      sarchFilter(); // 검색
+      sortFilter(); // 정렬
+      tagFilter();
       clearFilter();
 
       render(store.get());

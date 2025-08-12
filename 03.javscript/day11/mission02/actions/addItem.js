@@ -1,6 +1,6 @@
 import { store } from '../store.js';
 import { formEl, tagsEl, titleEl, urlEl } from '../utils/dom.js';
-import { showToast } from '../utils/toast.js';
+import { Toast } from '../utils/toast.js';
 import { parseTags } from '../utils/urlWithTag.js';
 
 export function addItem() {
@@ -18,7 +18,8 @@ export function addItem() {
     if (!item.title) return;
     store.set((prev) => ({ ...prev, items: [item, ...prev.items] }));
 
-    showToast('추가했어요. (동기화 중)');
+    const toast = new Toast();
+    toast.show('추가했어요. (동기화 중)');
     formEl.reset();
   });
 }

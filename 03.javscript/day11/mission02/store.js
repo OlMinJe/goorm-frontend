@@ -1,4 +1,3 @@
-import { THEME } from './constants.js';
 import { loadItem, saveItem } from './utils/storage.js';
 
 // Pub/Sub store
@@ -24,13 +23,6 @@ class Store {
   subscribe(fn) {
     this.#listeners.add(fn);
     return () => this.#listeners.delete(fn);
-  }
-
-  toggleTheme() {
-    this.set((s) => ({
-      ...s,
-      themeMode: s.themeMode === THEME.LIGHT ? THEME.DARK : THEME.LIGHT,
-    }));
   }
 }
 

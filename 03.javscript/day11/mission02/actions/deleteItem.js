@@ -1,11 +1,11 @@
 import { store } from '../store.js';
 import { listEl } from '../utils/dom.js';
-import { showToast } from '../utils/toast.js';
+import { Toast } from '../utils/toast.js';
 
 export function deleteItem() {
   listEl.addEventListener('click', (e) => {
     const deleteBtnEl = e.target;
-    if (!deleteBtnEl) return;
+    if (!deleteBtnEl.matches('.btn-delete')) return;
 
     const deleteCard = deleteBtnEl.closest('[data-id]');
     if (!deleteCard) return;
@@ -17,6 +17,7 @@ export function deleteItem() {
       return newItems.length === prev.items.length ? prev : { ...prev, items: newItems };
     });
 
-    showToast('삭제했어요.');
+    const toast = new Toast();
+    toast.show('삭제했어요.');
   });
 }

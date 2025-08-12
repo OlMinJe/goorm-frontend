@@ -14,6 +14,7 @@ export const formEl = document.getElementById('add-form');
 export const titleEl = document.getElementById('title');
 export const urlEl = document.getElementById('url');
 export const tagsEl = document.getElementById('tags');
+export const tagEl = document.getElementById('tag');
 
 export const qInputEl = document.getElementById('q');
 export const sortEl = document.getElementById('sort');

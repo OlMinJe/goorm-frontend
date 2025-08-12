@@ -1,9 +1,6 @@
 export const STORAGE_KEY = 'bookmark';
 
-export const THEME = {
-  LIGHT: 'light',
-  DARK: 'dark',
-};
+export const THEME_KEY = 'light';
 
 export const SORT = {
   RECENT: 'recent',
@@ -12,7 +9,7 @@ export const SORT = {
 };
 
 export const INITIAL_STATE = {
-  themeMode: THEME.LIGHT,
+  themeMode: THEME_KEY,
   items: [],
   filter: { q: '', selected: new Set(), sort: SORT.RECENT },
 };
