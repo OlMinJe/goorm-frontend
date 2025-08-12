@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS 비교 연산자 실습</title>
+    <style>
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 120px 1fr;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      input,
+      select,
+      button {
+        padding: 10px;
+        font-size: 16px;
+      }
+      .result {
+        margin-top: 14px;
+        padding: 14px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>비교 연산자 이해하기</h1>
+
+    <div class="row">
+      <input id="a" placeholder="값 A (예: 5 또는 '5')" />
+      <select id="op">
+        <option value="==">==</option>
+        <option value="===">===</option>
+        <option value="!=">!=</option>
+        <option value="!==">!==</option>
+        <option value=">">&gt;</option>
+        <option value="<">&lt;</option>
+        <option value=">=">&ge;</option>
+        <option value="<=">&le;</option>
+      </select>
+      <input id="b" placeholder="값 B (예: 5 또는 '5')" />
+    </div>
+
+    <label>
+      <input type="checkbox" id="asNumber" />
+      입력값을 숫자로 변환해서 비교하기(Number)
+    </label>
+    <br /><br />
+    <button id="run">비교 실행</button>
+    <button id="preset1">A='5', B=5</button>
+    <button id="preset2">A='10', B='2'</button>
+    <button id="preset3">A=NaN, B=NaN</button>
+
+    <div class="result" id="out">결과가 여기 표시됩니다.</div>
+
+    <script>
+      const aEl = document.getElementById('a');
+      const bEl = document.getElementById('b');
+      const opEl = document.getElementById('op');
+      const outEl = document.getElementById('out');
+      const asNumberEl = document.getElementById('asNumber');
+
+      function parse(val) {
+        if (!asNumberEl.checked) return { value: val, type: typeof val };
+        const n = Number(val);
+        return { value: n, type: Number.isNaN(n) ? 'number(NaN)' : 'number' };
+      }
+
+      function showResult() {
+        const A = parse(aEl.value);
+        const B = parse(bEl.value);
+
+        let result;
+        switch (opEl.value) {
+          case '==':
+            result = A.value == B.value;
+            break;
+          case '===':
+            result = A.value === B.value;
+            break;
+          case '!=':
+            result = A.value != B.value;
+            break;
+          case '!==':
+            result = A.value !== B.value;
+            break;
+          case '>':
+            result = A.value > B.value;
+            break;
+          case '<':
+            result = A.value < B.value;
+            break;
+          case '>=':
+            result = A.value >= B.value;
+            break;
+          case '<=':
+            result = A.value <= B.value;
+            break;
+        }
+
+        outEl.innerHTML = `
+          <div><b>식:</b> ${JSON.stringify(A.value)} (${A.type}) ${opEl.value} ${JSON.stringify(B.value)} (${B.type})</div>
+          <div><b>결과:</b> ${result}</div>
+        `;
+      }
+
+      document.getElementById('run').addEventListener('click', showResult);
+
+      document.getElementById('preset1').addEventListener('click', () => {
+        aEl.value = '5';
+        bEl.value = 5;
+        opEl.value = '==';
+        asNumberEl.checked = false;
+        showResult();
+      });
+      document.getElementById('preset2').addEventListener('click', () => {
+        aEl.value = '10';
+        bEl.value = '2';
+        opEl.value = '<';
+        asNumberEl.checked = false;
+        showResult();
+      });
+      document.getElementById('preset3').addEventListener('click', () => {
+        aEl.value = 'NaN';
+        bEl.value = 'NaN';
+        opEl.value = '===';
+        asNumberEl.checked = true;
+        showResult();
+      });
+
+      aEl.value = '5';
+      bEl.value = 5;
+      opEl.value = '===';
+      showResult();
+    </script>
+  </body>
+</html>

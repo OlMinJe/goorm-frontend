@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>(JS) 동적인 웹페이지 구현하기</title>
+    <style>
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Hello~</h1>
+    <p id="message">버튼을 눌러보세ㅇ</p>
+    <button id="changeBtn">클릭!</button>
+
+    <script>
+      const title = document.getElementById('title');
+      const message = document.getElementById('message');
+      const button = document.getElementById('changeBtn');
+
+      button.addEventListener('click', () => {
+        title.textContent = '어서오세용~';
+        message.textContent = '화면 내용 바꾸기 완료!';
+      });
+    </script>
+  </body>
+</html>
