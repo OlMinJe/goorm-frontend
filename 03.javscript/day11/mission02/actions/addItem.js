@@ -1,7 +1,6 @@
 import { store } from '../store.js';
 import { formEl, tagsEl, titleEl, urlEl } from '../utils/dom.js';
 import { Toast } from '../utils/toast.js';
-import { parseTags } from '../utils/urlWithTag.js';
 
 export function addItem() {
   formEl.addEventListener('submit', (e) => {
@@ -10,7 +9,8 @@ export function addItem() {
     const id = Date.now() + Math.random() * 1000;
     const title = String(titleEl.value || '').trim();
     const url = String(urlEl.value || '').trim();
-    const tags = parseTags(tagsEl.value || '');
+    // prettier-ignore
+    const tags = (tagsEl.value || '').split(',').map((s) => s.trim()).filter(Boolean);
     const createdAt = Date.now();
 
     const item = { id, title, url, tags, createdAt };

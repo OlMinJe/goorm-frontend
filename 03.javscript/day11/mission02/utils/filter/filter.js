@@ -1,14 +1,7 @@
-import { INITIAL_STATE } from '../constants.js';
-import { store } from '../store.js';
-import { clearFiltersEl, listEl, qInputEl, sortEl } from './dom.js';
-
-export function debounce(fn, delay = 300) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn(...args), delay);
-  };
-}
+import { INITIAL_STATE } from '../../constants.js';
+import { store } from '../../store.js';
+import { clearFiltersEl, listEl, qInputEl, sortEl } from '../dom.js';
+import { debounce } from './helperFilter.js';
 
 // 검색
 export function sarchFilter() {
@@ -25,18 +18,15 @@ export function tagFilter() {
   listEl.addEventListener('click', (e) => {
     const tagEl = e.target;
     if (!tagEl) return;
-
     const tagValue = (tagEl.dataset.tag || '').trim();
     if (!tagValue) return;
 
     store.set((prev) => {
       const prevSel = prev.filter?.selected ?? [];
       const selected = new Set([...prevSel].filter(Boolean));
-
       selected.has(tagValue) ? selected.delete(tagValue) : selected.add(tagValue);
 
       const q = [...selected].map((t) => `#${t}`);
-
       if (qInputEl) qInputEl.value = q.join('');
       return { ...prev, filter: { ...prev.filter, selected, q } };
     });
@@ -55,11 +45,9 @@ export function sortFilter() {
 // 검색 및 정렬 초기화
 export function clearFilter() {
   if (!clearFiltersEl || !qInputEl) return;
-
   clearFiltersEl.addEventListener('click', () => {
     if (qInputEl) qInputEl.value = '';
     if (sortEl) sortEl.value = INITIAL_STATE.filter?.sort;
-
     store.set((prev) => ({ ...prev, filter: { ...INITIAL_STATE.filter } }));
   });
 }

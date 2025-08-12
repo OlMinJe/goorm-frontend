@@ -41,9 +41,8 @@
       import { store } from './store.js';
       import { THEME_KEY } from './constants.js';
       import { themeBtnEl, qInputEl, sortEl } from './utils/dom.js';
-      import { sarchFilter, sortFilter, tagFilter, clearFilter } from './utils/filter.js';
+      import { sarchFilter, sortFilter, tagFilter, clearFilter } from './utils/filter/filter.js';
       import { createCardsRenderer } from './render/renderCards.js';
-      import { rednerTopTags } from './render/renderTopTags.js';
       import { addItem } from './actions/addItem.js';
       import { deleteItem } from './actions/deleteItem.js';
 
@@ -59,6 +58,7 @@
           sortEl.value = has ? savedSort : INITIAL_STATE.filter.sort;
         }
 
+        // 태그 안날아가게 가능./..?
         // const selected = filter.selected instanceof Set ? filter.selected : new Set(Array.isArray(filter.selected) ? filter.selected : []);
 
         // if (qInputEl && !filter.q && selected.size) {
@@ -66,20 +66,17 @@
         // }
       })();
 
-      if (localStorage.getItem(THEME_KEY) === '1') document.body.classList.add('light');
+      if (localStorage.getItem(THEME_KEY)) document.body.classList.add('light');
 
-      // ================= 생성 및 구독 =================
+      // 생성 및 구독 ==================================
       const render = createCardsRenderer();
       store.subscribe(render);
 
-      // ================= 이벤트 =================
-      // 테마
+      // 이벤트 등록 ==================================
       themeBtnEl.addEventListener('click', () => {
-        // TODO: boolean 으로 변경
         const isLight = document.body.classList.toggle('light');
-        localStorage.setItem(THEME_KEY, isLight ? '1' : '0');
+        localStorage.setItem(THEME_KEY, isLight);
       });
-
       addItem();
       deleteItem();
       sarchFilter(); // 검색

@@ -1,13 +1,3 @@
-export function createEl(tag, { className, text, html, attrs, children } = {}) {
-  const el = document.createElement(tag);
-  if (className) el.className = className;
-  if (text) el.textContent = text;
-  if (html) el.innerHTML = html;
-  if (attrs) for (const [key, value] of Object.entries(attrs)) el.setAttribute(key, value);
-  if (children) el.append(...children);
-  return el;
-}
-
 export const themeBtnEl = document.getElementById('theme-btn');
 
 export const formEl = document.getElementById('add-form');
