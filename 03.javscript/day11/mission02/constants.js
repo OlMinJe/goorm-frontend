@@ -7,7 +7,6 @@ export const SORT = {
   TAGS: 'tags',
 };
 export const INITIAL_STATE = {
-  themeMode: THEME_KEY,
   items: [],
   filter: { q: '', selected: new Set(), sort: SORT.RECENT },
 };

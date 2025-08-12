@@ -12,17 +12,16 @@ const parseJSON = (str) => {
 export function loadItem() {
   const raw = localStorage.getItem(STORAGE_KEY);
   const parsed = parseJSON(raw);
-  if (!parsed) return { ...INITIAL_STATE, selected: reviveSelected(INITIAL_STATE.filter?.selected) };
+  if (!parsed) return { ...INITIAL_STATE };
 
-  const items = isArray(parsed.items) ? parsed.items : INITIAL_STATE.items ?? [];
-
+  const items = isArray(parsed.items) ? parsed.items : INITIAL_STATE.items;
   const filter = {
     ...INITIAL_STATE.filter,
     ...parsed.filter,
     selected: reviveSelected(parsed.filter?.selected ?? INITIAL_STATE.filter?.selected),
   };
 
-  return { ...INITIAL_STATE, ...parsed, items, filter };
+  return { ...parsed, items, filter };
 }
 
 // 로컬 스토리지 저장하기
