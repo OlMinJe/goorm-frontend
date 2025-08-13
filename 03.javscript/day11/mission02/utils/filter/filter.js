@@ -26,7 +26,7 @@ export function sarchFilter() {
     const tags = (value.match(TAG_REGULAR) || []).map((s) => s.slice(1));
     if (tags.length === 0) return;
 
-    e.preventDefault(); // 중복 삭제 방지 - 해시태그에서 문자 1개 삭제의 원인이 너였다니,,
+    e.preventDefault(); // 중복 삭제 방지 - 해시태그에서 문자 1개 삭제의 원인
     tags.pop();
 
     const qStr = tags.map((t) => `#${t}`).join('');
@@ -47,9 +47,7 @@ export function tagFilter() {
 
     store.set((prev) => {
       const selected = reviveSelected(prev.filter?.selected);
-
-      // like toggle..
-      selected.has(tag) ? selected.delete(tag) : selected.add(tag);
+      selected.has(tag) ? selected.delete(tag) : selected.add(tag); // like toggle..
 
       const qStr = [...selected].map((t) => `#${t}`).join('');
       if (qInputEl) qInputEl.value = qStr;
@@ -71,7 +69,7 @@ export function sortFilter() {
 export function clearFilter() {
   if (!clearFiltersEl || !qInputEl) return;
   clearFiltersEl.addEventListener('click', () => {
-    if (qInputEl) qInputEl.value = '';
+    if (qInputEl) qInputEl.value = INITIAL_STATE.filter.q;
     if (sortEl) sortEl.value = INITIAL_STATE.filter.sort;
     store.set((prev) => ({ ...prev, filter: { ...INITIAL_STATE.filter } }));
   });

@@ -17,6 +17,7 @@ export class Toast {
     this.root = document.getElementById(rootId);
     if (!this.root) console.warn('Toast의 root element가 없음');
 
+    // show를 콜백으로 전달할 때도 this가 유지되도록 바인딩
     this.show = this.show.bind(this);
   }
 

@@ -1,3 +1,5 @@
+<!-- TODO 해시태그 # 개선 필요 -->
+<!-- TODO 우와 나현님 테스트 코드 대박! -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -52,9 +54,9 @@
         const { q, sort, selected } = state.filter ?? INITIAL_STATE.filter;
         if (qInputEl) qInputEl.value = q;
         if (sortEl) sortEl.value = sort;
+        const saved = localStorage.getItem(THEME_KEY);
+        document.body.classList.toggle(THEME_KEY, saved === '1');
       })();
-
-      if (localStorage.getItem(THEME_KEY)) document.body.classList.add(THEME_KEY);
 
       // 생성 및 구독 ==================================
       const render = createCardsRenderer();
@@ -63,7 +65,7 @@
       // 이벤트 등록 ==================================
       themeBtnEl.addEventListener('click', () => {
         const isLight = document.body.classList.toggle(THEME_KEY);
-        localStorage.setItem(THEME_KEY, isLight);
+        localStorage.setItem(THEME_KEY, isLight ? '1' : '0');
       });
       addItem();
       deleteItem();

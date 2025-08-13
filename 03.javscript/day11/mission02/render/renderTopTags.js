@@ -3,7 +3,7 @@ import { statsEl } from '../utils/dom.js';
 export function rednerTopTags(items) {
   const tagCountMap = new Map();
 
-  items.forEach(({ tags = [] }) => {
+  items.forEach(({ tags }) => {
     tags.forEach((tag) => {
       const count = (tagCountMap.get(tag) || 0) + 1;
       tagCountMap.set(tag, count);

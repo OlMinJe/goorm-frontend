@@ -1,49 +1,59 @@
 import { SORT, TAG_REGULAR } from '../constants.js';
 import { listEl, statsEl } from '../utils/dom.js';
 import { getMatchesWords, sortFn } from '../utils/filter/helperFilter.js';
-import { asString, escape, isUrl } from '../utils/utils.js';
+import { parseInputValue, escape, isUrl, serializeSelected } from '../utils/utils.js';
 import { rednerTopTags } from './renderTopTags.js';
 
 export function createCardsRenderer() {
-  return function render({ items, filter: f = {} }) {
-    // 해시태그 제외 후 진행
-    const words = asString(f.q).replace(TAG_REGULAR, ' ').split(/\s+/).filter(Boolean);
-    const selectedLower = Array.from(f.selected);
+  return function render({ items: _items, filter: _filter = {} }) {
+    const words = parseInputValue(_filter.q);
+    const hasWords = words.length > 0;
+
+    const selectedTags = serializeSelected(_filter.selected);
+    const hasSelected = selectedTags.length > 0;
 
     // OR
-    let result = items.filter((item) => getMatchesWords(item, words));
+    let result = hasWords ? getMatchesWords(_items, words) : _items;
 
     // AND
-    if (selectedLower.length) {
-      result = result.filter(({ tags = [] }) => {
-        if (tags.length < selectedLower.length) return false;
+    if (hasSelected) {
+      result = result.filter(({ tags }) => {
+        if (tags.length < selectedTags.length) return false;
         const set = new Set(tags);
-        return selectedLower.every((t) => set.has(t));
+        return selectedTags.every((t) => set.has(t));
       });
     }
 
-    const sortType = selectedLower.length ? SORT.TAGS : f.sort ?? SORT.RECENT;
-    result = result.sort(sortFn[sortType]);
+    // SORT
+    const sortType = _filter.selected.size ? SORT.TAGS : _filter.sort ?? SORT.RECENT;
+    const sorted = [...result].sort(sortFn[sortType]);
 
-    const html = result
-      .map(
-        ({ id, title, url, tags = [] }) => `
-            <article class="card" data-id="${id}">
-              <h3>${escape(title)}</h3>
-              ${url && isUrl(url) ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">열기</a>` : ''}
-              ${
-                tags.length && `<div class="tags">${tags.map((t) => `<span class="tag" data-tag="${escape(t)}">#${escape(t)}</span>`).join('')}</div>`
-              }
-              <div class="actions">
-                <button class="btn-delete" type="button">삭제</button>
-              </div>
-            </article>
-          `
-      )
+    const html = sorted
+      .map(({ id, title, url, tags }) => {
+        const urlMarkup = url
+          ? isUrl(url)
+            ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(url)}</a>`
+            : `<span>${escape(url)}</span>`
+          : '';
+
+        const tagsMarkup = tags
+          ? `<div class="tags">${tags.map((t) => `<span class="tag" data-tag="${escape(t)}">#${escape(t)}</span>`).join('')}</div>`
+          : '';
+
+        return `
+        <article class="card" data-id="${escape(id)}">
+          <h3>${escape(title)}</h3>
+          ${urlMarkup}
+          ${tagsMarkup}
+          <div class="actions">
+            <button class="btn-delete" type="button">삭제</button>
+          </div>
+        </article>
+      `;
+      })
       .join('');
 
     listEl.innerHTML = html;
-
     statsEl.textContent = `총 ${result.length}개 `;
     rednerTopTags(result);
   };
