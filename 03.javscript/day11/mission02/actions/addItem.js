@@ -18,8 +18,8 @@ export function addItem() {
     const createdAt = Date.now();
 
     const item = { id, title, url, tags, createdAt };
-
     if (!item.title) return;
+
     store.set((prev) => ({ ...prev, items: [item, ...prev.items] }));
 
     const toast = new Toast();

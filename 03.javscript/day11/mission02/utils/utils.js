@@ -10,8 +10,6 @@ export const asNumber = (v) => Number(v ?? 0);
 
 export const getTodayDate = () => Date.now() + Math.random() * 1000;
 
-export const parseInputValue = (v) => asStringNull(v).replace(TAG_REGULAR, ' ').split(/\s+/).filter(Boolean);
-
 export const escape = (s = '') =>
   String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 

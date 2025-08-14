@@ -1,6 +1,6 @@
 import { statsEl } from '../utils/dom.js';
 
-export function rednerTopTags(items) {
+export function renderTopTags(items) {
   const tagCountMap = new Map();
 
   items.forEach(({ tags }) => {

@@ -20,13 +20,3 @@ export const sortFn = (() => {
     [SORT.RECENT]: (a, b) => asNumber(b?.createdAt) - asNumber(a?.createdAt),
   };
 })();
-
-// 검색어가 제목 및 태그에 포함되는지 확인하는 함수(OR 조건) ======================
-export const getMatchesWords = (items, tokens) => {
-  if (!tokens.length || !items.length) return items;
-
-  const hasTokenInTitle = (title, tokens) => tokens.some((t) => title.includes(t));
-  const hasTokenInTags = (tags, tokens) => tokens.some((t) => tags.some((tag) => tag.includes(t)));
-
-  return items.filter(({ title, tags }) => hasTokenInTitle(title, tokens) || hasTokenInTags(tags, tokens));
-};

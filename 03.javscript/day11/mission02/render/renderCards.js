@@ -1,31 +1,26 @@
-import { SORT, TAG_REGULAR } from '../constants.js';
+import { SORT } from '../constants.js';
 import { listEl, statsEl } from '../utils/dom.js';
-import { getMatchesWords, sortFn } from '../utils/filter/helperFilter.js';
-import { parseInputValue, escape, isUrl, serializeSelected } from '../utils/utils.js';
-import { rednerTopTags } from './renderTopTags.js';
+import { sortFn } from '../utils/filter/helperFilter.js';
+import { escape, isUrl } from '../utils/utils.js';
+import { renderTopTags } from './renderTopTags.js';
 
-export function createCardsRenderer() {
+export function createCardsRender() {
   return function render({ items: _items, filter: _filter = {} }) {
-    const words = parseInputValue(_filter.q);
-    const hasWords = words.length > 0;
-
-    const selectedTags = serializeSelected(_filter.selected);
+    const selectedTags = [..._filter.selected];
     const hasSelected = selectedTags.length > 0;
 
     // OR
-    let result = hasWords ? getMatchesWords(_items, words) : _items;
-
+    let result = _filter.q ? _items.filter(({ title }) => title.includes(_filter.q)) : _items;
     // AND
     if (hasSelected) {
-      result = result.filter(({ tags }) => {
-        if (tags.length < selectedTags.length) return false;
+      result = _items.filter(({ tags }) => {
         const set = new Set(tags);
         return selectedTags.every((t) => set.has(t));
       });
     }
 
     // SORT
-    const sortType = _filter.selected.size ? SORT.TAGS : _filter.sort ?? SORT.RECENT;
+    const sortType = hasSelected ? SORT.TAGS : _filter.sort ?? SORT.RECENT;
     const sorted = [...result].sort(sortFn[sortType]);
 
     const html = sorted
@@ -55,6 +50,6 @@ export function createCardsRenderer() {
 
     listEl.innerHTML = html;
     statsEl.textContent = `총 ${result.length}개 `;
-    rednerTopTags(result);
+    renderTopTags(result);
   };
 }

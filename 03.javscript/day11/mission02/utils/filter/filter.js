@@ -5,23 +5,23 @@ import { asLower, reviveSelected } from '../utils.js';
 import { debounce } from './helperFilter.js';
 
 // 검색 입력 (디바운스) ============================================
-export function sarchFilter() {
+export function searchFilter() {
   const run = debounce((q) => {
     store.set((prev) => ({ ...prev, filter: { ...prev.filter, q: asLower(q) } }));
   }, 300);
 
   if (!qInputEl) return;
+
   qInputEl.addEventListener('input', (e) => run(e.target.value ?? ''));
 
   qInputEl.addEventListener('keydown', (e) => {
     if (e.key !== 'Backspace') return;
-
     const el = e.currentTarget;
     const { value, selectionStart, selectionEnd } = el;
 
     // 커서 맨 뒤
-    const isCcursorEnd = selectionStart === selectionEnd && selectionEnd === value.length;
-    if (!isCcursorEnd || !value) return;
+    const isCursorEnd = selectionStart === selectionEnd && selectionEnd === value.length;
+    if (!isCursorEnd || !value) return;
 
     const tags = (value.match(TAG_REGULAR) || []).map((s) => s.slice(1));
     if (tags.length === 0) return;
