@@ -1,5 +1,3 @@
-import { TAG_REGULAR } from '../constants.js';
-
 export const isArray = Array.isArray;
 export const isUrl = (url) => /^https?:\/\//.test(url ?? '');
 

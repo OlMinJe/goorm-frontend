@@ -1,11 +1,11 @@
 export default {
-  singleQuote: false,
-  semi: false,
-  trailingComma: "es5",
+  singleQuote: true,
+  semi: true,
+  trailingComma: 'es5',
   printWidth: 100,
   useTabs: false,
   tabWidth: 2,
-  endOfLine: "lf",
+  endOfLine: 'lf',
   selfClosing: true,
   bracketSameLine: false,
 };

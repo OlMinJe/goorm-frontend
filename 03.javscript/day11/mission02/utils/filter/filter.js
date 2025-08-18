@@ -23,6 +23,7 @@ export function searchFilter() {
     const isCursorEnd = selectionStart === selectionEnd && selectionEnd === value.length;
     if (!isCursorEnd || !value) return;
 
+    console.log(value);
     const tags = (value.match(TAG_REGULAR) || []).map((s) => s.slice(1));
     if (tags.length === 0) return;
 

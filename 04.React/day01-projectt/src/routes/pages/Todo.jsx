@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export default function Todo() {
-  const [task, setTask] = useState([]);
-  const [input, setInput] = useState('');
+  const [task, setTask] = useState([])
+  const [input, setInput] = useState('')
 
   const addTask = () => {
-    if (input.trim() === '') return;
-    setTask([...task, { id: Date.now(), text: input }]);
-    setInput('');
-  };
+    if (input.trim() === '') {
+      return
+    }
+    setTask([...task, { id: Date.now(), text: input }])
+    setInput('')
+  }
 
-  const toggleTask = (id) => setTask(task.filter((task) => task.id !== id));
+  const toggleTask = (id) => setTask(task.filter((task) => task.id !== id))
 
   return (
     <div className="container">
@@ -25,7 +27,7 @@ export default function Todo() {
         />
         <button onClick={addTask}>추가</button>
       </div>
-      <ul></ul>
+      <ul />
       {task.length === 0 && <p>할 일이 없습니다.</p>}
       {task.map((task) => (
         <li key={task.id} className="">
@@ -34,5 +36,5 @@ export default function Todo() {
         </li>
       ))}
     </div>
-  );
+  )
 }
