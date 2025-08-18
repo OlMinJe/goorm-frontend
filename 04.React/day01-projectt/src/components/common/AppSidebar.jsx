@@ -1,4 +1,4 @@
-import { Home, Settings } from 'lucide-react'
+import { CircleDollarSign, Home, ListCheck, User } from 'lucide-react'
 
 import {
   Sidebar,
@@ -9,6 +9,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
+import { useSidebarClosed } from '@/hooks/useSidebarClosed'
+import { cn } from '@/lib/utils'
 
 const items = [
   {
@@ -17,23 +19,30 @@ const items = [
     icon: Home,
   },
   {
+    title: 'User',
+    url: '/user',
+    icon: User,
+  },
+  {
     title: 'To-Do',
     url: '/todo',
-    icon: Settings,
+    icon: ListCheck,
   },
   {
     title: 'Rate',
     url: '/rate',
-    icon: Settings,
+    icon: CircleDollarSign,
   },
 ]
 
 export function AppSidebar() {
+  const { isClosed } = useSidebarClosed()
+
   return (
-    <Sidebar>
-      <SidebarHeader>MENU</SidebarHeader>
+    <Sidebar collapsible="icon" className="pt-2">
+      <SidebarHeader className={cn(isClosed && 'hidden')}>Menu</SidebarHeader>
       <SidebarContent>
-        <SidebarMenu>
+        <SidebarMenu className={cn(isClosed && 'items-center')}>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild>

@@ -7,13 +7,15 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 
 export default function DefaultLayout() {
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <AppSidebar />
-      <div className="flex flex-col w-full max-w-full min-h-screen">
+      <div className="flex flex-col w-full max-w-full min-h-100vh">
         <Header>
           <SidebarTrigger />
         </Header>
-        <Outlet />
+        <div className="p-8">
+          <Outlet />
+        </div>
         <Footer />
       </div>
     </SidebarProvider>

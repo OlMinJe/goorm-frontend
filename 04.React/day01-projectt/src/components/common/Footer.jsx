@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="h-[120px] l-3 pr-3 pt-4 pb-5 bg-pink-100">
-      <div>푸터 내용</div>
+    <footer className="p-8 bg-blue-100 text-center">
+      <div className="text-gray-400">&copy; 2025 MINJE LEE. All rights reserved.</div>
     </footer>
   )
 }
