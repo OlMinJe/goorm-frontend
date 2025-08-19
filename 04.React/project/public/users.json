@@ -1,0 +1,110 @@
+[
+  {
+    "id": 0,
+    "name": "조준형",
+    "profile": "./users/user1.png",
+    "intro": "UI/UX에 진심인 개발자",
+    "GitHub": "https://github.com/Jojunhyeong",
+    "blog": "https://velog.io/@jojh0323/posts",
+    "nickname": "픽셀브릭"
+  },
+  {
+    "id": 1,
+    "name": "이민제",
+    "profile": "./users/user2.png",
+    "intro": "데이터를 움직이는 개발자",
+    "GitHub": "https://github.com/olminje",
+    "blog": "https://velog.io/@ol_minje/posts",
+    "nickname": "큐티걸"
+  },
+  {
+    "id": 2,
+    "name": "박총명",
+    "profile": "./users/user3.png",
+    "intro": "문제 해결형 프론트엔드 엔지니어",
+    "GitHub": "https://github.com/chdaud78",
+    "blog": "https://velog.io/@chdaud78/posts",
+    "nickname": "토끼깡🔫"
+  },
+  {
+    "id": 3,
+    "name": "박나현",
+    "profile": "./users/user4.png",
+    "intro": "감각적인 인터페이스를 설계하는 디자이너형 개발자",
+    "GitHub": "https://github.com/studioOwol",
+    "blog": "https://owol-log.vercel.app/",
+    "nickname": "센스브릭"
+  },
+  {
+    "id": 4,
+    "name": "이승헌",
+    "profile": "./users/user5.png",
+    "intro": "코드로 세상을 더 편리하게",
+    "GitHub": "",
+    "blog": "",
+    "nickname": "이지브릭"
+  },
+  {
+    "id": 5,
+    "name": "백은섭",
+    "profile": "./users/user6.png",
+    "intro": "사용자 중심의 웹을 만드는 프론트엔드",
+    "GitHub": "",
+    "blog": "",
+    "nickname": "유저퍼스트 브릭"
+  },
+  {
+    "id": 6,
+    "name": "진현지",
+    "profile": "./users/user7.png",
+    "intro": "애니메이션과 모션에 강한 개발자",
+    "GitHub": "https://github.com/Catsmanager",
+    "blog": "https://velog.io/@catsmanager/posts",
+    "nickname": "모션기어"
+  },
+  {
+    "id": 7,
+    "name": "최지인",
+    "profile": "./users/user8.png",
+    "intro": "데이터 시각화에 매력을 느끼는 개발자",
+    "GitHub": "",
+    "blog": "",
+    "nickname": "차트브릭"
+  },
+  {
+    "id": 8,
+    "name": "최원형",
+    "profile": "./users/user9.png",
+    "intro": "클린 코드를 지향하는 주니어 개발자",
+    "GitHub": "",
+    "blog": "",
+    "nickname": "^_^ㅋ"
+  },
+  {
+    "id": 9,
+    "name": "홍성준",
+    "profile": "./users/user10.png",
+    "intro": "사용자의 여정을 설계하는 개발자",
+    "GitHub": "https://github.com/tjdwns1904",
+    "blog": "",
+    "nickname": "저니마스터"
+  },
+  {
+    "id": 10,
+    "name": "이신행",
+    "profile": "./users/user11.png",
+    "intro": "행복을 향해 나아가는 프론트엔드",
+    "GitHub": "https://github.com/shinhaeng1204",
+    "blog": "",
+    "nickname": "해피브릭"
+  },
+  {
+    "id": 11,
+    "name": "서민욱",
+    "profile": "./users/user12.png",
+    "intro": "알고리즘 분석에 고뇌하는 프론트 개발자",
+    "GitHub": "https://github.com/Ikmyeongs",
+    "blog": "https://velog.io/@boroson/posts",
+    "nickname": "브릭고리즘"
+  }
+]
