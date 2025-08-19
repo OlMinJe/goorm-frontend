@@ -11,19 +11,19 @@ const router = createBrowserRouter([
     element: <DefaultLayout />,
     children: [
       {
-        path: '/',
+        path: '',
         element: <MyApp />,
       },
       {
-        path: '/user',
+        path: 'user',
         element: <User />,
       },
       {
-        path: '/todo',
+        path: 'todo',
         element: <Todo />,
       },
       {
-        path: '/rate',
+        path: 'rate',
         element: <Rate />,
       },
     ],
