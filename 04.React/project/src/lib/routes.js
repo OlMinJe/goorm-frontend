@@ -8,6 +8,8 @@ export const ROUTES = {
   MEMBER: {
     ROOT: '/member',
     PROFILE: '/member/profile',
+    PROFILE_AXIOS: '/member/profile_axios',
+    PROFILE_QUERY: '/member/profile_query',
   },
   AUTH: {
     MYPAGE: '/mypage',

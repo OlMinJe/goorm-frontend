@@ -1,4 +1,6 @@
-import { Button } from '@/components/ui/button'
+import { NavLink } from 'react-router'
+
+import { ROUTES } from '@/lib/routes'
 
 export default function Header({ children }) {
   return (
@@ -9,8 +11,18 @@ export default function Header({ children }) {
           <h1 className="ml-3 font-bold">MyApp</h1>
         </div>
         <nav>
-          <Button className="mr-1">Login</Button>
-          <Button>Join</Button>
+          <NavLink
+            to={ROUTES.AUTH.LOGIN}
+            className="mr-1 py-2 px-4 rounded-md bg-blue-200 text-gray-600"
+          >
+            Login
+          </NavLink>
+          <NavLink
+            to={ROUTES.AUTH.REGISTER}
+            className="py-2 px-4 rounded-md bg-blue-200  text-gray-600"
+          >
+            Join
+          </NavLink>
         </nav>
       </div>
     </header>

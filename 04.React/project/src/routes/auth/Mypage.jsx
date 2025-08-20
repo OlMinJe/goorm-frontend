@@ -14,7 +14,7 @@ export default function Mypage() {
     const userJob = FormData.get('job')
     const userEmoji = FormData.get('emoji')
 
-    setUser({ name: userName, job: userJob, emoji: userEmoji })
+    setUser((prev) => ({ ...prev, name: userName, job: userJob, emoji: userEmoji }))
   }
 
   return (
