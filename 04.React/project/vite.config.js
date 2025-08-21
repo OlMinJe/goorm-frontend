@@ -8,4 +8,13 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: { alias: { '@': path.resolve(__dirname, './src') } },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000/', // goorm-server
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api/, ''),
+      },
+    },
+  },
 })

@@ -1,7 +1,7 @@
 import { use } from 'react'
 
+import { userPromise } from '@/api/fetchUser'
 import ProfileCard from '@/components/users/ProfileCard'
-import { userPromise } from '@/feature/user/fetchUser'
 
 export default function Profile() {
   // 1. 초창기 코드
