@@ -1,0 +1,17 @@
+export const BOOKS = [
+  'Clean Code',
+  "You Don't Know JS",
+  'Introduction to Algorithms',
+  'Design Patterns',
+  'JavaScript: The Good Parts',
+  'Eloquent JavaScript',
+  'Effective JavaScript',
+  'React Patterns',
+  'Data Structures and Algorithms',
+  'Binary Search Basics',
+  'Frontend Handbook',
+  'Cracking the Coding Interview',
+  'Refactoring',
+  'The Pragmatic Programmer',
+  'Algorithms in a Nutshell',
+];
